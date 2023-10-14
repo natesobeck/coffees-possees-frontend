@@ -1,12 +1,12 @@
 import FindClubForm from '../FindClubForm/FindClubForm'
+import FindClubResults from '../FindClubResults/FindClubResults'
 import './AllClubs.css'
 
 const AllClubs = () => {
   return ( 
     <div className="clubs-container">
-      <div className="club">
         <FindClubForm />
-      </div>
+        <FindClubResults />
     </div>
   )
 }

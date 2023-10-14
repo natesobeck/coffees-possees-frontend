@@ -3,6 +3,7 @@ import './FindClubResults.css'
 const FindClubResults = () => {
   return ( 
     <div className="search-results">
+      <h1>Results found</h1>
       <h4>City1</h4>
       <ul>
         <li>Club1 anb Location1</li>
