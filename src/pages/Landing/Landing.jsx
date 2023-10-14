@@ -1,3 +1,7 @@
+// npm modules
+import { Link } from 'react-router-dom'
+
+// components
 import ClubCard from '../../components/ClubCard/ClubCard'
 
 // css
@@ -12,12 +16,21 @@ const Landing = ({ user }) => {
       <section className={styles['section-container']}>
         <h1>This is where the club reccomendations go.</h1>
         <div className={styles['club-card-container']}>
-          <ClubCard />
-          <ClubCard />
-          <ClubCard />
-          <ClubCard />
-          <ClubCard />
-          <ClubCard />
+          <Link to='/details'>
+            <ClubCard />
+          </Link>
+          <Link to='/details'>
+            <ClubCard />
+          </Link>
+          <Link to='/details'>
+            <ClubCard />
+          </Link>
+          <Link to='/details'>
+            <ClubCard />
+          </Link>
+          <Link to='/details'>
+            <ClubCard />
+          </Link>     
         </div>
       </section>
       <section className={styles['section-container']}>
