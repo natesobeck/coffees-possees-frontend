@@ -2,4 +2,27 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 70px;
+}
+
+.sectioncontainer {
+  height: 1100px;
+  width: 100%;
+  border: 1px solid white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
+
+.clubcardcontainer {
+  height: 90%;
+  width: 90%;
+  border: 3px solid white;
+  border-radius: 10px;
+}
+
+main {
+  width: 100%;
 }
