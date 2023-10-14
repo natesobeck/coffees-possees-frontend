@@ -13,7 +13,7 @@ const NavBar = ({ user, handleLogout }) => {
           {/* <li><NavLink to="/auth/change-password">Change Password</NavLink></li> */}
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="">About Us</NavLink></li>
-          <li><NavLink to="">Add Club</NavLink></li>
+          <li><NavLink to="/new">Add Club</NavLink></li>
           <li><NavLink to="/clubs">All Clubs</NavLink></li>
           <li><NavLink to="/shops">All Shops</NavLink></li>
           <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
