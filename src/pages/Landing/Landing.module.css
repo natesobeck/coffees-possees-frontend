@@ -7,9 +7,9 @@
 }
 
 .section-container {
-  height: 1100px;
+  height: 100vh;
   width: 100%;
-  border: 1px solid white;
+  border-bottom: 3px solid #CEE6F3;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@
 .club-card-container {
   height: 90%;
   width: 90%;
-  border: 3px solid white;
+  border: 3px solid #CEE6F3;
   border-radius: 10px;
 }
 
@@ -30,12 +30,12 @@
   width: 90%;
   align-items: center;
   justify-content: center;
-  border: 1px solid white;
+  border: 1px solid #CEE6F3;
 }
 
 .about-us-subcontainer {
   margin: 20px;
-  border: 1px solid white;
+  border: 1px solid #CEE6F3;
   height: 50%;
   width: 40%;
   display: flex;

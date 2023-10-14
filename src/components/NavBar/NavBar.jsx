@@ -11,18 +11,18 @@ const NavBar = ({ user, handleLogout }) => {
         <ul>
           {/* <li><NavLink to="/profiles">Profiles</NavLink></li> */}
           {/* <li><NavLink to="/auth/change-password">Change Password</NavLink></li> */}
-          <li><NavLink to="/">Home</NavLink></li>
-          <li><NavLink to="">About Us</NavLink></li>
-          <li><NavLink to="/new">Add Club</NavLink></li>
-          <li><NavLink to="/clubs">All Clubs</NavLink></li>
-          <li><NavLink to="/shops">All Shops</NavLink></li>
-          <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
+          <li><NavLink to="/">HOME</NavLink></li>
+          <li><NavLink to="">ABOUT US</NavLink></li>
+          <li><NavLink to="/new">NEW CLUB</NavLink></li>
+          <li><NavLink to="/clubs">ALL CLUBS</NavLink></li>
+          <li><NavLink to="/shops">ALL SHOPS</NavLink></li>
+          <li><NavLink to="" onClick={handleLogout}>LOG OUT</NavLink></li>
         </ul>
       :
       <ul>
-          <li><NavLink to="">About Us</NavLink></li>
-          <li><NavLink to="/auth/login">Log In</NavLink></li>
-          <li><NavLink to="/auth/signup">Sign Up</NavLink></li>
+          <li><NavLink to="">ABOUT US</NavLink></li>
+          <li><NavLink to="/auth/login">LOG IN</NavLink></li>
+          <li><NavLink to="/auth/signup">SIGN UP</NavLink></li>
         </ul>
       }
     </nav>

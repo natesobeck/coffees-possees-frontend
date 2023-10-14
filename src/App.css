@@ -4,10 +4,16 @@
   box-sizing: inherit;
 }
 
+@font-face {
+  font-family: 'coffee';
+  src: url('../public/Fonts/Coffee.ttf')
+}
+
 html {
   display: flex;
   justify-content: center;
-  background-color: #242424;
+  background-color: #603601;
+  
 }
 
 body {
@@ -16,10 +22,10 @@ body {
   margin: 0;
   min-height: 100vh;
 
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'M PLUS Rounded 1c', sans-serif, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: #CEE6F3;
+  background-color: #603601;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -50,6 +56,11 @@ nav {
   max-width: 1400px;
   background-color: darkslategray;
   top: 0;
+}
+
+nav a {
+  font-family: 'coffee';
+  font-size: 20px;
 }
 
 nav > ul {
