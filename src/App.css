@@ -40,7 +40,6 @@ a:hover {
   color: lightblue;
   text-decoration: underline;
   text-underline-offset: 10px;
-
 }
 
 nav {
@@ -49,6 +48,7 @@ nav {
   width: 85vw;
   max-width: 1400px;
   background-color: darkslategray;
+  top: 0;
 }
 
 nav > ul {

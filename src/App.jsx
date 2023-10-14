@@ -12,6 +12,8 @@ import ChangePassword from './pages/ChangePassword/ChangePassword'
 // components
 import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
+import AllCoffeeShops from './components/AllCoffeeShops/AllCoffeeShops'
+import AllClubs from './components/AllClubs/AllClubs'
 
 // services
 import * as authService from './services/authService'
@@ -43,6 +45,22 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <Profiles />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/clubs"
+          element={
+            <ProtectedRoute user={user}>
+              <AllClubs />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/shops"
+          element={
+            <ProtectedRoute user={user}>
+              <AllCoffeeShops />
             </ProtectedRoute>
           }
         />

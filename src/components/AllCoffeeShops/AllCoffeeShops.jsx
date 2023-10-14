@@ -9,5 +9,5 @@ const AllCoffeeShops = () => {
     </div>
   )
 }
- 
+
 export default AllCoffeeShops
