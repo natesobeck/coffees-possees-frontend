@@ -34,9 +34,9 @@ function App() {
   }
 
   return (
-    <>
+    <main>
       <NavBar user={user} handleLogout={handleLogout} />
-      <Routes>
+      <Routes className='main-page'>
         <Route path="/" element={<Landing user={user} />} />
         <Route
           path="/profiles"
@@ -63,7 +63,7 @@ function App() {
           }
         />
       </Routes>
-    </>
+    </main>
   )
 }
 
