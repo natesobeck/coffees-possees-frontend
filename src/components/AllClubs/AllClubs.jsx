@@ -1,3 +1,5 @@
+import './AllClubs.css'
+
 const AllClubs = () => {
   return ( 
     <div className="clubs-container">
