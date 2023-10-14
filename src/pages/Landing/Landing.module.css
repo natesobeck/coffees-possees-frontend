@@ -2,10 +2,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 70px;
+  width: 85vw;
+  max-width: 1400px;
 }
 
-.sectioncontainer {
+.section-container {
   height: 1100px;
   width: 100%;
   border: 1px solid white;
@@ -16,7 +17,7 @@
   flex-direction: column;
 }
 
-.clubcardcontainer {
+.club-card-container {
   height: 90%;
   width: 90%;
   border: 3px solid white;

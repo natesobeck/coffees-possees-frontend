@@ -4,6 +4,11 @@
   box-sizing: inherit;
 }
 
+html {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   box-sizing: border-box;
 
@@ -20,6 +25,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a,
@@ -37,8 +45,9 @@ a:hover {
 
 nav {
   position: fixed;
-  z-index: 2;
-  width: 100%;
+  z-index: 0;
+  width: 85vw;
+  max-width: 1400px;
   background-color: darkslategray;
 }
 
