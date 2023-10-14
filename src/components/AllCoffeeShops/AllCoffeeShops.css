@@ -1,0 +1,14 @@
+.shops-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.shop {
+  border: 3px solid white;
+  padding: 20px;
+}
+h1 {
+  font-size: 35px;
+}
