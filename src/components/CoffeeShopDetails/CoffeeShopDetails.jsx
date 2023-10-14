@@ -6,4 +6,4 @@ const CoffeeShopDetails = () => {
   )
 }
 
-export default ClubCard
+export default CoffeeShopDetails
