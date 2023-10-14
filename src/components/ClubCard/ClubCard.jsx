@@ -4,7 +4,6 @@ const ClubCard = () => {
 
   return (
     <h1>this is a club card</h1>
-
   )
 }
 

@@ -14,6 +14,7 @@ import NavBar from './components/NavBar/NavBar'
 import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import AllCoffeeShops from './components/AllCoffeeShops/AllCoffeeShops'
 import AllClubs from './components/AllClubs/AllClubs'
+import NewClub from './components/NewClub/NewClub'
 
 // services
 import * as authService from './services/authService'
@@ -61,6 +62,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <AllCoffeeShops />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/new"
+          element={
+            <ProtectedRoute user={user}>
+              <NewClub />
             </ProtectedRoute>
           }
         />

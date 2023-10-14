@@ -1,7 +1,13 @@
+import * as data from '../../../public/assets/data.js'
+
 const NewClub = () => {
   return ( 
-    <h1>Add A Club Here</h1>
+    <main>
+      <h1>{data.club.name}</h1>
+      <form>
+      </form>
+    </main>
   )
 }
- 
-export default NewClub;
+
+export default NewClub
