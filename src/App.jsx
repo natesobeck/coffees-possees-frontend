@@ -15,6 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute/ProtectedRoute'
 import AllCoffeeShops from './components/AllCoffeeShops/AllCoffeeShops'
 import AllClubs from './components/AllClubs/AllClubs'
 import NewClub from './components/NewClub/NewClub'
+import ClubDetails from './components/ClubDetails/ClubDetails'
 
 // services
 import * as authService from './services/authService'
@@ -70,6 +71,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <NewClub />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/details"
+          element={
+            <ProtectedRoute user={user}>
+              <ClubDetails />
             </ProtectedRoute>
           }
         />
