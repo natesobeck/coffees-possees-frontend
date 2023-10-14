@@ -1,3 +1,5 @@
+import './FindClubResults.css'
+
 const FindClubResults = () => {
   return ( 
     <div className="search-results">
