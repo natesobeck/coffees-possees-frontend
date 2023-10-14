@@ -1,3 +1,5 @@
+import ClubCard from '../../components/ClubCard/ClubCard'
+
 // css
 import styles from './Landing.module.css'
 
@@ -9,7 +11,14 @@ const Landing = ({ user }) => {
       </section>
       <section className={styles['section-container']}>
         <h1>This is where the club reccomendations go.</h1>
-        <div className={styles['club-card-container']}></div>
+        <div className={styles['club-card-container']}>
+          <ClubCard />
+          <ClubCard />
+          <ClubCard />
+          <ClubCard />
+          <ClubCard />
+          <ClubCard />
+        </div>
       </section>
       <section className={styles['section-container']}>
         <h1>This is out About Us section.</h1>
