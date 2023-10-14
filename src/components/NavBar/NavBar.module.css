@@ -1,0 +1,15 @@
+.nav {
+  border: 1px solid white;
+}
+
+.nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  height: 70px;
+  align-items: center;
+}
+
+.nav ul li a {
+  margin: 10px;
+}

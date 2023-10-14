@@ -4,7 +4,11 @@ import styles from './Landing.module.css'
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
-      <h1>hello, {user ? user.name : 'friend'}</h1>
+      <div className={styles.landingcontainer}>
+      <h1>Welcome to Posses and Coffees, {user ? user.name : 'friend'}</h1>
+      </div>
+      <div className={styles.landingcontainer}></div>
+      <div className={styles.landingcontainer}></div>
     </main>
   )
 }
