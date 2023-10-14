@@ -24,20 +24,27 @@ body {
 
 a,
 a:visited {
-  color: #00d8ff
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lightblue;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+
 }
 
 nav {
   position: fixed;
+  z-index: 2;
+  width: 100%;
+  background-color: darkslategray;
 }
 
 nav > ul {
   margin: 0;
   padding: 16px 32px;
-}
-
-.main-page {
-  margin-top: 70px;
 }
 
 @media (min-width: 1200px) {

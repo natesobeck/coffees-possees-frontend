@@ -9,15 +9,14 @@ const NavBar = ({ user, handleLogout }) => {
     <nav className={styles.nav}>
       {user ?
         <ul>
-          <li>Welcome, {user.name}</li>
-          <li><NavLink to="/profiles">Profiles</NavLink></li>
-          <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
-          <li><NavLink to="/auth/change-password">Change Password</NavLink></li>
+          {/* <li><NavLink to="/profiles">Profiles</NavLink></li> */}
+          {/* <li><NavLink to="/auth/change-password">Change Password</NavLink></li> */}
           <li><NavLink to="/">Home</NavLink></li>
           <li><NavLink to="">About Us</NavLink></li>
           <li><NavLink to="">Add Club</NavLink></li>
           <li><NavLink to="">All Clubs</NavLink></li>
           <li><NavLink to="">All Shops</NavLink></li>
+          <li><NavLink to="" onClick={handleLogout}>Log Out</NavLink></li>
         </ul>
       :
       <ul>
