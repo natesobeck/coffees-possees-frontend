@@ -24,7 +24,7 @@ async function create(shopFormData) {
   try {
     const res = await fetch(BASE_URL, {
       method: 'POST',
-      header: {
+      headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`,
         'Content-Type': 'application/json'
       },
@@ -52,10 +52,24 @@ async function update(shopFormData) {
   }
 }
 
+async function deleteShop(shopId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${shopId}`, {
+      method: 'DELETE',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`
+      }
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export {
   index,
   show,
   create,
-  update
+  update,
+  deleteShop,
 }
