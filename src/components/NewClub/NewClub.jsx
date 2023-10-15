@@ -24,16 +24,16 @@ const NewClub = (props) => {
     <form onSubmit={handleSubmit} className='new-club-container'>
       <div className='club-info'>
         <div className='location-info'>
-          <h3>Hello, User!</h3>
-          <h5>Let's Create your Club!</h5>
-          <p>What is your Club name ?</p>
+          <h3>Let's Create Your New Club!</h3>
+          <h5>Start by giving your club a stunning name that will grab interest!</h5>
+          <p>What will yor club be called ?</p>
           <div className='name'>
             <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' />
             {/* <button>Search</button> */}
           </div>
         </div>
         <div className='club-focus'>
-          <h6>Tell us a bit about the focus of your group... anything useful for other members to know!</h6>
+          <h6>Tell us a bit about your group... Provide to other members information about its focus, location and the like.</h6>
           <div className='category-container'>
             <label htmlFor="category">Category:</label>
             <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' />

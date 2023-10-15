@@ -26,7 +26,9 @@
   font-size: 30px;
 }
 .location-info > h5 {
+  width: 80%;
   font-size: 20px;
+  text-align: center;
 }
 .location-info > .name {
   display: flex;
@@ -129,6 +131,26 @@
   color: #505050;
   outline: none;
   margin-left: 15px;
+}
+.create-club-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 3px solid white; */
+  width: 100%;
+  padding: 25px 0 25px 0;
+  /* height: 70px; */
+  background-color: white;
+}
+.create-club-button > button {
+  width: 200px;
+  height: 45px;
+  background-color: #b90e0a;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
 }
 .shops-in-club {
   display: flex;
