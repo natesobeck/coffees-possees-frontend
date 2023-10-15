@@ -164,7 +164,7 @@
   height: 190px;
   background-color: darkslategray;
 }
-.shops-in-club > form {
+.shops-in-club > .time-slot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,16 +175,16 @@
   gap: 20px;
   padding-right: 30px;
 }
-.shops-in-club > form > label {
+.shops-in-club > .time-slot > label {
   font-size: 16px;
   color: black;
 }
-.shops-in-club > form > input {
+.shops-in-club > .time-slot > input {
   height: 35px;
   color: #505050;
   border-radius: 5px;
 }
-.shops-in-club > form > button {
+.shops-in-club > .time-slot > button {
   height: 35px;
   width: 100px;
   font-size: 18px;
