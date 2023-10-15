@@ -1,7 +1,14 @@
+import styles from './CoffeeShopDetails.css'
+
 const CoffeeShopDetails = () => {
 
   return (
-    <h1>this will show the coffeshopdetails</h1>
+    <main>
+      
+
+
+
+    </main>
 
   )
 }
