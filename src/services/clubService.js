@@ -50,10 +50,27 @@ async function deleteClub(clubId) {
   }
 }
 
+async function update(clubFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${clubFormData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(clubFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   create,
   show,
   deleteClub,
+  update
 }
 
