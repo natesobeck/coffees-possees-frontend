@@ -4,11 +4,7 @@ const BASE_URL = `${import.meta.env.VITE_BACK_END_SERVER_URL}/api/clubs`
 
 async function index() {
   try {
-    const res = await fetch(BASE_URL, {
-      headers: {
-        'Authorization': `Bearer ${tokenService.getToken()}`
-      }
-    })
+    const res = await fetch(BASE_URL)
     return res.json()
   } catch (error) {
     console.log(error)
@@ -33,7 +29,17 @@ async function create(clubFormData) {
 
 async function show(clubId) {
   try {
+    const res = await fetch(`${BASE_URL}/${clubId}`)
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+async function deleteClub(clubId) {
+  try {
     const res = await fetch(`${BASE_URL}/${clubId}`, {
+      method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${tokenService.getToken()}`
       }
@@ -47,6 +53,7 @@ async function show(clubId) {
 export {
   index,
   create,
-  show
+  show,
+  deleteClub,
 }
 
