@@ -1,0 +1,107 @@
+.new-club-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 3px solid white;
+  width: 150%;
+}
+.club-info {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+}
+.location-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+  background-color: #481f01;
+}
+.location-info > h3 {
+  font-size: 30px;
+}
+.location-info > h5 {
+  font-size: 20px;
+}
+.location-info > form {
+  display: flex;
+  border: 3px solid white;
+  padding: 20px;
+  gap: 15px;
+  background-color: darkslategray;
+  border-radius: 7px;
+}
+.location-info > form > button {
+  width: 90px;
+  background-color: brown;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: 3px solid #b0b0b0;
+  border-radius: 5px;
+}
+.location-info > form > input {
+  border: 3px solid #b0b0b0;
+  border-radius: 5px;
+  color: #505050;
+}
+.club-focus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+  color: #606060;
+}
+.club-focus > h6 {
+  font-size: 20px;
+  font-weight: 800;
+  width: 80%;
+  text-align: center;
+}
+.club-focus > .category-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
+.category-container > label {
+  font-size: 20px;
+  font-weight: bold;
+}
+.category-container > select {
+  width: 60%;
+  height: 40px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #606060;
+  color: white;
+}
+
+.club-focus > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  padding-right: 30px;
+  background-color: darkslategray;
+  border-radius: 7px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  /* margin: 0 auto; */
+}
+.club-focus > form > input {
+  height: 40px;
+  border: 3px solid #b0b0b0;
+  border-radius: 5px;
+  color: #505050;
+}
