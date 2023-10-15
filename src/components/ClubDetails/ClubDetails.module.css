@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid white;
+  height: 650px;
+  width:800px;
+  padding: 30px;
+  margin-top: 60px;
+
+  
+}
+
+.club-details-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  justify-content: left;
+  /* width: 100px; */
+  border: 3px solid white;
+  /* align-items: center; */
+  /* padding: 20px; */
+}

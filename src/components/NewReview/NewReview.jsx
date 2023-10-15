@@ -39,7 +39,6 @@ const NewReview = () => {
             <option value='choiceOne'>spacious</option>
             <option value='choiceTwo'>cozy</option>
             <option value='choiceThree'>loud</option>
-            <option value='choiceFour'>cramped</option>
             <option value='choiceFive'>relaxing</option>
             <option value='choiceSix'>quiet</option>
           </select>
