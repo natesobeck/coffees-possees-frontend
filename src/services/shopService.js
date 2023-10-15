@@ -66,10 +66,27 @@ async function deleteShop(shopId) {
   }
 }
 
+async function createReview(shopId, reviewFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${shopId}/reviews`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(reviewFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
   create,
   update,
   deleteShop,
+  createReview
 }
