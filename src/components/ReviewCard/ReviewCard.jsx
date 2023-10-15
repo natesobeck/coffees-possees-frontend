@@ -4,13 +4,14 @@ const ReviewCard = () => {
   
  
   return (
-    <Link to={}>
-      <header>
-          <span>
-            <h1>this is a review card</h1>
-          </span>
-        </header>
-   </Link>
+    <h1> this is a review card</h1>
+  //   <Link to={}>
+  //     <header>
+  //         <span>
+  //           <h1>this is a review card</h1>
+  //         </span>
+  //       </header>
+  //  </Link>
   )
 }
 
