@@ -11,6 +11,16 @@ async function index() {
   }
 }
 
+async function show(shopId) {
+  try {
+    const res = await fetch(`${BASE_URL}/${shopId}`)
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
+  show
 }
