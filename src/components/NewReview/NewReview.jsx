@@ -1,35 +1,66 @@
+import styles from './NewReview.module.css'
 
 
 const NewReview = () => {
 
   return (
     <main>
+      <h1>Leave a Review</h1>
       <form>
         <textarea
         required
         type='text'
         />
-        <select name='priceOfCoffees'>
-          <option value='price'>Price</option>
-        </select>
+        <label> 
+          Price of Coffee:
+          <select name='priceOfCoffees'>
+            <option value='one'>1</option>
+            <option value='two'>2</option>
+            <option value='three'>3</option>
+            <option value='four'>4</option>
+            <option value='five'>5</option>
+          </select>
+        </label>
 
+        <label> 
+         Rating:
+          <select name='ratingForCoffeeShop'>
+            <option value='one'>1</option>
+            <option value='two'>2</option>
+            <option value='three'>3</option>
+            <option value='four'>4</option>
+            <option value='five'>5</option>
+          </select>
+        </label>
 
+        <label> 
+         Ambience:
+          <select name='coffeeShopAmbience'>
+            <option value='choiceOne'>spacious</option>
+            <option value='choiceTwo'>cozy</option>
+            <option value='choiceThree'>loud</option>
+            <option value='choiceFour'>cramped</option>
+            <option value='choiceFive'>relaxing</option>
+            <option value='choiceSix'>quiet</option>
+          </select>
+        </label>
+
+        <label> 
+         Wifi Strength:
+          <select name='wifiStrength'>
+            <option value='one'>1</option>
+            <option value='two'>2</option>
+            <option value='three'>3</option>
+            <option value='four'>4</option>
+            <option value='five'>5</option>
+          </select>
+        </label>
+        <button type="submit">Add Review</button>
      
-      <button type="submit"><Icon category="Create" /></button>
     </form>
   </main>
   )
 }
-
-// const review = {
-//   _id: 3,
-//   text: 'superrrrr',
-//   price: 1000000,
-//   rating: 5,
-//   coffeeShopAmbience: 'spacious',
-//   wifiStrength: 4,
-//   addedBy: 'Nate'
-// }
 
 
 export default NewReview
