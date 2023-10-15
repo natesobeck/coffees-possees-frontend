@@ -28,7 +28,7 @@
 .location-info > h5 {
   font-size: 20px;
 }
-.location-info > form {
+.location-info > .name {
   display: flex;
   border: 3px solid white;
   padding: 20px;
@@ -36,7 +36,8 @@
   background-color: darkslategray;
   border-radius: 7px;
 }
-.location-info > form > button {
+
+/* .location-info > .name > button {
   width: 90px;
   background-color: brown;
   border: none;
@@ -45,11 +46,15 @@
   font-weight: bold;
   border: 3px solid #b0b0b0;
   border-radius: 5px;
-}
-.location-info > form > input {
+} */
+.location-info > .name > input {
   border: 3px solid #b0b0b0;
   border-radius: 5px;
   color: #505050;
+  outline: none;
+}
+.location-info > .name > input:focus {
+  border: 4px solid #0492c2;
 }
 .club-focus {
   display: flex;
@@ -73,25 +78,30 @@
   gap: 20px;
   width: 50%;
 }
+.category-container {
+
+}
 .category-container > label {
   font-size: 20px;
   font-weight: bold;
   color: black;
 }
-.category-container > select {
+.category-container > input {
   width: 60%;
   height: 40px;
   text-align: center;
   border: none;
+  border: 2px solid #606060;
   border-radius: 5px;
   font-size: 20px;
-  background-color: #606060;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
-.club-focus > form {
+.club-focus > .location-time {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 20px;
   padding: 20px;
   padding-right: 30px;
@@ -101,13 +111,25 @@
   margin-bottom: 20px;
   /* margin: 0 auto; */
 }
-.club-focus > form > input {
+.club-focus > .location-time > input {
   height: 40px;
   border: 3px solid #b0b0b0;
   border-radius: 5px;
   color: #505050;
+  outline: none;
 }
-
+.club-focus > div > input:focus {
+  border: 4px solid #0492c2;
+}
+.club-focus > .location-time > select {
+  width: 95%;
+  height: 40px;
+  border: 3px solid #b0b0b0;
+  border-radius: 5px;
+  color: #505050;
+  outline: none;
+  margin-left: 15px;
+}
 .shops-in-club {
   display: flex;
   flex-direction: column;
