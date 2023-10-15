@@ -1,0 +1,173 @@
+.new-club-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 3px solid white;
+  width: 150%;
+  margin: 100px 0 30px 0;
+}
+.club-info {
+  border: 2px solid white;
+  display: flex;
+  flex-direction: row;
+}
+.location-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 20px;
+  width: 50%;
+  background-color: #481f01;
+}
+.location-info > h3 {
+  font-size: 30px;
+}
+.location-info > h5 {
+  font-size: 20px;
+}
+.location-info > form {
+  display: flex;
+  border: 3px solid white;
+  padding: 20px;
+  gap: 15px;
+  background-color: darkslategray;
+  border-radius: 7px;
+}
+.location-info > form > button {
+  width: 90px;
+  background-color: brown;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  border: 3px solid #b0b0b0;
+  border-radius: 5px;
+}
+.location-info > form > input {
+  border: 3px solid #b0b0b0;
+  border-radius: 5px;
+  color: #505050;
+}
+.club-focus {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+  color: #606060;
+}
+.club-focus > h6 {
+  font-size: 20px;
+  font-weight: 800;
+  width: 80%;
+  text-align: center;
+}
+.club-focus > .category-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  width: 50%;
+}
+.category-container > label {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+.category-container > select {
+  width: 60%;
+  height: 40px;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #606060;
+  color: white;
+}
+
+.club-focus > form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  padding-right: 30px;
+  background-color: darkslategray;
+  border-radius: 7px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  /* margin: 0 auto; */
+}
+.club-focus > form > input {
+  height: 40px;
+  border: 3px solid #b0b0b0;
+  border-radius: 5px;
+  color: #505050;
+}
+
+.shops-in-club {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #d0d0d0;
+  color: black;
+  border-top: 3px solid black;
+  width: 100%;
+  color: #606060;
+  gap: 40px;
+  padding: 20px;
+}
+.shops-in-club > p {
+  font-size: 20px;
+  width: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+.shops-in-club > .shop-cards {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.shop-cards > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  color: #c8c8c8;
+  width: 250px;
+  height: 190px;
+  background-color: darkslategray;
+}
+.shops-in-club > form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  width: 600px;
+  border: 2px solid black;
+  border-radius: 5px;
+  gap: 20px;
+  padding-right: 30px;
+}
+.shops-in-club > form > label {
+  font-size: 16px;
+  color: black;
+}
+.shops-in-club > form > input {
+  height: 35px;
+  color: #505050;
+  border-radius: 5px;
+}
+.shops-in-club > form > button {
+  height: 35px;
+  width: 100px;
+  font-size: 18px;
+  background-color: #505050;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
