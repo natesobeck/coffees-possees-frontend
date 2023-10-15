@@ -52,19 +52,11 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={
-            <ProtectedRoute user={user}>
-              <AllClubs />
-            </ProtectedRoute>
-          }
+          element={ <AllClubs /> }
         />
         <Route
           path="/shops"
-          element={
-            <ProtectedRoute user={user}>
-              <AllCoffeeShops />
-            </ProtectedRoute>
-          }
+          element={ <AllCoffeeShops /> }
         />
         <Route
           path="/new"
@@ -76,11 +68,7 @@ function App() {
         />
         <Route
           path="/details"
-          element={
-            <ProtectedRoute user={user}>
-              <ClubDetails />
-            </ProtectedRoute>
-          }
+          element={ <ClubDetails /> }
         />
         <Route
           path="/auth/signup"
