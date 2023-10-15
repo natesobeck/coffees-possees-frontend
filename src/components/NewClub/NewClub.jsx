@@ -1,4 +1,5 @@
 import * as data from '../../../public/assets/data.js'
+import './NewClub.css'
 
 const NewClub = () => {
   return ( 
