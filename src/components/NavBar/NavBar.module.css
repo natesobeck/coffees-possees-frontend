@@ -1,5 +1,6 @@
 .nav {
-  background-color: #3A2613;
+  background-color: #3e2814;
+  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
   border-bottom: 5px solid #CEE6F3;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -14,5 +15,15 @@
 }
 
 .nav ul li a {
-  margin: 10px;
+  margin: 1vw;
+}
+
+nav a {
+  font-family: 'coffee';
+  font-size: 25px;
+}
+
+nav > ul {
+  margin: 0;
+  padding: 16px 32px;
 }

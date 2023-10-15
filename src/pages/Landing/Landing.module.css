@@ -43,6 +43,18 @@
   justify-content: center;
 }
 
-main {
-  width: 100%;
+.wooden-board {
+  height: 120px;
+  width: 40%;
+  background-color: #563232;
+  border: 5px solid #CEE6F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  border-radius: 20px;
+}
+
+section {
+  margin-top: -100px;
 }
