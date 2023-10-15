@@ -20,7 +20,24 @@ async function show(shopId) {
   }
 }
 
+async function create(shopFormData) {
+  try {
+    const res = await fetch(BASE_URL, {
+      method: 'POST',
+      header: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(shopFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
-  show
+  show,
+  create
 }
