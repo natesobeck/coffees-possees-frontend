@@ -36,8 +36,26 @@ async function create(shopFormData) {
   }
 }
 
+async function update(shopFormData) {
+  try {
+    const res = await fetch(`${BASE_URL}/${shopFormData._id}`, {
+      method: 'PUT',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(shopFormData)
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+
 export {
   index,
   show,
-  create
+  create,
+  update
 }
