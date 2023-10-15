@@ -1,37 +1,57 @@
 import * as data from '../../../public/assets/data.js'
+import { useState } from 'react'
 import './NewClub.css'
 
-const NewClub = () => {
+const NewClub = (props) => {
+
+  const [clubFormData, setClubFormData] = useState({
+    name: '',
+    category: '',
+    timeOfDay: 'Morning',
+    location: '',
+  })
+
+  const handleChange = evt => {
+    setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
+  }
+
+  const handleSubmit = evt => {
+    evt.preventDefault()
+    props.handleAddClub(clubFormData)
+  }
+
   return (
-    <main className='new-club-container'>
+    <form onSubmit={handleSubmit} className='new-club-container'>
       <div className='club-info'>
         <div className='location-info'>
-          <h3>Hello, User!</h3>
-          <h5>Where do you want to start your club?</h5>
-          <p>Enter a Zip code or City:</p>
-          <form>
-            <input type="text" placeholder='zipcode or city' />
-            <button>Search</button>
-          </form>
+          <h3>Let's Create Your New Club!</h3>
+          <h5>Start by giving your club a stunning name that will grab interest!</h5>
+          <p>What will yor club be called ?</p>
+          <div className='name'>
+            <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' />
+            {/* <button>Search</button> */}
+          </div>
         </div>
         <div className='club-focus'>
-          <h6>Tell us a bit about the focus of your group... anything useful for other members to know!</h6>
+          <h6>Tell us a bit about your group... Provide to other members information about its focus, location and the like.</h6>
           <div className='category-container'>
             <label htmlFor="category">Category:</label>
-            <select value="category" id='category'>
-              <option name="category" id="category-option">Option1</option>
-              <option name="category" id="category-option">Option2</option>
-              <option name="category" id="category-option">Option3</option>
-              <option name="category" id="category-option">Option4</option>
+            <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' />
+          </div>
+          <div className='location-time'>
+            <input name="location" type="text" value={clubFormData.location} placeholder='Enter your city here' />
+            <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay">
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="Evening">Evening</option>
             </select>
           </div>
-          <form>
-            <input type="text" placeholder='Specific focus' />
-            <input type="number" placeholder='Age Group' />
-          </form>
         </div>
-        <div></div>
       </div>
+      <div className='create-club-button'>
+        <button type='submit'>Create Club</button>
+      </div>
+      
       <div className='shops-in-club'>
         <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
         <div className='shop-cards'>
@@ -39,13 +59,13 @@ const NewClub = () => {
           <div>Shop Card 2</div>
           <div>Shop Card 3</div>
         </div>
-        <form className='time-slot'>
+        <div className='time-slot'>
           <label>Pick a time:</label>
           <input type="time" placeholder="Pick a time slot" />
           <button>Pick Time</button>
-        </form>
+        </div>
       </div>
-    </main>
+    </form>
   )
 }
 
