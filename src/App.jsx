@@ -54,6 +54,12 @@ function App() {
     navigate('/new')
   }
 
+  const handleDeleteClub = async (clubId) => {
+    const deletedClub = await clubService.deleteClub(clubId)
+    setClubs(clubs.filter(club => club._id !== deletedClub._id))
+    navigate('/clubs')
+  }
+
   useEffect(() => {
     const fetchAllClubs = async () => {
       const data = await clubService.index()
@@ -85,7 +91,7 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={ <AllClubs clubs={clubs} /> }
+          element={ <AllClubs clubs={clubs} handleDeleteClub={handleDeleteClub}/> }
         />
         <Route
           path="/shops"

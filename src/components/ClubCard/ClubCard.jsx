@@ -11,6 +11,9 @@ const ClubCard = ({ club }) => {
         <div>{club.name}</div>
         <div>{club.category}</div>
         <div>{club.timeOfDay}</div>
+        <div>
+          <button type='submit'>DELETE</button>
+        </div>
       </div>
     </Link>
   )
