@@ -88,6 +88,10 @@ function App() {
           element={ <ClubDetails /> }
         />
         <Route
+          path="/clubs/:clubId"
+          element={ <ClubDetails user={user}/> }
+        />
+        <Route
           path="/auth/signup"
           element={<Signup handleAuthEvt={handleAuthEvt} />}
         />

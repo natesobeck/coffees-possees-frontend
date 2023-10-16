@@ -1,3 +1,4 @@
+
 // components
 import ClubCard from '../ClubCard/ClubCard'
 
@@ -10,7 +11,7 @@ const FindClubResults = ({ clubs }) => {
 
   return ( 
     <div className="search-results">
-      <div>
+      <div className="headers">
         <div>Club Name:</div>
         <div>Category:</div>
         <div>Time of Day:</div>
