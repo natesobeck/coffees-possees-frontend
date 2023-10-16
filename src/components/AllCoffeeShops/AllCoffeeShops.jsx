@@ -1,12 +1,8 @@
-import './AllCoffeeShops.css'
+import styles from "./AllCoffeeShops.module.css"
 
 const AllCoffeeShops = () => {
   return ( 
-    <div className="shops-container">
-      <div className="shop">
-        <h1>ALL SHOPS</h1>
-      </div>
-    </div>
+    <div className={styles["shops-container"]}>Hello</div>
   )
 }
 
