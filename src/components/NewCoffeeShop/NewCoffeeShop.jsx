@@ -1,3 +1,5 @@
+import './NewCofeeShop.css'
+
 const NewCoffeeShop = () => {
   return ( 
     <div className="new-shop-form-container">
