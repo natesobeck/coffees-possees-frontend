@@ -37,10 +37,22 @@ const CoffeeShopDetails = () => {
         <h1>CoffeeShop Name Here</h1>
         <h3>Name:{coffeeShop.name}</h3>
         <h3>Ambience:{coffeeShop.coffeeShopAmbience}</h3>
-        
-
-
+        <h3>CoffeShop Description: ...</h3>
       </div>
+      <div className={styles['show-all-clubs-container']}>
+        <h3>All Clubs</h3>
+        <ul>
+          <li>{club.name}</li>
+          <li>{club.name}</li>
+          <li>{club.name}</li>
+        </ul>
+      </div>
+           {/* <button> edit</button> */}
+         {/* edit button will be changed to a link to be sent to the edit form for user to be able to edit their coffesshop^ */}
+      {/* <button> delete</button> */}
+      {/* delete button needs an onclick with a handleDeleteCoffeeShop function that will be held in app.jsx and will be deleted by using the coffeeshopId */}
+
+
       
 
 
