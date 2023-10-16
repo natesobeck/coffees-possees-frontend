@@ -67,6 +67,7 @@
   background-color: white;
   color: #606060;
 }
+
 .club-focus > h6 {
   font-size: 20px;
   font-weight: 800;
@@ -80,24 +81,25 @@
   gap: 20px;
   width: 50%;
 }
-.category-container {
+/* .category-container {
 
-}
+} */
 .category-container > label {
   font-size: 20px;
   font-weight: bold;
   color: black;
 }
+
 .category-container > input {
-  width: 60%;
+  width: 170px;
   height: 40px;
   text-align: center;
   border: none;
-  border: 2px solid #606060;
+  border: 2px solid #0492c2;
   border-radius: 5px;
   font-size: 20px;
   background-color: white;
-  color: black;
+  color: #505050;
 }
 
 .club-focus > .location-time {
