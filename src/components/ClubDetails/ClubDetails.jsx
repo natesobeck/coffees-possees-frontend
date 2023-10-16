@@ -1,6 +1,6 @@
 //npm modeules
 import { useState, useEffect } from 'react'
-import { useParams, Link } from 'react-router-dom'
+import { useParams, Link, useLocation } from 'react-router-dom'
 
 //css
 import styles from './ClubDetails.module.css'
@@ -14,7 +14,7 @@ import styles from './ClubDetails.module.css'
 import * as clubService from '../../services/clubService'
 
 
-const ClubDetails = (clubs) => {
+const ClubDetails = () => {
   const [club, setClub] = useState({})
   const { clubId } = useParams()
 
@@ -25,6 +25,8 @@ useEffect(() => {
   }
   fetchClub()
 },[clubId])
+
+// useEffect is the function that makes the api call
 
 
   return (

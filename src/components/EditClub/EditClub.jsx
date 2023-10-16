@@ -1,16 +1,13 @@
-//
-import * as data from '../../../public/assets/data.js'
-
 //npm modules
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 
 //css
 import './EditClub.css'
 
 
 const EditClub = (props) => {
-  const { state } = useParams()
+  const { state } = useLocation()
   const [clubFormData, setClubFormData] = useState(state)
 
 
