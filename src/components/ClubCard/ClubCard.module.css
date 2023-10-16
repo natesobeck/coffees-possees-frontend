@@ -1,12 +1,11 @@
 .club-card {
   border: 1px solid rgb(211, 179, 179);
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
 }
 
 .club-card div {
   padding: 10px;
-  border: 1px solid white;
   height: 100%;
-  width: 25%;
   text-align: center;
 }
