@@ -9,7 +9,7 @@ const NewReview = () => {
   const [reviewFormData, setReviewFormData] = useState({})
 
   const handleChange = (evt) => {
-    setReviewFormData({...reviewFormData, [evt.target.text: evt.target.value]})
+    setReviewFormData({...reviewFormData, [evt.target.name]: evt.target.value})
   }
 
   const handleSubmitReview = (evt) => {
@@ -22,20 +22,17 @@ const NewReview = () => {
 
   return (
     <form className={styles.container}>
-      // <h1>Leave a Review</h1>
+      <h1>Leave a Review</h1>
     
       
-      <textarea
-      required
-      type='text'
-      />
+    
       
 
       
         
-          <select name='priceOfCoffee'>
-            <option value='one'>1</option>
-            <option value='two'>2</option>
+          <select name='price'>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
             <option value='three'>3</option>
             <option value='four'>4</option>
             <option value='five'>5</option>
@@ -44,7 +41,7 @@ const NewReview = () => {
 
         <label> 
         Rating:
-          <select name='ratingForCoffeeShop'>
+          <select name='rating'>
             <option value='one'>1</option>
             <option value='two'>2</option>
             <option value='three'>3</option>
@@ -65,7 +62,7 @@ const NewReview = () => {
         </label>
 
         <label> 
-        Wifi Strength:
+        Wifi Strength:</label>
           <select name='wifiStrength'>
             <option value='one'>1</option>
             <option value='two'>2</option>
@@ -73,9 +70,7 @@ const NewReview = () => {
             <option value='four'>4</option>
             <option value='five'>5</option>
           </select>
-        </label>
         <button type="submit">Add Review</button>
-  
     </form>
 
   )
