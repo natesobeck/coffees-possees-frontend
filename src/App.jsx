@@ -20,6 +20,7 @@ import ClubDetails from './components/ClubDetails/ClubDetails'
 // services
 import * as authService from './services/authService'
 import * as clubService from './services/clubService'
+import * as shopService from './services/shopService'
 
 // styles
 import './App.css'
@@ -43,7 +44,13 @@ function App() {
   const handleAddClub = async clubFormData => {
     const newClub = await clubService.create(clubFormData)
     setClubs([newClub, ...clubs])
-    navigate('/clubs')
+    navigate('/new')
+  }
+
+  const handleAddShop = async shopFormData => {
+    const newShop = await shopService.create(shopFormData)
+    setShops([newShop, ...shops])
+    navigate('/new')
   }
 
   useEffect(() => {
@@ -52,6 +59,14 @@ function App() {
       setClubs(data)
     }
     fetchAllClubs()
+  }, [])
+
+  useEffect(() => {
+    const fetchAllShops = async () => {
+      const data = await shopService.index()
+      setShops(data)
+    }
+    fetchAllShops()
   }, [])
 
   return (
@@ -73,19 +88,15 @@ function App() {
         />
         <Route
           path="/shops"
-          element={ <AllCoffeeShops /> }
+          element={ <AllCoffeeShops shops={shops}/> }
         />
         <Route
           path="/new"
           element={
             <ProtectedRoute user={user}>
-              <NewClub handleAddClub={handleAddClub} />
+              <NewClub handleAddClub={handleAddClub} handleAddShop={handleAddShop}/>
             </ProtectedRoute>
           }
-        />
-        <Route
-          path="/details"
-          element={ <ClubDetails /> }
         />
         <Route
           path="/clubs/:clubId"
