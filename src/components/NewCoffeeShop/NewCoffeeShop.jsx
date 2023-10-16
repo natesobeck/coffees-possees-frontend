@@ -5,12 +5,11 @@ const NewCoffeeShop = (props) => {
 
   const [coffeeShop, setCoffeeShop] = useState({
     name: '',
-    address: {
-       street: '',
-       city: '',
-       state: '',
-       zipcode: ''
-    }
+    street: '',
+    city: '',
+    state: '',
+    zipCode: '',
+    location: ''
   })
 
   const handleChange = evt => {
@@ -18,10 +17,24 @@ const NewCoffeeShop = (props) => {
   }
 
   const handleSubmit = evt => {
+    const adjustedFormData = {}
+    adjustedFormData.name = coffeeShop.name
+    adjustedFormData.location = coffeeShop.location
+    adjustedFormData.address = {
+      street: coffeeShop.street,
+      city: coffeeShop.city,
+      state: coffeeShop.state,
+      zipCode: coffeeShop.zipCode
+    }
     evt.preventDefault()
-    props.handleAddShop(coffeeShop)
+    props.handleAddShop(adjustedFormData)
   }
-  
+
+  // const handleChangeAddress = evt => {
+  //   setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
+  // }
+  // Build a new Object?
+  // Store the address
 
   return ( 
     <form className="new-shop-form-container" onSubmit={handleSubmit}>
@@ -39,10 +52,6 @@ const NewCoffeeShop = (props) => {
             <input type="text" name="street" id="shop-street" value={coffeeShop.street} onChange={handleChange} />
           </div>
           <div>
-            <label htmlFor="shop-street">Street:</label>
-            <input type="text" name="street" id="shop-street" value={coffeeShop.street} onChange={handleChange} />
-          </div>
-          <div>
             <label htmlFor="shop-city">City:</label>
             <input type="text" name="city" id="shop-city" value={coffeeShop.city} onChange={handleChange} />
           </div>
@@ -55,7 +64,7 @@ const NewCoffeeShop = (props) => {
             <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode} onChange={handleChange}/>
           </div>
         </div>
-        <button type='submit'>Add Shop</button>
+        <button type='submit'>Add Coffee Shop</button>
       </div>
     </form>
   )
