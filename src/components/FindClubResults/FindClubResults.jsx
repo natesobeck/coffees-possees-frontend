@@ -3,15 +3,15 @@
 import ClubCard from '../ClubCard/ClubCard'
 
 // css
-import './FindClubResults.css'
+import styles from './FindClubResults.module.css'
 
 const FindClubResults = ({ clubs }) => {
 
   if (!clubs.length) return <h2>Loading clubs...</h2>
 
   return ( 
-    <div className="search-results">
-      <div className="headers">
+    <div className={styles["search-results"]}>
+      <div className={styles["headers"]}>
         <div>Club Name:</div>
         <div>Category:</div>
         <div>Time of Day:</div>

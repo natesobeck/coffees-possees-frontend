@@ -1,6 +1,7 @@
 import FindClubForm from '../FindClubForm/FindClubForm'
 import FindClubResults from '../FindClubResults/FindClubResults'
 import styles from './AllClubs.module.css'
+
 const AllClubs = (props) => {
   return ( 
     <main>
