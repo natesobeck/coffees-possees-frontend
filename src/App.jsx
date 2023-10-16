@@ -19,12 +19,14 @@ import ClubDetails from './components/ClubDetails/ClubDetails'
 
 // services
 import * as authService from './services/authService'
+import * as clubService from './services/clubService'
 
 // styles
 import './App.css'
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
+  const [clubs, setClubs] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -35,6 +37,12 @@ function App() {
 
   const handleAuthEvt = () => {
     setUser(authService.getUser())
+  }
+
+  const handleAddClub = async clubFormData => {
+    const newClub = await clubService.create(clubFormData)
+    setClubs([newClub, ...clubs])
+    navigate('/clubs')
   }
 
   return (
