@@ -7,7 +7,7 @@ const AllClubs = (props) => {
     <main>
       <div className={styles["clubs-container"]}>
         <FindClubForm />
-        <FindClubResults clubs={props.clubs}/>
+        <FindClubResults clubs={props.clubs} handleDeleteClub={props.handleDeleteClub}/>
       </div>
     </main>
   )

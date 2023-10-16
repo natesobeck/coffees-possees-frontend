@@ -4,14 +4,17 @@ import { Link } from 'react-router-dom'
 // css
 import styles from './ShopCard.module.css'
 
-const ShopCard = ({ shop }) => {
+const ShopCard = ({ shop, handleDeleteShop }) => {
   return (
-    <Link to={`/coffeeshops/${shop._id}`}>
-      <div className={styles["shop-card-container"]}>
+    <div className={styles["shop-card-container"]}>
+      <Link to={`/coffeeshops/${shop._id}`}>
         <h3>{shop.name}</h3>
-        <div>{shop.location}, {shop.address.state}</div>
+      </Link>
+      <div>{shop.location}, {shop.address.state}</div>
+      <div>
+        <button type='submit' onClick={() => handleDeleteShop(shop._id)}>Delete</button>
       </div>
-    </Link>
+    </div>
   )
 }
 
