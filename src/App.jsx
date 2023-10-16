@@ -70,7 +70,7 @@ function App() {
           path="/new"
           element={
             <ProtectedRoute user={user}>
-              <NewClub />
+              <NewClub handleAddClub={handleAddClub} />
             </ProtectedRoute>
           }
         />
