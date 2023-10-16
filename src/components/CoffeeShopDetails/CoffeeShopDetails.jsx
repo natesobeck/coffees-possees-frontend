@@ -34,6 +34,11 @@ const CoffeeShopDetails = () => {
   return (
     <main className={styles.container}>
       <div className={styles['coffeeShop-details-container']}>
+        <h1>CoffeeShop Name Here</h1>
+        <h3>Name:{coffeeShop.name}</h3>
+        <h3>Ambience:{coffeeShop.coffeeShopAmbience}</h3>
+        
+
 
       </div>
       
