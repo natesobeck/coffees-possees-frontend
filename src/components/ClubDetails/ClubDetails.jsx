@@ -14,7 +14,7 @@ import styles from './ClubDetails.module.css'
 import * as clubService from '../../services/clubService'
 
 
-const ClubDetails = (clubs) => {
+const ClubDetails = () => {
   const [club, setClub] = useState({})
   const { clubId } = useParams()
 
