@@ -16,7 +16,7 @@ import * as clubService from '../../services/clubService'
 
 const ClubDetails = (clubs) => {
   const [club, setClub] = useState({})
-  const { clubId } =useParams
+  const { clubId } = useParams()
 
 useEffect(() => {
   const fetchClub = async () => {
@@ -44,6 +44,8 @@ useEffect(() => {
         </ul>
  {/* for the list of the coffeshop names once this is done they will be written in a component tag above */}
       </div>
+      {/* <button> edit</button> */}
+      {/* <button> delete</button> */}
     </main>
   )
 }
