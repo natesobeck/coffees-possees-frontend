@@ -25,23 +25,6 @@ const Landing = ({ user }) => {
       </section>
       <section className={styles['section-container']}>
         <h1>This is where the club reccomendations go.</h1>
-        <div className={styles['club-card-container']}>
-          <Link to='/details'>
-            <ClubCard />
-          </Link>
-          <Link to='/details'>
-            <ClubCard />
-          </Link>
-          <Link to='/details'>
-            <ClubCard />
-          </Link>
-          <Link to='/details'>
-            <ClubCard />
-          </Link>
-          <Link to='/details'>
-            <ClubCard />
-          </Link>     
-        </div>
       </section>
       <section className={styles['section-container']} id={styles['about-us']}>
         <h1>This is out About Us section.</h1>

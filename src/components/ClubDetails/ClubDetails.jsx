@@ -39,12 +39,13 @@ useEffect(() => {
       </div>
       <div className={styles['show-previous-container']} >
         <h3> Previous Club Locations:</h3>
+        {/* <ul className={styles['coffeeshop-list']}> */}
         <ul>
           <li>CoffeeShop Name</li>
           <li>CoffeShop Name</li>
           <li>CoffeeShop Name</li>
         </ul>
- {/* for the list of the coffeshop names once this is done they will be written in a component tag above */}
+ {/* for the list of the coffeshop names once this is done they will be written in a component tags above */}
       </div>
       {/* <button> edit</button> */}
       {/* <button> delete</button> */}

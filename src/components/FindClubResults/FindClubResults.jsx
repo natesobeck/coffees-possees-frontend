@@ -1,3 +1,4 @@
+
 // components
 import ClubCard from '../ClubCard/ClubCard'
 
@@ -10,7 +11,11 @@ const FindClubResults = ({ clubs }) => {
 
   return ( 
     <div className="search-results">
-      <h1>Results found</h1>
+      <div className="headers">
+        <div>Club Name:</div>
+        <div>Category:</div>
+        <div>Time of Day:</div>
+      </div>
       {clubs.map(club => (
         <ClubCard key={club._id} club={club}/>
       ))}

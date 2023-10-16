@@ -1,0 +1,12 @@
+.club-card {
+  border: 1px solid rgb(211, 179, 179);
+  display: flex;
+}
+
+.club-card div {
+  padding: 10px;
+  border: 1px solid white;
+  height: 100%;
+  width: 33.333333333%;
+  text-align: center;
+}
