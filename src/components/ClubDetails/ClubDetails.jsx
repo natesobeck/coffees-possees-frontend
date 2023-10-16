@@ -1,6 +1,6 @@
 //npm modeules
 import { useState, useEffect } from 'react'
-
+import { useParams, Link } from 'react-router-dom'
 
 //css
 import styles from './ClubDetails.module.css'
@@ -14,8 +14,19 @@ import styles from './ClubDetails.module.css'
 import * as clubService from '../../services/clubService'
 
 
-const ClubDetails = (club) => {
-//  const 
+const ClubDetails = (clubs) => {
+  const [club, setClub] = useState({})
+  const { clubId } =useParams
+
+useEffect(() => {
+  const fetchClub = async () => {
+    const data = await clubService.show(clubId)
+    setClub(data)
+  }
+  fetchClub()
+},[clubId])
+
+
 
 
   return (
@@ -27,6 +38,14 @@ const ClubDetails = (club) => {
         <h3>Club Description: ....  </h3>
       </div>
       <div className={styles['show-previous-container']} >
+        <h3> Previous Club Locations:</h3>
+        <ul>
+          <li>CoffeeShop Name</li>
+          <li>CoffeShop Name</li>
+          <li>CoffeeShop Name</li>
+        </ul>
+
+
 
       </div>
     </main>
