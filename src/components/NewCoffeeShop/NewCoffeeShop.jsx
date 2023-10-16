@@ -1,9 +1,9 @@
-import './NewCofeeShop.css'
+import './NewCoffeeShop.css'
 
 const NewCoffeeShop = () => {
   return ( 
     <div className="new-shop-form-container">
-      <h1>Add A Coffee Shop Here</h1>
+      {/* <h1>Add A Coffee Shop Here</h1> */}
       <div className="new-shop-image-holder"></div>
       <div className="shop-form">
         <label htmlFor="shop-name">Name:</label>
@@ -16,9 +16,10 @@ const NewCoffeeShop = () => {
           <input type="text" name="city" id="shop-city" />
           <label htmlFor="shop-state">State:</label>
           <input type="text" name="state" id="shop-state" />
-          <label htmlFor="shop-zipCode"></label>
+          <label htmlFor="shop-zipCode">Zip-code</label>
           <input type="text" name="state" id="shop-zipCode" />
         </div>
+        <button type='submit'>Add Shop</button>
       </div>
     </div>
   )
