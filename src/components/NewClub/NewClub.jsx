@@ -38,7 +38,7 @@ const NewClub = (props) => {
             <h6>Tell us a bit about your group... Provide to other members information about its focus, location and the like.</h6>
             <div className='category-container'>
               <label htmlFor="category">Category:</label>
-              <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' />
+              <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' id='category' />
             </div>
             <div className='location-time'>
               <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' />
