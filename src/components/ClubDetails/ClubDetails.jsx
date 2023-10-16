@@ -21,15 +21,20 @@ const ClubDetails = (club) => {
   return (
     <main className={styles.container}>
       <div className={styles['club-details-container']}>
+        <h1>Club Name Here</h1>
+        <h3>Name:{club.name} </h3>
+        <h3>Category:{club.category} </h3>
+        <h3>Club Description: ....  </h3>
+      </div>
+      <div className={styles['show-previous-container']} >
 
-      <h3>Name:{club.name} </h3>
       </div>
     </main>
-
-
-      
-
   )
 }
 
 export default ClubDetails
+
+
+
+{/* <h1 className={styles['title-club-details']}>Club Name Here</h1> */}

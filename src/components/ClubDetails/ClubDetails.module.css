@@ -3,19 +3,34 @@
   flex-direction: column;
   border: 3px solid white;
   height: 650px;
-  width:800px;
+  width:900px;
   padding: 30px;
   margin-top: 60px;
 
-  
 }
 
+
+.title-club-details {
+
+  /* align-items: center; */
+}
+
+
 .club-details-container {
+  position: absolute; top: 150px; 
   /* display: flex; */
   /* flex-direction: column; */
-  justify-content: left;
-  /* width: 100px; */
+  width: 700px; 
   border: 3px solid white;
   /* align-items: center; */
-  /* padding: 20px; */
+  padding:20px; 
+}
+
+.show-previous-container {
+  position: relative; top: 100px;
+  border: 3px solid white;
+  padding: 50px;
+
+
+
 }
