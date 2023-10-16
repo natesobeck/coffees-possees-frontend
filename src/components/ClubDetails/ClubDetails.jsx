@@ -7,7 +7,7 @@ import styles from './ClubDetails.module.css'
 
 
 //components
-
+// import loading
 
 
 //services
@@ -27,8 +27,6 @@ useEffect(() => {
 },[clubId])
 
 
-
-
   return (
     <main className={styles.container}>
       <div className={styles['club-details-container']}>
@@ -44,9 +42,7 @@ useEffect(() => {
           <li>CoffeShop Name</li>
           <li>CoffeeShop Name</li>
         </ul>
-
-
-
+ {/* for the list of the coffeshop names once this is done they will be written in a component tag above */}
       </div>
     </main>
   )
