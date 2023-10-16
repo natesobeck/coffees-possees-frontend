@@ -43,6 +43,7 @@ const NewClub = (props) => {
             <div className='location-time'>
               <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' />
               <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay">
+                <option value="" disabled selected>Choose Time of Day</option>
                 <option value="Morning">Morning</option>
                 <option value="AfterNoon">Afternoon</option>
                 <option value="Evening">Evening</option>
