@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './NewCoffeeShop.css'
+import styles from './NewCoffeeShop.module.css'
 
 const NewCoffeeShop = (props) => {
 
@@ -37,15 +37,15 @@ const NewCoffeeShop = (props) => {
   // Store the address
 
   return ( 
-    <form className="new-shop-form-container" onSubmit={handleSubmit}>
+    <form className={styles["new-shop-form-container"]} onSubmit={handleSubmit}>
       {/* <h1>Add A Coffee Shop Here</h1> */}
-      <div className="new-shop-image-holder"></div>
-      <div className="shop-form">
+      <div className={styles["new-shop-image-holder"]}></div>
+      <div className={styles["shop-form"]}>
         <div>
           <label htmlFor="shop-name">Name:</label>
           <input type="text" name="name" id="shop-name" value={coffeeShop.name} onChange={handleChange} />
         </div>
-        <div className="shop-address">
+        <div className={styles["shop-address"]}>
           <h4>Address</h4>
           <div>
             <label htmlFor="shop-street">Street:</label>
