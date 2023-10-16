@@ -1,4 +1,4 @@
-import * as data from '../../../public/assets/data.js'
+
 import { useState } from 'react'
 import './NewClub.css'
 

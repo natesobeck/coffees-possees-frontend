@@ -1,6 +1,3 @@
-//
-import * as data from '../../../public/assets/data.js'
-
 //npm modules
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
