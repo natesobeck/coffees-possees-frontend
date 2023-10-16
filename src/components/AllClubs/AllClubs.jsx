@@ -2,13 +2,15 @@ import FindClubForm from '../FindClubForm/FindClubForm'
 import FindClubResults from '../FindClubResults/FindClubResults'
 import './AllClubs.css'
 
-const AllClubs = () => {
+const AllClubs = (props) => {
   return ( 
-    <div className="clubs-container">
+    <main>
+      <div className="clubs-container">
         <FindClubForm />
-        <FindClubResults />
-    </div>
+        <FindClubResults clubs={props.clubs}/>
+      </div>
+    </main>
   )
 }
- 
+
 export default AllClubs

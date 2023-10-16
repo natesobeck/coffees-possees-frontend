@@ -43,7 +43,7 @@ const Landing = ({ user }) => {
           </Link>     
         </div>
       </section>
-      <section className={styles['section-container']}>
+      <section className={styles['section-container']} id={styles['about-us']}>
         <h1>This is out About Us section.</h1>
         <div className={styles['about-us-container']}>
           <div className={styles['about-us-subcontainer']}>About us container</div>

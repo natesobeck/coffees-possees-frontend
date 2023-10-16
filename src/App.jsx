@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Routes, Route, useNavigate } from 'react-router-dom'
 
 // pages
@@ -27,6 +27,7 @@ import './App.css'
 function App() {
   const [user, setUser] = useState(authService.getUser())
   const [clubs, setClubs] = useState([])
+  const [shops, setShops] = useState([])
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -45,6 +46,14 @@ function App() {
     navigate('/clubs')
   }
 
+  useEffect(() => {
+    const fetchAllClubs = async () => {
+      const data = await clubService.index()
+      setClubs(data)
+    }
+    fetchAllClubs()
+  }, [])
+
   return (
     <main>
       <NavBar user={user} handleLogout={handleLogout} />
@@ -60,7 +69,7 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={ <AllClubs /> }
+          element={ <AllClubs clubs={clubs} /> }
         />
         <Route
           path="/shops"
