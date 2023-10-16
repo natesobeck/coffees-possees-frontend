@@ -1,8 +1,3 @@
-// npm modules
-import { Link } from 'react-router-dom'
-
-// components
-import ClubCard from '../../components/ClubCard/ClubCard'
 
 // css
 import styles from './Landing.module.css'

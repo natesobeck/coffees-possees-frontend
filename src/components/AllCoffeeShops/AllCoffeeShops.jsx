@@ -1,11 +1,13 @@
-import './AllCoffeeShops.css'
+// components
+import ShopCard from "../ShopCard/ShopCard"
 
-const AllCoffeeShops = () => {
+// css
+import styles from "./AllCoffeeShops.module.css"
+
+const AllCoffeeShops = ({ shops }) => {
   return ( 
-    <div className="shops-container">
-      <div className="shop">
-        <h1>ALL SHOPS</h1>
-      </div>
+    <div className={styles["shops-container"]}>
+      {shops.map(shop => <ShopCard key={shop._id} shop={shop}/>)}
     </div>
   )
 }

@@ -16,6 +16,7 @@ import AllCoffeeShops from './components/AllCoffeeShops/AllCoffeeShops'
 import AllClubs from './components/AllClubs/AllClubs'
 import NewClub from './components/NewClub/NewClub'
 import ClubDetails from './components/ClubDetails/ClubDetails'
+import CoffeeShopDetails from './components/CoffeeShopDetails/CoffeeShopDetails'
 
 // services
 import * as authService from './services/authService'
@@ -101,6 +102,10 @@ function App() {
         <Route
           path="/clubs/:clubId"
           element={ <ClubDetails user={user}/> }
+        />
+        <Route
+          path="/coffeeshops/:shopId"
+          element={ <CoffeeShopDetails user={user}/> }
         />
         <Route
           path="/auth/signup"
