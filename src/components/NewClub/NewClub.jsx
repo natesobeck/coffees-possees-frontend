@@ -55,7 +55,7 @@ const NewClub = (props) => {
           <button type='submit'>Create Club</button>
         </div>
       </form>
-      <NewCoffeeShop />
+      <NewCoffeeShop handleAddShop={props.handleAddShop} />
         <div className='shops-in-club'>
           <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
           <div className='shop-cards'>
