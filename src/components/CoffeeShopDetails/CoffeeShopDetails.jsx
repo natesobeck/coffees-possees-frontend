@@ -30,7 +30,6 @@ const CoffeeShopDetails = () => {
 
 
 
-
   return (
     <main className={styles.container}>
       <div className={styles['coffeeShop-details-container']}>
@@ -51,18 +50,13 @@ const CoffeeShopDetails = () => {
          {/* edit button will be changed to a link to be sent to the edit form for user to be able to edit their coffesshop^ */}
       {/* <button> delete</button> */}
       {/* delete button needs an onclick with a handleDeleteCoffeeShop function that will be held in app.jsx and will be deleted by using the coffeeshopId */}
+    <section>
+      <h2>Leave a Review</h2>
 
 
-      
-
-
-
-
-
-
+    </section>
     </main>
-
-)
+  )
 }
 
 export default CoffeeShopDetails
