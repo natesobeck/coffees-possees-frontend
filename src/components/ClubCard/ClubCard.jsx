@@ -1,9 +1,11 @@
 import styles from './ClubCard.module.css'
 
-const ClubCard = () => {
+const ClubCard = ({ club }) => {
 
   return (
-    <h1>this is a club card</h1>
+    <div className='club-card'>
+      <div>{club.name}</div>
+    </div>
   )
 }
 
