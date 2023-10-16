@@ -1,6 +1,7 @@
 
 import { useState } from 'react'
 import './NewClub.css'
+import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
 
 const NewClub = (props) => {
 
@@ -53,6 +54,7 @@ const NewClub = (props) => {
           <button type='submit'>Create Club</button>
         </div>
       </form>
+      <NewCoffeeShop />
         <div className='shops-in-club'>
           <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
           <div className='shop-cards'>
