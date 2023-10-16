@@ -47,9 +47,10 @@ const CoffeeShopDetails = () => {
       <div className={styles['show-all-clubs-container']}>
         <h3>All Clubs</h3>
         <ul>
-          <li>{club.name}</li>
-          <li>{club.name}</li>
-          <li>{club.name}</li>
+          <li>clubname</li>
+          <li></li>
+          <li></li>
+          
         </ul>
       </div>
            {/* <button> edit</button> */}
