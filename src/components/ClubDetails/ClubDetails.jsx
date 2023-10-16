@@ -47,8 +47,10 @@ useEffect(() => {
         </ul>
  {/* for the list of the coffeshop names once this is done they will be written in a component tags above */}
       </div>
-      {/* <button> edit</button> */}
-      {/* <button> delete</button> */}
+      <div className=''> 
+      <button> edit</button> 
+      <button> delete</button> 
+      </div>
     </main>
   )
 }

@@ -29,18 +29,17 @@ const NewReview = () => {
       
 
       
-        
+        <lable htmlFor>Price of Coffees:</lable>
           <select name='price'>
             <option value='1'>1</option>
             <option value='2'>2</option>
-            <option value='three'>3</option>
-            <option value='four'>4</option>
-            <option value='five'>5</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
           </select>
         
 
-        <label> 
-        Rating:
+        <label> Rating:</label>
           <select name='rating'>
             <option value='one'>1</option>
             <option value='two'>2</option>
@@ -48,10 +47,8 @@ const NewReview = () => {
             <option value='four'>4</option>
             <option value='five'>5</option>
           </select>
-        </label>
 
-        <label> 
-        Ambience:
+        <label> Ambience:</label>
           <select name='coffeeShopAmbience'>
             <option value='spacious'>spacious</option>
             <option value='cozy'>cozy</option>
@@ -59,10 +56,8 @@ const NewReview = () => {
             <option value='relaxing'>relaxing</option>
             <option value='quiet'>quiet</option>
           </select>
-        </label>
 
-        <label> 
-        Wifi Strength:</label>
+        <label> Wifi Strength:</label>
           <select name='wifiStrength'>
             <option value='one'>1</option>
             <option value='two'>2</option>
