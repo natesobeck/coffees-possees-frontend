@@ -3,6 +3,10 @@ import styles from './NewReview.module.css'
 
 const NewReview = () => {
 
+
+
+
+
   return (
     <main>
       <h1>Leave a Review</h1>
@@ -23,7 +27,7 @@ const NewReview = () => {
         </label>
 
         <label> 
-         Rating:
+        Rating:
           <select name='ratingForCoffeeShop'>
             <option value='one'>1</option>
             <option value='two'>2</option>
@@ -34,18 +38,18 @@ const NewReview = () => {
         </label>
 
         <label> 
-         Ambience:
+        Ambience:
           <select name='coffeeShopAmbience'>
-            <option value='choiceOne'>spacious</option>
-            <option value='choiceTwo'>cozy</option>
-            <option value='choiceThree'>loud</option>
-            <option value='choiceFive'>relaxing</option>
-            <option value='choiceSix'>quiet</option>
+            <option value='spacious'>spacious</option>
+            <option value='cozy'>cozy</option>
+            <option value='loud'>loud</option>
+            <option value='relaxing'>relaxing</option>
+            <option value='quiet'>quiet</option>
           </select>
         </label>
 
         <label> 
-         Wifi Strength:
+        Wifi Strength:
           <select name='wifiStrength'>
             <option value='one'>1</option>
             <option value='two'>2</option>
@@ -55,7 +59,7 @@ const NewReview = () => {
           </select>
         </label>
         <button type="submit">Add Review</button>
-     
+  
     </form>
   </main>
   )

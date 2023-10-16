@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom'
 
 
 //components
+import NewReview from '../NewReview/NewReview'
 
 
 //import loading, new review, and reviews here 
@@ -25,6 +26,12 @@ const CoffeeShopDetails = () => {
     }
     fetchCoffeeShop()
   }, [coffeeShopId])
+
+  const handleAddReview = async reviewFormData => {
+    const newReview = await shopService.createReview(coffeeShopId, reviewFormData)
+  }
+
+  // if (!coffeeShop) return <Loading />
 
 
 
