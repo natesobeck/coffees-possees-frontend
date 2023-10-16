@@ -10,7 +10,11 @@ const FindClubResults = ({ clubs }) => {
 
   return ( 
     <div className="search-results">
-      <h1>Results found</h1>
+      <div>
+        <div>Club Name:</div>
+        <div>Category:</div>
+        <div>Time of Day:</div>
+      </div>
       {clubs.map(club => (
         <ClubCard key={club._id} club={club}/>
       ))}
