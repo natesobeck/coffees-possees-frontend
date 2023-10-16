@@ -1,13 +1,14 @@
 
 import { useState } from 'react'
 import './NewClub.css'
+import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
 
 const NewClub = (props) => {
 
   const [clubFormData, setClubFormData] = useState({
     name: '',
     category: '',
-    timeOfDay: 'Morning',
+    timeOfDay: '',
     location: '',
   })
 
@@ -41,7 +42,8 @@ const NewClub = (props) => {
             </div>
             <div className='location-time'>
               <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' />
-              <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay">
+              <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay" placeholder='Choose time of day'>
+                {/* <option value="" selected disabled>Choose Time of Day</option> */}
                 <option value="Morning">Morning</option>
                 <option value="AfterNoon">Afternoon</option>
                 <option value="Evening">Evening</option>
@@ -53,6 +55,7 @@ const NewClub = (props) => {
           <button type='submit'>Create Club</button>
         </div>
       </form>
+      <NewCoffeeShop />
         <div className='shops-in-club'>
           <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
           <div className='shop-cards'>
