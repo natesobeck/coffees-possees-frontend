@@ -39,6 +39,7 @@ useEffect(() => {
       </div>
       <div className={styles['show-previous-container']} >
         <h3> Previous Club Locations:</h3>
+        {/* <ul className={styles['coffeeshop-list']}> */}
         <ul>
           <li>CoffeeShop Name</li>
           <li>CoffeShop Name</li>

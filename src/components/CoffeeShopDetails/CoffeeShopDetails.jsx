@@ -12,8 +12,6 @@ import { useParams } from 'react-router-dom'
 //components
 
 
-
-
 //import loading, new review, and reviews here 
 
 const CoffeeShopDetails = () => {
@@ -60,9 +58,6 @@ const CoffeeShopDetails = () => {
 }
 
 export default CoffeeShopDetails
-
-
-
 
 
 
