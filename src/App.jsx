@@ -30,9 +30,12 @@ import './App.css'
 
 
 function App() {
-  const [user, setUser] = useState(authService.getUser())
   const [clubs, setClubs] = useState([])
+  const [user, setUser] = useState(authService.getUser())
   const [shops, setShops] = useState([])
+  const [clubSearchResults, setClubSearchResults] = useState([])
+  const [shopSearchResults, setShopSearchResults] = useState([])
+
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -81,21 +84,41 @@ function App() {
     navigate('/shops')
   }
 
+  const handleClubSearch = formData => {
+    const filteredClubResults = clubs.filter(club => (
+      club.name.toLowerCase().includes(formData.query.toLowerCase()) ||
+      club.category.toLowerCase().includes(formData.query.toLowerCase())
+    ))
+    setClubSearchResults(filteredClubResults)
+  }
+
+  const handleShopSearch = formData => {
+    const filteredShopResults = shops.filter(shop => (
+      shop.location.toLowerCase().includes(formData.query.toLowerCase()) || 
+      shop.name.toLowerCase().includes(formData.query.toLowerCase())
+    ))
+    setShopSearchResults(filteredShopResults)
+  }
+
   useEffect(() => {
     const fetchAllClubs = async () => {
       const data = await clubService.index()
       setClubs(data)
+      setClubSearchResults(data)
     }
     fetchAllClubs()
-  }, [])
+  }, [handleDeleteClub])
+  
 
   useEffect(() => {
     const fetchAllShops = async () => {
       const data = await shopService.index()
       setShops(data)
+      setShopSearchResults(data)
     }
     fetchAllShops()
-  }, [])
+  }, [handleDeleteShop])  
+  
 
   return (
     <main>
@@ -112,17 +135,33 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={ <AllClubs clubs={clubs} handleDeleteClub={handleDeleteClub} user={user}/>}
+          element={ <AllClubs 
+            clubs={clubs} 
+            handleDeleteClub={handleDeleteClub} 
+            user={user}
+            handleClubSearch={handleClubSearch}
+            clubSearchResults={clubSearchResults}
+          />}
         />
         <Route
           path="/shops"
-          element={ <AllCoffeeShops shops={shops} handleDeleteShop={handleDeleteShop} user={user}/> }
+          element={ 
+          <AllCoffeeShops 
+            shops={shops} 
+            handleDeleteShop={handleDeleteShop} 
+            user={user}
+            handleShopSearch={handleShopSearch}
+            shopSearchResults={shopSearchResults}
+          /> }
         />
         <Route
           path="/new"
           element={
             <ProtectedRoute user={user}>
-              <NewClub handleAddClub={handleAddClub} handleAddShop={handleAddShop}/>
+              <NewClub 
+                handleAddClub={handleAddClub} 
+                handleAddShop={handleAddShop}
+              />
             </ProtectedRoute>
           }
         />

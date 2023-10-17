@@ -16,11 +16,16 @@ const ClubSearchResults = (props) => {
         <div>Category:</div>
         <div>Time of Day:</div>
       </div>
-      {props.searchResults.map(club => (
-        <ClubCard key={club._id} club={club} handleDeleteClub={props.handleDeleteClub} user={props.user} />
+      {props.clubSearchResults.map(club => (
+        <ClubCard 
+          key={club._id} 
+          club={club} 
+          handleDeleteClub={props.handleDeleteClub} 
+          user={props.user} 
+        />
       ))}
     </div>
   )
 }
- 
+
 export default ClubSearchResults;
