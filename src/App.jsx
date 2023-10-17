@@ -17,6 +17,7 @@ import AllClubs from './components/AllClubs/AllClubs'
 import NewClub from './components/NewClub/NewClub'
 import ClubDetails from './components/ClubDetails/ClubDetails'
 import CoffeeShopDetails from './components/CoffeeShopDetails/CoffeeShopDetails'
+import EditClub from './components/EditClub/EditClub'
 
 // services
 import * as authService from './services/authService'
@@ -64,6 +65,11 @@ function App() {
     const deletedShop = await shopService.deleteShop(shopId)
     setClubs(shops.filter(shop => shop._id !== deletedShop._id))
     navigate('/shops')
+  }
+
+  const handleUpdateClub = async clubFormData => {
+    const updatedClub = await clubService.update(clubFormData)
+    setClubs(clubs.map((club) => clubFormData._id === club._id ? updatedClub : club))
   }
 
   useEffect(() => {
@@ -132,6 +138,14 @@ function App() {
           element={
             <ProtectedRoute user={user}>
               <ChangePassword handleAuthEvt={handleAuthEvt} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/clubs/:clubId/edit"
+          element={
+            <ProtectedRoute user={user}>
+              <EditClub handleUpdateClub={handleUpdateClub} />
             </ProtectedRoute>
           }
         />

@@ -14,6 +14,7 @@ const NewClub = (props) => {
     category: '',
     timeOfDay: '',
     location: '',
+    description: '',
   })
 
   const handleChange = evt => {
@@ -34,7 +35,7 @@ const NewClub = (props) => {
             <h5>Start by giving your club a stunning name that will grab interest!</h5>
             <p>What will yor club be called ?</p>
             <div className={styles['name']}>
-              <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' />
+              <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' />
               {/* <button>Search</button> */}
             </div>
           </div>
@@ -42,10 +43,11 @@ const NewClub = (props) => {
             <h6>Tell us a bit about your group... Provide to other members information about its focus, location and the like.</h6>
             <div className={styles['category-container']}>
               <label htmlFor="category">Category:</label>
-              <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' />
+              <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' id='category' autoComplete='off' />
             </div>
             <div className={styles['location-time']}>
-              <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' />
+              <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' autoComplete='off' />
+              <input name="description" type="text" value={clubFormData.description} onChange={handleChange} placeholder='Enter club description' autoComplete='off' />
               <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay" placeholder='Choose time of day'>
                 {/* <option value="" selected disabled>Choose Time of Day</option> */}
                 <option value="Morning">Morning</option>

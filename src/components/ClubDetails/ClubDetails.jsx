@@ -1,6 +1,6 @@
 //npm modeules
 import { useState, useEffect } from 'react'
-import { useParams, Link, useLocation } from 'react-router-dom'
+import { useParams, NavLink, useLocation } from 'react-router-dom'
 
 //css
 import styles from './ClubDetails.module.css'
@@ -46,8 +46,11 @@ useEffect(() => {
           <li>CoffeeShop Name</li>
         </ul>
  {/* for the list of the coffeshop names once this is done they will be written in a component tags above */}
+      </div>
+      <div className=''> 
       <div className={styles['edit-delete-button']}> 
-      <button> edit</button> 
+      {/* <button> edit</button>  */}
+      <NavLink state={club} to={`/clubs/${clubId}/edit`}><button>edit</button></NavLink>
       <button> delete</button> 
       </div> 
       </div>
