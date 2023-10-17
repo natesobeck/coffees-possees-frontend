@@ -6,7 +6,6 @@ import styles from './EditReview.module.css'
 
 // services
 import * as shopService from '../../services/shopService'
-import { useLocation, useNavigate } from "react-router-dom";
 
 const EditReview = () => {
   const navigate = useNavigate()
@@ -20,11 +19,13 @@ const EditReview = () => {
 
   const handleSubmitEdit = async (evt) => {
     evt.preventDefault()
-    await shopService.crea
+    await shopService.updateReview(shopId, reviewId, reviewFormData)
+    navigate(`/shops/${shopId}`)
   }
 
   return (
     <form className={styles.container} onSubmit={handleSubmitEdit}>
+      <h1> EDIT REVIEW</h1>
       <div className={styles['review-container']}> 
         <div className={styles['space-between']}>
           <label htmlFor="text">Text:</label>
@@ -35,7 +36,7 @@ const EditReview = () => {
             value={reviewFormData.text || ''} 
             id='text'
             onChange={handleChange}
-            placeholder='Add Review'
+            placeholder='Edit Review'
             autoComplete='off'
           />
         </div>
@@ -92,4 +93,4 @@ const EditReview = () => {
 
 export default EditReview
 
-// Add updateReview and deleteReview functions in shopService
+// Add updateReview and deleteReview functions in shopService and import edit review into app.jsx

@@ -19,6 +19,7 @@ import ClubDetails from './components/ClubDetails/ClubDetails'
 import CoffeeShopDetails from './components/CoffeeShopDetails/CoffeeShopDetails'
 import EditClub from './components/EditClub/EditClub'
 import EditCoffeeShop from './components/EditCoffeeShop/EditCoffeeShop'
+import EditReview from './components/EditReview/EditReview'
 
 // services
 import * as authService from './services/authService'
@@ -206,6 +207,14 @@ function App() {
               <EditCoffeeShop handleUpdateCoffeeShop={handleUpdateCoffeeShop} />
             </ProtectedRoute>
           }
+        />
+        <Route 
+          path="/shops/:shopId/reviews/:reviewId" 
+          element={
+            <ProtectedRoute user={user}>
+              <EditReview />
+            </ProtectedRoute>
+        } 
         />
       </Routes>
     </main>
