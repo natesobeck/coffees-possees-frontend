@@ -78,8 +78,8 @@ const NewReview = (props) => {
           </select>
     </div>
     <div className={styles['space-between']}>
-      <label htmlFor='wifiStrength'> Wifi Strength:</label>
-        <select name='wifiStrength' value={reviewFormData.wifiStrength} onChange={handleChange}>
+      <label htmlFor='wifi'> Wifi Strength:</label>
+        <select name='wifi' value={reviewFormData.wifiStrength} onChange={handleChange}>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
@@ -90,9 +90,7 @@ const NewReview = (props) => {
     <div className={styles['review-button']}>
       <button type="submit">Add Review</button>
     </div>
-
   </div>
-
 </form>
 
   )
