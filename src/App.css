@@ -6,7 +6,12 @@
 
 @font-face {
   font-family: 'coffee';
-  src: url('../public/Fonts/Coffee.ttf')
+  src: url(/Fonts/Coffee.ttf)
+}
+
+@font-face {
+  font-family: 'breve';
+  src: url(/Fonts/Breve.ttf)
 }
 
 html {

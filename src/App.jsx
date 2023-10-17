@@ -65,7 +65,7 @@ function App() {
 
   const handleDeleteShop = async (shopId) => {
     const deletedShop = await shopService.deleteShop(shopId)
-    setClubs(shops.filter(shop => shop._id !== deletedShop._id))
+    setShops(shops.filter(shop => shop._id !== deletedShop._id))
     navigate('/shops')
   }
 
@@ -112,11 +112,11 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={ <AllClubs clubs={clubs} handleDeleteClub={handleDeleteClub}/> }
+          element={ <AllClubs clubs={clubs} handleDeleteClub={handleDeleteClub} user={user}/>}
         />
         <Route
           path="/shops"
-          element={ <AllCoffeeShops shops={shops} handleDeleteShop={handleDeleteShop}/> }
+          element={ <AllCoffeeShops shops={shops} handleDeleteShop={handleDeleteShop} user={user}/> }
         />
         <Route
           path="/new"
