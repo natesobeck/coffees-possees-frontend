@@ -26,7 +26,7 @@ const EditCoffeeShop = (props) => {
       zipCode: coffeeShop.zipCode
     }
     evt.preventDefault()
-    props.handleAddShop(adjustedFormData)
+    props.handleUpdateCoffeeShop(adjustedFormData)
   }
 
   // const handleChangeAddress = evt => {

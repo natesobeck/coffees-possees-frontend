@@ -7,6 +7,7 @@ import * as shopService from '../../services/shopService'
 //npm modules
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 
 //components
@@ -53,7 +54,7 @@ const CoffeeShopDetails = () => {
         </ul>
       </div>
       <div className={styles['coffee-edit-delete-button']}> 
-      <button> edit</button> 
+      <NavLink state={coffeeShop} to={`/coffeeshops/${shopId}/editshop`} ><button> edit</button> </NavLink>
       <button> delete</button> 
       </div> 
            {/* <button> edit</button> */}
