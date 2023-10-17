@@ -13,7 +13,8 @@ const AllCoffeeShops = ({ shops, handleDeleteShop, user }) => {
 
   const handleShopSearch = formData => {
     const filteredShopResults = shops.filter(shop => (
-      shop.location.toLowerCase().includes(formData.query.toLowerCase())
+      shop.location.toLowerCase().includes(formData.query.toLowerCase()) || 
+      shop.name.toLowerCase().includes(formData.query.toLowerCase())
     ))
     setSearchResults(filteredShopResults)
   }
