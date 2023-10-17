@@ -14,6 +14,7 @@ const NewClub = (props) => {
     category: '',
     timeOfDay: '',
     location: '',
+    description: '',
   })
 
   const handleChange = evt => {
