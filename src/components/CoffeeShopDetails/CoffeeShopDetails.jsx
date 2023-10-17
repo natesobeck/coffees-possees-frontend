@@ -17,24 +17,24 @@ import NewReview from '../NewReview/NewReview'
 
 const CoffeeShopDetails = () => {
   const [coffeeShop, setCoffeeShop] = useState({})
-  const { coffeeShopId } = useParams()
+  const { shopId } = useParams()
 
   useEffect(() => {
     const fetchCoffeeShop = async () => {
-      const data = await shopService.show(coffeeShopId)
+      const data = await shopService.show(shopId)
       setCoffeeShop(data)
     }
     fetchCoffeeShop()
-  }, [coffeeShopId])
+  }, [shopId])
 
   const handleAddReview = async (reviewFormData) => {
-    const newReview = await shopService.createReview(coffeeShopId, reviewFormData)
+    const newReview = await shopService.createReview(shopId, reviewFormData)
     setCoffeeShop({...coffeeShop, reviews: [...coffeeShop, newReview]})
   }
 
   // if (!coffeeShop) return <Loading />
 
-
+//i changed coffeeshop id to shop id based on the asyn function in shopService!!!!!!!!
 
   return (
     <main className={styles.container}>

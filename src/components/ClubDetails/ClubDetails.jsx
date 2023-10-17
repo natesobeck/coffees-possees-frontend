@@ -42,7 +42,7 @@ useEffect(() => {
         {/* <ul className={styles['coffeeshop-list']}> */}
         <ul>
           <li>CoffeeShop Name</li>
-          <li>CoffeShop Name</li>
+          <li>CoffeeShop Name</li>
           <li>CoffeeShop Name</li>
         </ul>
  {/* for the list of the coffeshop names once this is done they will be written in a component tags above */}

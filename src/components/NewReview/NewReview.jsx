@@ -6,7 +6,13 @@ import styles from './NewReview.module.css'
 
 
 const NewReview = (props) => {
-  const [reviewFormData, setReviewFormData] = useState({})
+  const [reviewFormData, setReviewFormData] = useState({
+    text: '',
+    price:'Number',
+    rating:'Number',
+    wifi:'Number',
+    coffeeShopAmbience: ['Spacious', 'Cozy', 'Loud', 'Relaxing', 'Quiet']
+  })
 
   const handleChange = (evt) => {
     setReviewFormData({...reviewFormData, [evt.target.name]: evt.target.value})
@@ -16,8 +22,6 @@ const NewReview = (props) => {
     evt.preventDefault()
     props.handleAddReview(reviewFormData)
     setReviewFormData({})
-
-
   }
 
 
@@ -26,11 +30,25 @@ const NewReview = (props) => {
     <form className={styles.container} onSubmit={handleSubmitReview}>
       <div className={styles['review-container']}> 
 
+        {/* <div className={styles['space-between']}>
+
+        <label htmlFor="text">Text:</label>
+        <input
+        required
+        name='text'
+        type='text'
+        value={reviewFormData.text}
+        onChange={handleChange}
+        placeholder='Add Review'
+
+        />
+        
+      </div> */}
 
     {/* <h1>Leave a Review</h1> */}
     <div className={styles['space-between']}>
-      <lable htmlFor='price'>Price of Coffees:</lable>
-      <select name='price' value={reviewFormData.price}onChange={handleChange}>
+      <label htmlFor='price'>Price of Coffees:</label>
+      <select name='price' value={reviewFormData.price} onChange={handleChange}>
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>
@@ -42,11 +60,11 @@ const NewReview = (props) => {
     <div className={styles['space-between']}>
       <label htmlFor='rating'> Rating:</label>
         <select name='rating' value={reviewFormData.rating} onChange={handleChange}>
-          <option value='one'>1</option>
-          <option value='two'>2</option>
-          <option value='three'>3</option>
-          <option value='four'>4</option>
-          <option value='five'>5</option>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
         </select>
     </div>
     <div className={styles['space-between']}>
