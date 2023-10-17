@@ -17,7 +17,7 @@ const EditClub = (props) => {
 
   const handleSubmit = evt => {
     evt.preventDefault()
-    props.handleAddClub(clubFormData)
+    props.handleUpdateClub(clubFormData)
   }
 
   return (
