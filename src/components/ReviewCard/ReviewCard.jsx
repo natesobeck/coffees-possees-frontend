@@ -1,14 +1,14 @@
-import styles from './ReviewCard.module.css'
+// import styles from './ReviewCard.module.css'
+//components
+import AddedBy from '../AddedBy/AddedBy'
 
-//components 
-// import AddedBy from '../AddedBy/AddedBy'
 
 const ReviewCard = ({ review }) => {
   
 
   return (
     <div>
-      {/* <AddedBy content={review} /> */}
+      <AddedBy content={review} />
       <h3>{review.text}</h3>
       <h3>{review.price}</h3>
       <h3>{review.rating}</h3>
