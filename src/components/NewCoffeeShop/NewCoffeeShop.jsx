@@ -61,7 +61,7 @@ const NewCoffeeShop = (props) => {
           </div>
           <div>
             <label htmlFor="shop-zipCode">Zip-code</label>
-            <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode} onChange={handleChange}/>
+            <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode} onChange={handleChange} autoComplete='off' />
           </div>
         </div>
         <button type='submit'>Add Coffee Shop</button>
