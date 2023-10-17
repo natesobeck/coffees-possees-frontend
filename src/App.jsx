@@ -18,6 +18,7 @@ import NewClub from './components/NewClub/NewClub'
 import ClubDetails from './components/ClubDetails/ClubDetails'
 import CoffeeShopDetails from './components/CoffeeShopDetails/CoffeeShopDetails'
 import EditClub from './components/EditClub/EditClub'
+import EditCoffeeShop from './components/EditCoffeeShop/EditCoffeeShop'
 
 // services
 import * as authService from './services/authService'
@@ -26,6 +27,7 @@ import * as shopService from './services/shopService'
 
 // styles
 import './App.css'
+
 
 function App() {
   const [user, setUser] = useState(authService.getUser())
@@ -70,6 +72,13 @@ function App() {
   const handleUpdateClub = async clubFormData => {
     const updatedClub = await clubService.update(clubFormData)
     setClubs(clubs.map((club) => clubFormData._id === club._id ? updatedClub : club))
+    navigate('/clubs')
+  }
+
+  const handleUpdateCoffeeShop = async shopFormData => {
+    const updatedShop = await shopService.update(shopFormData)
+    setShops(shops.map((shop) => shopFormData._id === shop._id ? updatedShop : shop))
+    navigate('/shops')
   }
 
   useEffect(() => {
@@ -142,10 +151,18 @@ function App() {
           }
         />
         <Route
-          path="/clubs/:clubId/edit"
+          path="/clubs/:clubId/editclub"
           element={
             <ProtectedRoute user={user}>
               <EditClub handleUpdateClub={handleUpdateClub} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/coffeeshops/:shopId/editshop"
+          element={
+            <ProtectedRoute user={user}>
+              <EditCoffeeShop handleUpdateCoffeeShop={handleUpdateCoffeeShop} />
             </ProtectedRoute>
           }
         />
