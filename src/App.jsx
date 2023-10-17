@@ -63,12 +63,14 @@ function App() {
   const handleDeleteClub = async (clubId) => {
     const deletedClub = await clubService.deleteClub(clubId)
     setClubs(clubs.filter(club => club._id !== deletedClub._id))
+    setClubSearchResults(clubSearchResults.filter(club => club._id !== deletedClub._id))
     navigate('/clubs')
   }
 
   const handleDeleteShop = async (shopId) => {
     const deletedShop = await shopService.deleteShop(shopId)
     setShops(shops.filter(shop => shop._id !== deletedShop._id))
+    setShopSearchResults(shopSearchResults.filter(shop => shop._id !== deletedShop._id))
     navigate('/shops')
   }
 
