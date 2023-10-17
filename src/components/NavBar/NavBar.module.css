@@ -19,8 +19,8 @@
 }
 
 nav a {
-  font-family: 'coffee';
-  font-size: 2vw;
+  font-family: 'breve';
+  font-size: 3.5vw;
 }
 
 nav > ul {
@@ -30,6 +30,6 @@ nav > ul {
 
 @media (min-width: 1200px) {
   nav a {
-    font-size: 25px;
+    font-size: 35px;
   }
 }

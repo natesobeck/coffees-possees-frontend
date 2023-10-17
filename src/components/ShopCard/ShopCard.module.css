@@ -1,8 +1,9 @@
 .shop-card-container {
-  border: 1px solid white;
+  background-color:#38220f;
+  border: 4px solid 	#dbc1ac;
+  border-radius: 10px;
   justify-content: center;
   align-items: center;
-  padding: 15px;
   display: grid;
   grid-template-columns: 50% 25% 25%;
   width: 100%;
@@ -10,7 +11,19 @@
   grid-column-gap: 10px;
 }
 
+.shop-card-container a h3 {
+  font-family: 'breve';
+  font-size: 35px;
+}
+
 .btn-container {
   display: flex;
   justify-content: center;
+}
+
+.btn-container button {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: maroon;
+  color: white;
 }
