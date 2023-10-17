@@ -67,6 +67,11 @@ function App() {
     navigate('/shops')
   }
 
+  const handleUpdateClub = async clubFormData => {
+    const updatedClub = await clubService.update(clubFormData)
+    setClubs(clubs.map((club) => clubFormData._id === club._id ? updatedClub : club))
+  }
+
   useEffect(() => {
     const fetchAllClubs = async () => {
       const data = await clubService.index()

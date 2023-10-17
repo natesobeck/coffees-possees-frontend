@@ -39,7 +39,7 @@ const EditClub = (props) => {
             <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' />
           </div>
           <div className={styles['location-time']}>
-            <input name="location" type="text" value={clubFormData.location} placeholder='Enter your city here' />
+            <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' />
             <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay">
               <option value="morning">Morning</option>
               <option value="afternoon">Afternoon</option>
