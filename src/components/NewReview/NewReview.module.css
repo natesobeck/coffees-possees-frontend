@@ -1,0 +1,19 @@
+.container {
+  /* display: flex; */
+  /* flex-direction: row; */
+  border: 3px solid white;
+  height: 100%;
+  /* width: 150%; */
+  padding: 10px
+
+}
+
+.review-container {
+  display: flex;
+  flex-direction: row;
+  /* padding: 40px; */
+}
+
+.space-between {
+  padding: 10px;
+}

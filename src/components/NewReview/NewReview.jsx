@@ -5,68 +5,77 @@ import { useState } from 'react'
 import styles from './NewReview.module.css'
 
 
-const NewReview = () => {
-  const [reviewFormData, setReviewFormData] = useState({})
+const NewReview = (props) => {
+  // const [reviewFormData, setReviewFormData] = useState({})
 
-  const handleChange = (evt) => {
-    setReviewFormData({...reviewFormData, [evt.target.name]: evt.target.value})
-  }
+  // const handleChange = (evt) => {
+  //   setReviewFormData({...reviewFormData, [evt.target.name]: evt.target.value})
+  // }
 
-  const handleSubmitReview = (evt) => {
-    evt.preventDefault()
+  // const handleSubmitReview = (evt) => {
+  //   evt.preventDefault()
+  //   props.handleAddReview(reviewFormData)
+  //   setReviewFormData({})
 
 
-  }
+  // }
 
 
 
   return (
     <form className={styles.container}>
-      <h1>Leave a Review</h1>
-    
-      
-    
-      
+      <div className={styles['review-container']}> 
 
-      
-        <lable htmlFor>Price of Coffees:</lable>
-          <select name='price'>
-            <option value='1'>1</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5'>5</option>
-          </select>
+
+    {/* <h1>Leave a Review</h1> */}
+    <div className={styles['space-between']}>
+      <lable htmlFor='price'>Price of Coffees:</lable>
+      <select name='price'>
+        <option value='1'>1</option>
+        <option value='2'>2</option>
+        <option value='3'>3</option>
+        <option value='4'>4</option>
+        <option value='5'>5</option>
+      </select>
+    </div>
         
-
-        <label> Rating:</label>
-          <select name='rating'>
-            <option value='one'>1</option>
-            <option value='two'>2</option>
-            <option value='three'>3</option>
-            <option value='four'>4</option>
-            <option value='five'>5</option>
-          </select>
-
-        <label> Ambience:</label>
+    <div className={styles['space-between']}>
+      <label htmlFor='rating'> Rating:</label>
+        <select name='rating'>
+          <option value='one'>1</option>
+          <option value='two'>2</option>
+          <option value='three'>3</option>
+          <option value='four'>4</option>
+          <option value='five'>5</option>
+        </select>
+    </div>
+    <div className={styles['space-between']}>
+      <label htmlFor='coffeeShopAmbience'>Ambience:</label>
           <select name='coffeeShopAmbience'>
-            <option value='spacious'>spacious</option>
-            <option value='cozy'>cozy</option>
-            <option value='loud'>loud</option>
-            <option value='relaxing'>relaxing</option>
-            <option value='quiet'>quiet</option>
+            <option value='Spacious'>Spacious</option>
+            <option value='Cozy'>Cozy</option>
+            <option value='Loud'>Loud</option>
+            <option value='Relaxing'>Relaxing</option>
+            <option value='Quiet'>Quiet</option>
           </select>
+    </div>
+    <div className={styles['space-between']}>
+      <label htmlFor='wifiStrength'> Wifi Strength:</label>
+        <select name='wifiStrength'>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+        </select>
+    </div>  
+    <div className={styles['review-button']}>
+      <button type="submit">Add Review</button>
+    </div>
 
-        <label> Wifi Strength:</label>
-          <select name='wifiStrength'>
-            <option value='one'>1</option>
-            <option value='two'>2</option>
-            <option value='three'>3</option>
-            <option value='four'>4</option>
-            <option value='five'>5</option>
-          </select>
-        <button type="submit">Add Review</button>
-    </form>
+  </div>
+
+</form>
 
   )
 }
