@@ -2,12 +2,15 @@
 // css
 import styles from './Landing.module.css'
 
+// components
+import AboutUs from '../../components/AboutUs/AboutUs'
+
 const Landing = ({ user }) => {
   return (
     <main className={styles.container}>
       <section className={styles['section-container']}>
         <div className={styles['wooden-board']}>
-          <h1>Welcome, {user ? user.name.slice(0,1).toUpperCase().concat(user.name.slice(1).toLowerCase()) : 'friend'}</h1>
+          <h1>Welcome, {user ? user.name.slice(0, 1).toUpperCase().concat(user.name.slice(1).toLowerCase()) : 'friend'}</h1>
         </div>
         <img src="/Logo.png" alt="Coffees and Posses Logo" />
         <br />
@@ -23,10 +26,7 @@ const Landing = ({ user }) => {
       </section>
       <section className={styles['section-container']} id={styles['about-us']}>
         <h1>This is out About Us section.</h1>
-        <div className={styles['about-us-container']}>
-          <div className={styles['about-us-subcontainer']}>About us container</div>
-          <div className={styles['about-us-subcontainer']}>About us container</div>
-        </div>
+        <AboutUs />
       </section>
     </main>
   )
