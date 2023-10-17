@@ -30,7 +30,7 @@ const CoffeeShopDetails = () => {
 
   const handleAddReview = async (reviewFormData) => {
     const newReview = await shopService.createReview(shopId, reviewFormData)
-    setCoffeeShop({...coffeeShop, reviews: [...coffeeShop, newReview]})
+    setCoffeeShop({...coffeeShop, reviews: [...coffeeShop.reviews, newReview]})
   }
 
   // if (!coffeeShop) return <Loading />
