@@ -1,13 +1,13 @@
-import FindClubForm from '../FindClubForm/FindClubForm'
-import FindClubResults from '../FindClubResults/FindClubResults'
+import ClubSearchForm from '../ClubSearchForm/ClubSearchForm'
+import ClubSearchResults from '../ClubSearchResults/ClubSearchResults'
 import styles from './AllClubs.module.css'
 
 const AllClubs = (props) => {
   return ( 
     <main>
       <div className={styles["clubs-container"]}>
-        <FindClubForm />
-        <FindClubResults clubs={props.clubs} handleDeleteClub={props.handleDeleteClub}/>
+        <ClubSearchForm />
+        <ClubSearchResults clubs={props.clubs} handleDeleteClub={props.handleDeleteClub}/>
       </div>
     </main>
   )

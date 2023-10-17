@@ -3,11 +3,11 @@
 import ClubCard from '../ClubCard/ClubCard'
 
 // css
-import styles from './FindClubResults.module.css'
+import styles from './ClubSearchResults.module.css'
 
-const FindClubResults = ({ clubs, handleDeleteClub }) => {
+const ClubSearchResults = ({ clubs, handleDeleteClub }) => {
 
-  if (!clubs.length) return <h2>Loading clubs...</h2>
+  if (!clubs.length) return <h2>No clubs yet!</h2>
 
   return ( 
     <div className={styles["search-results"]}>
@@ -23,4 +23,4 @@ const FindClubResults = ({ clubs, handleDeleteClub }) => {
   )
 }
  
-export default FindClubResults;
+export default ClubSearchResults;
