@@ -78,7 +78,7 @@ function App() {
   const handleUpdateCoffeeShop = async shopFormData => {
     const updatedShop = await shopService.update(shopFormData)
     setShops(shops.map((shop) => shopFormData._id === shop._id ? updatedShop : shop))
-    navigate('/coffeeshops')
+    navigate('/shops')
   }
 
   useEffect(() => {
