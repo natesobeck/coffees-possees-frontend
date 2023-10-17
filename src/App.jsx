@@ -107,7 +107,7 @@ function App() {
       setClubSearchResults(data)
     }
     fetchAllClubs()
-  }, [handleDeleteClub])
+  }, [])
   
 
   useEffect(() => {
@@ -117,7 +117,7 @@ function App() {
       setShopSearchResults(data)
     }
     fetchAllShops()
-  }, [handleDeleteShop])  
+  }, [])  
   
 
   return (
