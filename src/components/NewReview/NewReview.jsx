@@ -8,10 +8,10 @@ import styles from './NewReview.module.css'
 const NewReview = (props) => {
   const [reviewFormData, setReviewFormData] = useState({
     text: '',
-    price:'',
-    rating:'',
-    wifi:'',
-    coffeeShopAmbience: 'Cozy'
+    price:'1',
+    rating:'1',
+    wifi:'1',
+    coffeeShopAmbience: 'Spacious'
   })
 
   const handleChange = (evt) => {
@@ -20,13 +20,13 @@ const NewReview = (props) => {
 
   const handleSubmitReview = (evt) => {
     evt.preventDefault()
-    // const newForm = {}
-    // newForm.text = reviewFormData.text
-    // newForm.price = parseFloat(reviewFormData.price)
-    // newForm.rating = parseFloat(reviewFormData.rating)
-    // newForm.wifi = parseFloat(reviewFormData.wifi)
-    // newForm.coffeeShopAmbience = reviewFormData.coffeeShopAmbience
-    props.handleAddReview(reviewFormData)
+    const newForm = {}
+    newForm.text = reviewFormData.text
+    newForm.price = parseFloat(reviewFormData.price)
+    newForm.rating = parseFloat(reviewFormData.rating)
+    newForm.wifi = parseFloat(reviewFormData.wifi)
+    newForm.coffeeShopAmbience = reviewFormData.coffeeShopAmbience
+    props.handleAddReview(newForm)
     setReviewFormData({})
   }
 
@@ -37,25 +37,23 @@ const NewReview = (props) => {
       <div className={styles['review-container']}> 
 
         <div className={styles['space-between']}>
-
-        <label htmlFor="text">Text:</label>
+          <label htmlFor="text">Text:</label>
         <input
         required
         name='text'
         type='text'
-        value={reviewFormData.text}
+        value={reviewFormData.text || ''} 
         id='text'
         onChange={handleChange}
         placeholder='Add Review'
-
+        autoComplete='off'
         />
-        
-      </div>
+        </div>
 
     {/* <h1>Leave a Review</h1> */}
     <div className={styles['space-between']}>
       <label htmlFor='price'>Price of Coffees:</label>
-      <select name='price' value={reviewFormData.price} id='price' onChange={handleChange}>
+      <select name='price' value={reviewFormData.price || ''} id='price' onChange={handleChange}>
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>
@@ -66,7 +64,7 @@ const NewReview = (props) => {
         
     <div className={styles['space-between']}>
       <label htmlFor='rating'> Rating:</label>
-        <select name='rating' value={reviewFormData.rating} id='rating' onChange={handleChange}>
+        <select name='rating' value={reviewFormData.rating || ''} id='rating' onChange={handleChange}>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
@@ -76,7 +74,7 @@ const NewReview = (props) => {
     </div>
     <div className={styles['space-between']}>
       <label htmlFor='coffeeShopAmbience'>Ambience:</label>
-          <select name='coffeeShopAmbience' value={reviewFormData.coffeeShopAmbience} id='coffeeShopAmbience' onChange={handleChange}>
+          <select name='coffeeShopAmbience' value={reviewFormData.coffeeShopAmbience || ''} id='coffeeShopAmbience' onChange={handleChange}>
             <option value='Spacious'>Spacious</option>
             <option value='Cozy'>Cozy</option>
             <option value='Loud'>Loud</option>
@@ -86,7 +84,7 @@ const NewReview = (props) => {
     </div>
     <div className={styles['space-between']}>
       <label htmlFor='wifi'> Wifi Strength:</label>
-        <select name='wifi' value={reviewFormData.wifiStrength} id='wifi' onChange={handleChange}>
+        <select name='wifi' value={reviewFormData.wifi || ''} id='wifi' onChange={handleChange}>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
