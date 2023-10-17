@@ -11,7 +11,7 @@ const ShopCard = ({ shop, handleDeleteShop }) => {
         <h3>{shop.name}</h3>
       </Link>
       <div>{shop.location}, {shop.address.state}</div>
-      <div>
+      <div className={styles['btn-container']}>
         <button type='submit' onClick={() => handleDeleteShop(shop._id)}>Delete</button>
       </div>
     </div>

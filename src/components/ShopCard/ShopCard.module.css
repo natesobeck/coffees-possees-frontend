@@ -9,3 +9,8 @@
   text-align: center;
   grid-column-gap: 10px;
 }
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+}
