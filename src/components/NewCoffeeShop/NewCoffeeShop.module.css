@@ -9,8 +9,19 @@
 
 .new-shop-image-holder {
   width: 50%;
-  height: 400px;
-  border: 2px solid black;
+  min-height: 95%;
+  /* border: 2px solid black; */
+  background-color: darkslategray;
+  margin-left: 15px;
+
+  transform: perspective(1500px) rotateY(15deg);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  transition: transform 1s ease 0s;
+
+  &:hover {
+    transform: perspective(3000px) rotateY(5deg);
+  }
 }
 
 .shop-form {

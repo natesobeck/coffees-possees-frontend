@@ -12,7 +12,7 @@ const NewClub = (props) => {
   const [clubFormData, setClubFormData] = useState({
     name: '',
     category: '',
-    timeOfDay: '',
+    timeOfDay: 'Morning',
     location: '',
     description: '',
   })
