@@ -1,12 +1,13 @@
+import styles from './AddedBy.module.css'
 
-// ask if this is needed 
 
-// const AddedBy = ({ content }) =>{
+const AddedBy = ({ content }) => {
 
-//   return (
-//     <div className={styles.container}>
+  return (
+    <div className={styles.container}>
+        <h3>{content.addedBy.name}</h3>
+    </div>
+    )
+  }
 
-//       </div>
-    
-//     )
-//   }
+  export default AddedBy

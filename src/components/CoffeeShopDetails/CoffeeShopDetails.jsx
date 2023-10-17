@@ -12,11 +12,12 @@ import { NavLink } from 'react-router-dom'
 
 //components
 import NewReview from '../NewReview/NewReview'
+import Reviews from '../Reviews/Reviews'
 
 
 //import loading, new review, and reviews here 
 
-const CoffeeShopDetails = () => {
+const CoffeeShopDetails = (props) => {
   const [coffeeShop, setCoffeeShop] = useState({})
   const { shopId } = useParams()
 
@@ -64,6 +65,8 @@ const CoffeeShopDetails = () => {
     <div className={styles['review-container']}>
       <h1>Leave a Review</h1>
       <NewReview handleAddReview={handleAddReview} />
+      <Reviews reviews={coffeeShop.reviews} user={props.user} />
+
     </div>
     </main>
   )
@@ -73,6 +76,7 @@ export default CoffeeShopDetails
 
 
 
+// search or dropdown on the page to be able to find a club to put in 
 
 
 //refer to hoot details
