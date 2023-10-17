@@ -12,7 +12,7 @@ const NavBar = ({ user, handleLogout }) => {
           {/* <li><NavLink to="/profiles">Profiles</NavLink></li> */}
           {/* <li><NavLink to="/auth/change-password">Change Password</NavLink></li> */}
           <li><NavLink to="/">HOME</NavLink></li>
-          <li><NavLink to="">ABOUT US</NavLink></li>
+          <li><NavLink to="/#about-us">ABOUT US</NavLink></li>
           <li><NavLink to="/new">NEW CLUB</NavLink></li>
           <li><NavLink to="/clubs">ALL CLUBS</NavLink></li>
           <li><NavLink to="/shops">ALL SHOPS</NavLink></li>
@@ -24,7 +24,6 @@ const NavBar = ({ user, handleLogout }) => {
         <li><NavLink to="">ABOUT US</NavLink></li>
         <li><NavLink to="/clubs">ALL CLUBS</NavLink></li>
         <li><NavLink to="/shops">ALL SHOPS</NavLink></li>
-        <li><NavLink to="">ABOUT US</NavLink></li>
         <li><NavLink to="/auth/login">LOG IN</NavLink></li>
         <li><NavLink to="/auth/signup">SIGN UP</NavLink></li>
       </ul>

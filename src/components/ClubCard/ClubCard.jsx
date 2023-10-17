@@ -4,15 +4,18 @@ import { Link } from 'react-router-dom'
 // css
 import styles from './ClubCard.module.css'
 
-const ClubCard = ({ club }) => {
+const ClubCard = ({ club, handleDeleteClub }) => {
   return (
-    <Link to={`/clubs/${club._id}`}>
-      <div className={styles['club-card']}>
+    <div className={styles['club-card']}>
+      <Link to={`/clubs/${club._id}`}>
         <div>{club.name}</div>
-        <div>{club.category}</div>
-        <div>{club.timeOfDay}</div>
+      </Link>
+      <div>{club.category}</div>
+      <div>{club.timeOfDay}</div>
+      <div>
+        <button type='submit' onClick={() => handleDeleteClub(club._id)}>DELETE</button>
       </div>
-    </Link>
+      </div>
   )
 }
 

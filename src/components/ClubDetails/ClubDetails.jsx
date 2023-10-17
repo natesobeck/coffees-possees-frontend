@@ -42,14 +42,20 @@ useEffect(() => {
         {/* <ul className={styles['coffeeshop-list']}> */}
         <ul>
           <li>CoffeeShop Name</li>
-          <li>CoffeShop Name</li>
+          <li>CoffeeShop Name</li>
           <li>CoffeeShop Name</li>
         </ul>
  {/* for the list of the coffeshop names once this is done they will be written in a component tags above */}
+<<<<<<< HEAD
       </div>
       <div className=''> 
       <NavLink state={club} to={`/clubs/${clubId}/edit`}><button>edit</button></NavLink>
+=======
+      <div className={styles['edit-delete-button']}> 
+      <button> edit</button> 
+>>>>>>> main
       <button> delete</button> 
+      </div> 
       </div>
     </main>
   )

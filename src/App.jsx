@@ -55,10 +55,16 @@ function App() {
     navigate('/new')
   }
 
-  const handleUpdateClub = async clubFormData => {
-    const updatedClub = await clubService.update(clubFormData)
-    setClubs(clubs.map((club) => clubFormData._id === club._id ? updatedClub : club))
+  const handleDeleteClub = async (clubId) => {
+    const deletedClub = await clubService.deleteClub(clubId)
+    setClubs(clubs.filter(club => club._id !== deletedClub._id))
     navigate('/clubs')
+  }
+
+  const handleDeleteShop = async (shopId) => {
+    const deletedShop = await shopService.deleteShop(shopId)
+    setClubs(shops.filter(shop => shop._id !== deletedShop._id))
+    navigate('/shops')
   }
 
   useEffect(() => {
@@ -92,11 +98,11 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={ <AllClubs clubs={clubs} /> }
+          element={ <AllClubs clubs={clubs} handleDeleteClub={handleDeleteClub}/> }
         />
         <Route
           path="/shops"
-          element={ <AllCoffeeShops shops={shops}/> }
+          element={ <AllCoffeeShops shops={shops} handleDeleteShop={handleDeleteShop}/> }
         />
         <Route
           path="/new"
