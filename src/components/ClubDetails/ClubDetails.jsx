@@ -50,7 +50,7 @@ useEffect(() => {
       <div className=''> 
       <div className={styles['edit-delete-button']}> 
       {/* <button> edit</button>  */}
-      <NavLink state={club} to={`/clubs/${clubId}/edit`}><button>edit</button></NavLink>
+      <NavLink state={club} to={`/clubs/${clubId}/editClub`}><button>edit</button></NavLink>
       <button> delete</button> 
       </div> 
       </div>

@@ -43,21 +43,21 @@ const NewCoffeeShop = (props) => {
       <div className={styles["shop-form"]}>
         <div>
           <label htmlFor="shop-name">Name:</label>
-          <input type="text" name="name" id="shop-name" value={coffeeShop.name} onChange={handleChange} />
+          <input type="text" name="name" id="shop-name" value={coffeeShop.name} onChange={handleChange} autoComplete='off' />
         </div>
         <div className={styles["shop-address"]}>
           <h4>Address</h4>
           <div>
             <label htmlFor="shop-street">Street:</label>
-            <input type="text" name="street" id="shop-street" value={coffeeShop.street} onChange={handleChange} />
+            <input type="text" name="street" id="shop-street" value={coffeeShop.street} onChange={handleChange} autoComplete='off' />
           </div>
           <div>
             <label htmlFor="shop-city">City:</label>
-            <input type="text" name="city" id="shop-city" value={coffeeShop.city} onChange={handleChange} />
+            <input type="text" name="city" id="shop-city" value={coffeeShop.city} onChange={handleChange} autoComplete='off' />
           </div>
           <div>
             <label htmlFor="shop-state">State:</label>
-            <input type="text" name="state" id="shop-state" value={coffeeShop.state} onChange={handleChange} />
+            <input type="text" name="state" id="shop-state" value={coffeeShop.state} onChange={handleChange} autoComplete='off' />
           </div>
           <div>
             <label htmlFor="shop-zipCode">Zip-code</label>
