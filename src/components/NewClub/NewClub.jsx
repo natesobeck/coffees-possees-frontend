@@ -1,5 +1,5 @@
 // npm modules
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 //components
 import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
@@ -25,6 +25,25 @@ const NewClub = (props) => {
     evt.preventDefault()
     props.handleAddClub(clubFormData)
   }
+
+
+  // useEffect(() => {
+  //   const createClub = document.getElementById('create-club').addEventListener("click", displayShopSuggestions)
+  //   const shopSuggestions = document.getElementById('shop-suggestions')
+  //   const displayShopSuggestions = () => {
+  //     shopSuggestions
+  //   }
+  // })
+
+  const displayShopSuggestions = () => {
+    const shopSuggestions = document.getElementById('shop-suggestions')
+    if (shopSuggestions.style.display === 'none') {
+      shopSuggestions.style.display = 'block'
+    } else {
+      shopSuggestions.style.display = 'none'
+    }
+  }
+  
 
   return (
     <div className={styles['new-club-container']}>
@@ -58,11 +77,11 @@ const NewClub = (props) => {
           </div>
         </div>
         <div className={styles['create-club-button']}>
-          <button type='submit'>Create Club</button>
+          <button type='submit' id='create-club' onClick={displayShopSuggestions}>Create Club</button>
         </div>
       </form>
       <NewCoffeeShop handleAddShop={props.handleAddShop} />
-        <div className={styles['shops-in-club']}>
+        <div className={styles['shops-in-club']} id='shop-suggestions'>
           <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
           <div className={styles['shop-cards']}>
             <div>Shop Card 1</div>
