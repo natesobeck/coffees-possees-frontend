@@ -4,7 +4,6 @@ import { useState } from 'react'
 //css
 import styles from './NewReview.module.css'
 
-
 const NewReview = (props) => {
   const [reviewFormData, setReviewFormData] = useState({
     text: '',
@@ -30,24 +29,21 @@ const NewReview = (props) => {
     setReviewFormData({})
   }
 
-
-
   return (
     <form className={styles.container} onSubmit={handleSubmitReview}>
       <div className={styles['review-container']}> 
-
         <div className={styles['space-between']}>
           <label htmlFor="text">Text:</label>
-        <input
-        required
-        name='text'
-        type='text'
-        value={reviewFormData.text || ''} 
-        id='text'
-        onChange={handleChange}
-        placeholder='Add Review'
-        autoComplete='off'
-        />
+          <input
+            required
+            name='text'
+            type='text'
+            value={reviewFormData.text || ''} 
+            id='text'
+            onChange={handleChange}
+            placeholder='Add Review'
+            autoComplete='off'
+          />
         </div>
 
     {/* <h1>Leave a Review</h1> */}
