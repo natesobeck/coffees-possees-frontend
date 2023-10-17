@@ -50,9 +50,12 @@ const CoffeeShopDetails = () => {
           <li>clubname</li>
           <li></li>
           <li></li>
-          
         </ul>
       </div>
+      <div className={styles['coffee-edit-delete-button']}> 
+      <button> edit</button> 
+      <button> delete</button> 
+      </div> 
            {/* <button> edit</button> */}
          {/* edit button will be changed to a link to be sent to the edit form for user to be able to edit their coffesshop^ */}
       {/* <button> delete</button> */}
