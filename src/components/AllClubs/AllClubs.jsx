@@ -1,13 +1,29 @@
-import FindClubForm from '../FindClubForm/FindClubForm'
-import FindClubResults from '../FindClubResults/FindClubResults'
+// npm modules
+import { useState } from 'react'
+
+// components
+import ClubSearchForm from '../ClubSearchForm/ClubSearchForm'
+import ClubSearchResults from '../ClubSearchResults/ClubSearchResults'
+
+// css
 import styles from './AllClubs.module.css'
 
 const AllClubs = (props) => {
+  const [searchResults, setSearchResults] = useState(props.clubs)
+
+  const handleClubSearch = formData => {
+    const filteredClubResults = props.clubs.filter(club => (
+      club.name.toLowerCase().includes(formData.query.toLowerCase()) ||
+      club.category.toLowerCase().includes(formData.query.toLowerCase())
+    ))
+    setSearchResults(filteredClubResults)
+  }
+
   return ( 
     <main>
       <div className={styles["clubs-container"]}>
-        <FindClubForm />
-        <FindClubResults clubs={props.clubs} handleDeleteClub={props.handleDeleteClub}/>
+        <ClubSearchForm handleClubSearch={handleClubSearch} />
+        <ClubSearchResults clubs={props.clubs} handleDeleteClub={props.handleDeleteClub} searchResults={searchResults} user={props.user}/>
       </div>
     </main>
   )
