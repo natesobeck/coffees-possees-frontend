@@ -10,6 +10,7 @@ import { useParams } from 'react-router-dom'
 
 
 //components
+import NewReview from '../NewReview/NewReview'
 
 
 //import loading, new review, and reviews here 
@@ -26,6 +27,13 @@ const CoffeeShopDetails = () => {
     fetchCoffeeShop()
   }, [coffeeShopId])
 
+  const handleAddReview = async (reviewFormData) => {
+    const newReview = await shopService.createReview(coffeeShopId, reviewFormData)
+    setCoffeeShop({...coffeeShop, reviews: [...coffeeShop, newReview]})
+  }
+
+  // if (!coffeeShop) return <Loading />
+
 
 
   return (
@@ -39,9 +47,10 @@ const CoffeeShopDetails = () => {
       <div className={styles['show-all-clubs-container']}>
         <h3>All Clubs</h3>
         <ul>
-          <li>{club.name}</li>
-          <li>{club.name}</li>
-          <li>{club.name}</li>
+          <li>clubname</li>
+          <li></li>
+          <li></li>
+          
         </ul>
       </div>
            {/* <button> edit</button> */}
