@@ -5,9 +5,9 @@ import ClubCard from '../ClubCard/ClubCard'
 // css
 import styles from './ClubSearchResults.module.css'
 
-const ClubSearchResults = ({ clubs, handleDeleteClub }) => {
+const ClubSearchResults = (props) => {
 
-  if (!clubs.length) return <h2>No clubs yet!</h2>
+  if (!props.clubs.length) return <h2>No clubs yet!</h2>
 
   return ( 
     <div className={styles["search-results"]}>
@@ -16,8 +16,8 @@ const ClubSearchResults = ({ clubs, handleDeleteClub }) => {
         <div>Category:</div>
         <div>Time of Day:</div>
       </div>
-      {clubs.map(club => (
-        <ClubCard key={club._id} club={club} handleDeleteClub={handleDeleteClub}/>
+      {props.searchResults.map(club => (
+        <ClubCard key={club._id} club={club} handleDeleteClub={props.handleDeleteClub} user={props.user} />
       ))}
     </div>
   )
