@@ -51,7 +51,7 @@ a:hover {
 nav {
   position: fixed;
   z-index: 0;
-  width: 85vw;
+  width: 100vw;
   max-width: 1400px;
   top: 0;
 }
