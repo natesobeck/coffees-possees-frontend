@@ -47,12 +47,6 @@ a:visited {
   text-decoration: none;
 }
 
-a:hover {
-  color: lightblue;
-  text-decoration: underline;
-  text-underline-offset: 10px;
-}
-
 @media (min-width: 1200px) {
   main {
     display: flex;

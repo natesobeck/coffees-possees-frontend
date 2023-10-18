@@ -52,12 +52,14 @@ function App() {
   const handleAddClub = async clubFormData => {
     const newClub = await clubService.create(clubFormData)
     setClubs([newClub, ...clubs])
+    setClubSearchResults([...newClub, ...clubSearchResults])
     navigate('/new')
   }
 
   const handleAddShop = async shopFormData => {
     const newShop = await shopService.create(shopFormData)
     setShops([newShop, ...shops])
+    setShopSearchResults([newShop, ...shopSearchResults])
     navigate('/new')
   }
 
@@ -120,7 +122,7 @@ function App() {
       setShopSearchResults(data)
     }
     fetchAllShops()
-  }, [])  
+  }, [])
   
 
   return (
