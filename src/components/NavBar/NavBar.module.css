@@ -28,6 +28,13 @@ nav a {
   font-size: 3.5vw;
 }
 
+
+nav a:hover {
+  color: lightblue;
+  border-bottom: 2px solid #CEE6F3;
+  transition: border-bottom .5s ease-out;
+}
+
 nav > ul {
   margin: 0;
   padding: 16px 32px;

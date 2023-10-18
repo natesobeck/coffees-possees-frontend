@@ -89,11 +89,8 @@
   opacity: .3;
 }
 
-#home, #reccomendations {
+#home, #reccomendations, #about-us {
   z-index: 2;
-}
-
-#home {
   font-family: 'breve';
 }
 
@@ -131,4 +128,24 @@
   border: 2px solid #CEE6F3;
   color: #CEE6F3;
   font-size: 6rem;
+}
+
+#about-background {
+  background-image: url(/assets/coffeeBeans.jpg);
+  height: 110vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 200vh;
+}
+
+#img-cover3 {
+  height: 110vh;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  background-color: #262A56;
+  top: 200vh;
+  opacity: .65;
 }
