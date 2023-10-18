@@ -18,7 +18,7 @@ const ReviewCard = ({ review, shopId, user }) => {
       <Link to={`/shops/${shopId}/reviews/${review._id}`} state={review}>
         EDIT
       </Link>
-      <button>DELETE</button>
+      <button onClick={()=> handleDeleteReview(shopId, review._id)}>DELETE</button>
       </>
     }
       <h3>Text: {review.text}</h3>

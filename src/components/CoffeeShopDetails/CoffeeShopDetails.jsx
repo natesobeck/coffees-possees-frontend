@@ -34,6 +34,11 @@ const CoffeeShopDetails = (props) => {
     setCoffeeShop({...coffeeShop, reviews: [...coffeeShop.reviews, newReview]})
   }
 
+  const handleDeleteReview = async (shopId, reviewId) => {
+    await shopService.deleteReview(shopId, reviewId)
+    setCoffeeShop({...coffeeShop, reviews: coffeeShop.reviews.filter((review)=> review._id !== reviewId) })
+  }
+
   // if (!coffeeShop) return <Loading />
 
 //i changed coffeeshop id to shop id based on the asyn function in shopService!!!!!!!!
@@ -65,7 +70,7 @@ const CoffeeShopDetails = (props) => {
     <div className={styles['review-container']}>
       <h1>Leave a Review</h1>
       <NewReview handleAddReview={handleAddReview} />
-      <Reviews reviews={coffeeShop.reviews} user={props.user} shopId={shopId}/>
+      <Reviews reviews={coffeeShop.reviews} user={props.user} shopId={shopId} handleDeleteReview={handleDeleteReview}/>
 
     </div>
     </main>
