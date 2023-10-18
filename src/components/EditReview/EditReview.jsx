@@ -13,8 +13,8 @@ const EditReview = () => {
   const { shopId, reviewId } = useParams()
   const  [reviewFormData, setReviewFormData] = useState(state)
 
-  const handleChange = ({ target }) => {
-    setReviewFormData({ ...reviewFormData, [target.name]: target.value})
+  const handleChange = (evt) => {
+    setReviewFormData({ ...reviewFormData, [evt.target.name]: evt.target.value})
   }
 
   const handleSubmitEdit = async (evt) => {
@@ -40,7 +40,7 @@ const EditReview = () => {
             required
             name='text'
             type='text'
-            value={reviewFormData.text || ''} 
+            value={reviewFormData.text} 
             id='text'
             onChange={handleChange}
             placeholder='Edit Review'
@@ -51,7 +51,7 @@ const EditReview = () => {
     {/* <h1>Leave a Review</h1> */}
     <div className={styles['space-between']}>
       <label htmlFor='price'>Price of Coffees:</label>
-      <select name='price' value={reviewFormData.price || ''} id='price' onChange={handleChange}>
+      <select name='price' value={reviewFormData.price} id='price' onChange={handleChange}>
         <option value='1'>1</option>
         <option value='2'>2</option>
         <option value='3'>3</option>
@@ -62,7 +62,7 @@ const EditReview = () => {
         
     <div className={styles['space-between']}>
       <label htmlFor='rating'> Rating:</label>
-        <select name='rating' value={reviewFormData.rating || ''} id='rating' onChange={handleChange}>
+        <select name='rating' value={reviewFormData.rating} id='rating' onChange={handleChange}>
           <option value='1'>1</option>
           <option value='2'>2</option>
           <option value='3'>3</option>
@@ -72,7 +72,7 @@ const EditReview = () => {
     </div>
     <div className={styles['space-between']}>
       <label htmlFor='coffeeShopAmbience'>Ambience:</label>
-          <select name='coffeeShopAmbience' value={reviewFormData.coffeeShopAmbience || ''} id='coffeeShopAmbience' onChange={handleChange}>
+          <select name='coffeeShopAmbience' value={reviewFormData.coffeeShopAmbience} id='coffeeShopAmbience' onChange={handleChange}>
             <option value='Spacious'>Spacious</option>
             <option value='Cozy'>Cozy</option>
             <option value='Loud'>Loud</option>
@@ -82,7 +82,7 @@ const EditReview = () => {
     </div>
     <div className={styles['space-between']}>
         <label htmlFor='wifi'> Wifi Strength:</label>
-          <select name='wifi' value={reviewFormData.wifi || ''} id='wifi' onChange={handleChange}>
+          <select name='wifi' value={reviewFormData.wifi} id='wifi' onChange={handleChange}>
             <option value='1'>1</option>
             <option value='2'>2</option>
             <option value='3'>3</option>
