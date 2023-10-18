@@ -10,7 +10,6 @@
 .section-container {
   height: 100vh;
   width: 100%;
-
   text-align: center;
   display: flex;
   justify-content: center;
@@ -94,6 +93,7 @@
   font-family: 'breve';
 }
 
+
 .slogan {
   font-size: 3.5rem;
   color: #CEE6F3;
@@ -102,11 +102,6 @@
   border-radius: 10px;
   border: 2px solid #CEE6F3;
   margin: 0 0 20px 0;
-}
-
-#slogan-container {
-  position: absolute;
-  bottom: 20vh;
 }
 
 #img-cover2 {
@@ -120,14 +115,13 @@
 }
 
 #title-container {
-  position: absolute;
-  top: 40vh;
   background: black;
   padding: 15px;
   border-radius: 10px;
   border: 2px solid #CEE6F3;
   color: #CEE6F3;
   font-size: 6rem;
+  margin-bottom: 5%;
 }
 
 #about-background {
@@ -148,4 +142,31 @@
   background-color: #262A56;
   top: 200vh;
   opacity: .5;
+}
+
+@media (max-width: 1200px){
+  #title-container {
+    font-size: 5rem;
+  }
+  .slogan {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #title-container {
+    font-size: 4rem;
+  }
+  .slogan {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 550px) {
+  #title-container {
+    font-size: 3rem;
+  }
+  .slogan {
+    font-size: 1.5rem;
+  }
 }

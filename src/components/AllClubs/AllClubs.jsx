@@ -10,6 +10,8 @@ const AllClubs = (props) => {
 
   return ( 
     <main>
+      <div id={styles['background-image']}></div>
+      <div id={styles['img-cover']}></div>
       <div className={styles["clubs-container"]}>
         <ClubSearchForm 
           handleClubSearch={props.handleClubSearch} 

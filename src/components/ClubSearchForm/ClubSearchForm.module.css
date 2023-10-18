@@ -5,9 +5,30 @@
   align-items: center;
   padding: 15px;
   padding-bottom: 50px;
-  border: 3px solid white;
-  margin-top: 100px;
-  width: 90%;
+  margin-top: 120px;
+  width: 50%;
+  background-color: rgba(245, 245, 245, .3);
+  backdrop-filter: blur(18px);
+  color: black;
+  border-radius: 20px;
+  font-family: 'breve';
+}
+
+.form-container h1, .form-container p {
+  color: #CEE6F3;
+  background-color: rgb(0, 0, 0, .6);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #CEE6F3;
+  margin: 0 0 20px 0;
+}
+.form-container h1 {
+  font-size: 3rem;
+}
+
+.form-container p {
+  font-size: 2rem;
+  padding: 5px;
 }
 
 .search-clubs {
@@ -15,33 +36,24 @@
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  /* gap: 20px; */
-  border: 3px solid white;
   border-radius: 7px;
   width: 500px;
   height: 90px;
   margin-top: 20px;
-  background-color: darkslategray;
+  background-color: rgb(0, 0, 0, .6);
 }
-.p-tag {
-  font-size: 20px;
-  width: 500px;
-  text-align: center;
-}
+
 .search-clubs > input {
   width: 50%;
   height: 40px;
-  border: 3px solid #787878;
-  border-radius: 5px;
-}
-.search-clubs > button {
-  height: 40px;
-  width: 30%;
-  background-color: brown;
   border-radius: 5px;
   border: none;
-  color: white;
-  font-size: 15px;
-  font-weight: bold;
-  border: 3px solid #b0b0b0;
+}
+.search-clubs > button {
+  height: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(255, 255, 255, .4);
+  border-radius: 50%;
+  border: none;
 }
