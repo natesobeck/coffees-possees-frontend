@@ -22,8 +22,8 @@ const ClubSearchForm = (props) => {
 
   return ( 
     <div className={styles["form-container"]}>
-      <h1>Search For A Club</h1>
-      <p className={styles['p-tag']}>Find what clubs are available around your area based on your interests</p>
+      <h1>Find a Club Here</h1>
+      <p>Search for a club by name or category</p>
       <form className={styles['search-clubs']} onSubmit={handleSubmit}>
         <input 
           type="text" 
@@ -32,7 +32,7 @@ const ClubSearchForm = (props) => {
           name="query"
           onChange={handleChange}
         />
-        <button>Search</button>
+        <button>🔎</button>
       </form>
     </div>
   )
