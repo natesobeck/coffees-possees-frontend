@@ -52,7 +52,7 @@ function App() {
   const handleAddClub = async clubFormData => {
     const newClub = await clubService.create(clubFormData)
     setClubs([newClub, ...clubs])
-    setClubSearchResults([...newClub, ...clubSearchResults])
+    setClubSearchResults([newClub, ...clubSearchResults])
     navigate('/new')
   }
 
