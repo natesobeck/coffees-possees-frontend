@@ -7,7 +7,7 @@ import styles from './ShopCard.module.css'
 const ShopCard = ({ shop, handleDeleteShop, user }) => {
   return (
     <div className={styles["shop-card-container"]}>
-      <Link to={`/coffeeshops/${shop._id}`}>
+      <Link to={`/shops/${shop._id}`}>
         <h3>{shop.name}</h3>
       </Link>
       <div>{shop.location}, {shop.address.state}</div>

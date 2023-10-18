@@ -173,7 +173,7 @@ function App() {
           element={ <ClubDetails user={user}/> }
         />
         <Route
-          path="/coffeeshops/:shopId"
+          path="/shops/:shopId"
           element={ <CoffeeShopDetails user={user}/> }
         />
         <Route
@@ -201,7 +201,7 @@ function App() {
           }
         />
         <Route
-          path="/coffeeshops/:shopId/editshop"
+          path="/shops/:shopId/editshop"
           element={
             <ProtectedRoute user={user}>
               <EditCoffeeShop handleUpdateCoffeeShop={handleUpdateCoffeeShop} />
