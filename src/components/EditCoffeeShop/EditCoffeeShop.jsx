@@ -38,7 +38,6 @@ const EditCoffeeShop = (props) => {
 
   return (
     <form className="new-shop-form-container" onSubmit={handleSubmit}>
-      {/* <h1>Add A Coffee Shop Here</h1> */}
       <div className="new-shop-image-holder"></div>
       <div className="shop-form">
         <div>
