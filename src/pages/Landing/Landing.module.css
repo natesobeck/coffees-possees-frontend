@@ -10,12 +10,13 @@
 .section-container {
   height: 100vh;
   width: 100%;
-  border-bottom: 3px solid #CEE6F3;
+
   text-align: center;
   display: flex;
   justify-content: center;
   align-items:center;
   flex-direction: column;
+  z-index: 0;
 }
 
 .club-card-container {
@@ -54,4 +55,80 @@
   align-items: center;
   margin-bottom: 25px;
   border-radius: 20px;
+}
+
+#home-background {
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/coffeeCups.jpg);
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  border-bottom: 5px solid #CEE6F3;
+}
+
+#reccomendation-background {
+  background-image: url(/assets/espresso.jpg);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 100vh;
+  border-bottom: 5px solid #CEE6F3;
+}
+
+#img-cover1 {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  top: 0;
+  opacity: .3;
+}
+
+#home, #reccomendations {
+  z-index: 2;
+}
+
+#home {
+  font-family: 'breve';
+}
+
+.slogan {
+  font-size: 3.5rem;
+  color: #CEE6F3;
+  background-color: black;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #CEE6F3;
+  margin: 0 0 20px 0;
+}
+
+#slogan-container {
+  position: absolute;
+  bottom: 20vh;
+}
+
+#img-cover2 {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: 1;
+  background-color: black;
+  top: 100vh;
+  opacity: .4;
+}
+
+#title-container {
+  position: absolute;
+  top: 40vh;
+  background: black;
+  padding: 15px;
+  border-radius: 10px;
+  border: 2px solid #CEE6F3;
+  color: #CEE6F3;
+  font-size: 6rem;
 }

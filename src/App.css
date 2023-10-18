@@ -53,14 +53,6 @@ a:hover {
   text-underline-offset: 10px;
 }
 
-nav {
-  position: fixed;
-  z-index: 0;
-  width: 100vw;
-  max-width: 1400px;
-  top: 0;
-}
-
 @media (min-width: 1200px) {
   main {
     display: flex;
