@@ -18,6 +18,16 @@ const EditReview = () => {
   }
 
   const handleSubmitEdit = async (evt) => {
+
+    const newForm = {}
+    newForm.text = reviewFormData.text
+    newForm.price = parseFloat(reviewFormData.price)
+    newForm.rating = parseFloat(reviewFormData.rating)
+    newForm.wifi = parseFloat(reviewFormData.wifi)
+    newForm.coffeeShopAmbience = reviewFormData.coffeeShopAmbience
+  
+
+
     evt.preventDefault()
     await shopService.updateReview(shopId, reviewId, reviewFormData)
     navigate(`/shops/${shopId}`)

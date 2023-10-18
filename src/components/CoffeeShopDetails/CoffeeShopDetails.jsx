@@ -65,7 +65,7 @@ const CoffeeShopDetails = (props) => {
     <div className={styles['review-container']}>
       <h1>Leave a Review</h1>
       <NewReview handleAddReview={handleAddReview} />
-      <Reviews reviews={coffeeShop.reviews} user={props.user} />
+      <Reviews reviews={coffeeShop.reviews} user={props.user} shopId={shopId}/>
 
     </div>
     </main>
