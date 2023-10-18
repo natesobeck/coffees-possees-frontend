@@ -167,6 +167,7 @@
   color: #606060;
   gap: 40px;
   padding: 20px;
+  display: none;
 }
 .shops-in-club > p {
   font-size: 20px;
