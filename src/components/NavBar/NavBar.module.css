@@ -1,9 +1,13 @@
 .nav {
   background-color: #3e2814;
-  background-image: url("https://www.transparenttextures.com/patterns/wood-pattern.png");
   border-bottom: 5px solid #CEE6F3;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  z-index: 5;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  height: 90px;
 }
 
 .nav ul {
@@ -12,6 +16,7 @@
   list-style-type: none;
   height: 70px;
   align-items: center;
+  margin-right: 3rem;
 }
 
 .nav ul li a {
