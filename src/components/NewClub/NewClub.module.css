@@ -9,11 +9,13 @@
   max-width: 1400px;
   margin: 100px 0 30px 0;
 }
+
 .club-info {
   border: 2px solid white;
   display: flex;
   flex-direction: row;
 }
+
 .location-info {
   display: flex;
   flex-direction: column;
@@ -23,15 +25,18 @@
   width: 50%;
   background-color: #481f01;
 }
-.location-info > h3 {
+
+.location-info>h3 {
   font-size: 30px;
 }
-.location-info > h5 {
+
+.location-info>h5 {
   width: 80%;
   font-size: 20px;
   text-align: center;
 }
-.location-info > .name {
+
+.location-info>.name {
   display: flex;
   border: 3px solid white;
   padding: 20px;
@@ -50,15 +55,17 @@
   border: 3px solid #b0b0b0;
   border-radius: 5px;
 } */
-.location-info > .name > input {
+.location-info>.name>input {
   border: 3px solid #b0b0b0;
   border-radius: 5px;
   color: #505050;
   outline: none;
 }
-.location-info > .name > input:focus {
+
+.location-info>.name>input:focus {
   border: 4px solid #0492c2;
 }
+
 .club-focus {
   display: flex;
   flex-direction: column;
@@ -69,29 +76,31 @@
   color: #606060;
 }
 
-.club-focus > h6 {
+.club-focus>h6 {
   font-size: 20px;
   font-weight: 800;
   width: 80%;
   text-align: center;
 }
-.club-focus > .category-container {
+
+.club-focus>.category-container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
   width: 50%;
 }
+
 /* .category-container {
 
 } */
-.category-container > label {
+.category-container>label {
   font-size: 20px;
   font-weight: bold;
   color: black;
 }
 
-.category-container > input {
+.category-container>input {
   width: 170px;
   height: 40px;
   text-align: center;
@@ -103,7 +112,7 @@
   color: #505050;
 }
 
-.club-focus > .location-time {
+.club-focus>.location-time {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -116,17 +125,20 @@
   margin-bottom: 20px;
   /* margin: 0 auto; */
 }
-.club-focus > .location-time > input {
+
+.club-focus>.location-time>input {
   height: 40px;
   border: 3px solid #b0b0b0;
   border-radius: 5px;
   color: #505050;
   outline: none;
 }
-.club-focus > div > input:focus {
+
+.club-focus>div>input:focus {
   border: 4px solid #0492c2;
 }
-.club-focus > .location-time > select {
+
+.club-focus>.location-time>select {
   width: 95%;
   height: 40px;
   border: 3px solid #b0b0b0;
@@ -135,6 +147,7 @@
   outline: none;
   margin-left: 15px;
 }
+
 .create-club-button {
   display: flex;
   justify-content: center;
@@ -145,7 +158,8 @@
   /* height: 70px; */
   background-color: white;
 }
-.create-club-button > button {
+
+.create-club-button>button {
   width: 200px;
   height: 45px;
   background-color: #b90e0a;
@@ -155,6 +169,7 @@
   font-weight: bold;
   border: none;
 }
+
 .shops-in-club {
   display: flex;
   flex-direction: column;
@@ -169,18 +184,21 @@
   padding: 20px;
   display: none;
 }
-.shops-in-club > p {
+
+.shops-in-club>p {
   font-size: 20px;
   width: 50%;
   text-align: center;
   font-weight: bold;
 }
-.shops-in-club > .shop-cards {
+
+.shops-in-club>.shop-cards {
   display: flex;
   justify-content: space-between;
   width: 80%;
 }
-.shop-cards > * {
+
+.shop-cards>* {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,7 +208,8 @@
   height: 190px;
   background-color: darkslategray;
 }
-.shops-in-club > .time-slot {
+
+.shops-in-club>.time-slot {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -201,16 +220,19 @@
   gap: 20px;
   padding-right: 30px;
 }
-.shops-in-club > .time-slot > label {
+
+.shops-in-club>.time-slot>label {
   font-size: 16px;
   color: black;
 }
-.shops-in-club > .time-slot > input {
+
+.shops-in-club>.time-slot>input {
   height: 35px;
   color: #505050;
   border-radius: 5px;
 }
-.shops-in-club > .time-slot > button {
+
+.shops-in-club>.time-slot>button {
   height: 35px;
   width: 100px;
   font-size: 18px;
@@ -218,4 +240,9 @@
   color: white;
   border: none;
   border-radius: 5px;
+}
+
+
+.hidden {
+  display: none;
 }
