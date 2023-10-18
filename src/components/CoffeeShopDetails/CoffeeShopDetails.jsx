@@ -7,7 +7,7 @@ import * as shopService from '../../services/shopService'
 //npm modules
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 //components
@@ -20,7 +20,6 @@ import Reviews from '../Reviews/Reviews'
 const CoffeeShopDetails = (props) => {
   const [coffeeShop, setCoffeeShop] = useState({})
   const { shopId } = useParams()
-
   useEffect(() => {
     const fetchCoffeeShop = async () => {
       const data = await shopService.show(shopId)
@@ -60,7 +59,7 @@ const CoffeeShopDetails = (props) => {
         </ul>
       </div>
       <div className={styles['coffee-edit-delete-button']}> 
-      <NavLink state={coffeeShop} to={`/coffeeshops/${shopId}/editshop`} ><button> edit</button> </NavLink>
+      <Link state={coffeeShop} to={`/coffeeshops/${shopId}/editshop`} ><button> edit</button> </Link>
       <button> delete</button> 
       </div> 
            {/* <button> edit</button> */}

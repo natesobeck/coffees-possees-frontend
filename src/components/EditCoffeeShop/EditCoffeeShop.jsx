@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 //css
-import styles from './EditCoffeeShop.module.css'
+// import styles from './EditCoffeeShop.module.css'
 
 
 const EditCoffeeShop = (props) => {
@@ -13,10 +13,8 @@ const EditCoffeeShop = (props) => {
     street: state.address.street,
     city: state.address.city,
     state: state.address.state,
-    zipCode: state.address.zipCode
+    zipCode: state.address.zipCode,
   })
-
-  console.log("THIS IS STATE", state)
 
   const handleChange = evt => {
     setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
@@ -26,8 +24,8 @@ const EditCoffeeShop = (props) => {
 
   const handleSubmit = evt => {
     const adjustedFormData = {}
+    adjustedFormData._id = state._id
     adjustedFormData.name = coffeeShop.name
-    adjustedFormData.location = coffeeShop.location
     adjustedFormData.address = {
       street: coffeeShop.street,
       city: coffeeShop.city,
@@ -38,13 +36,7 @@ const EditCoffeeShop = (props) => {
     props.handleUpdateCoffeeShop(adjustedFormData)
   }
 
-  // const handleChangeAddress = evt => {
-  //   setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
-  // }
-  // Build a new Object?
-  // Store the address
-
-  return ( 
+  return (
     <form className="new-shop-form-container" onSubmit={handleSubmit}>
       {/* <h1>Add A Coffee Shop Here</h1> */}
       <div className="new-shop-image-holder"></div>
@@ -69,7 +61,7 @@ const EditCoffeeShop = (props) => {
           </div>
           <div>
             <label htmlFor="shop-zipCode">Zip-code</label>
-            <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode} onChange={handleChange}/>
+            <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode || ''} onChange={handleChange} />
           </div>
         </div>
         <button type='submit'>Edit CoffeeShop</button>
