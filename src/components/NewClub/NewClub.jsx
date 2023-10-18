@@ -83,19 +83,19 @@ const NewClub = (props) => {
         </div>
       </form>
       <NewCoffeeShop handleAddShop={props.handleAddShop} />
-        <div className={styles['shops-in-club']} id='shop-suggestions'>
-          <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
-          <div className={styles['shop-cards']}>
-            <div>Shop Card 1</div>
-            <div>Shop Card 2</div>
-            <div>Shop Card 3</div>
-          </div>
-          {/* <div className='time-slot'>
-            <label>Pick a time:</label>
-            <input type="time" placeholder="Pick a time slot" />
-            <button>Pick Time</button>
-          </div> */}
+      <div className={styles['shops-in-club']} id='shop-suggestions'>
+        <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
+        <div className={styles['shop-cards']}>
+          <div>Shop Card 1</div>
+          <div>Shop Card 2</div>
+          <div>Shop Card 3</div>
         </div>
+        {/* <div className='time-slot'>
+          <label>Pick a time:</label>
+          <input type="time" placeholder="Pick a time slot" />
+          <button>Pick Time</button>
+        </div> */}
+      </div>
     </div>
     
   )
