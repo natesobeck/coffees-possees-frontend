@@ -18,13 +18,13 @@ const NewReview = (props) => {
   }
 
   const handleSubmitReview = (evt) => {
-    evt.preventDefault()
     const newForm = {}
     newForm.text = reviewFormData.text
     newForm.price = parseFloat(reviewFormData.price)
     newForm.rating = parseFloat(reviewFormData.rating)
     newForm.wifi = parseFloat(reviewFormData.wifi)
     newForm.coffeeShopAmbience = reviewFormData.coffeeShopAmbience
+    evt.preventDefault()
     props.handleAddReview(newForm)
     setReviewFormData({})
   }

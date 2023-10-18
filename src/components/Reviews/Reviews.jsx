@@ -11,6 +11,7 @@ const Reviews = (props) => {
           review={review}
           user={props.user}
           shopId={props.shopId}
+          handleDeleteReview={props.handleDeleteReview}
         />
     ))}
     </>
