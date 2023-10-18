@@ -5,6 +5,7 @@ import AboutUsCard from '../AboutUsCard/AboutUsCard'
 
 
 const AboutUs = () => {
+
   let aboutUsList = data.sort(() => 0.5 - Math.random())
   return (
     <div className={style.container} >

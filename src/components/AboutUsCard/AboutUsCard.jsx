@@ -9,15 +9,19 @@ const AboutUsCard = ({ about }) => {
     <>
       <div className={style.card}>
         <div className={style.front}>
-          <h1 style={{ color: 'red' }}>{about.name}</h1>
+          <h1 style={{ color: '#61dafb' }}>{about.name}</h1>
         </div>
 
         <div className={style.back}>
-          <h1>{about.name}</h1>
-          <img src={github} alt="" style={{width: '20px'}} />
-          <img src={linkedIn} alt="" style={{width: '20px'}} />
-          <img src={mail} alt="" style={{width: '20px'}} />
-
+          <h1 style={{ color: '#603601' }}>{about.name}</h1>
+          <div className={style.social}>
+            <img src={github} alt="" />
+            <img src={linkedIn} alt=""  />
+            <img src={mail} alt="" />
+          </div>
+          <div className={style.desc}>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+          </div>
         </div>
       </div>
     </>
