@@ -22,6 +22,7 @@ const NewClub = (props) => {
   }
 
   const handleSubmit = evt => {
+    displayShopSuggestions()
     evt.preventDefault()
     props.handleAddClub(clubFormData)
   }
@@ -36,6 +37,7 @@ const NewClub = (props) => {
   // })
 
   const displayShopSuggestions = () => {
+    console.log('click')
     const shopSuggestions = document.getElementById('shop-suggestions')
     if (shopSuggestions.style.display === 'none') {
       shopSuggestions.style.display = 'block'
