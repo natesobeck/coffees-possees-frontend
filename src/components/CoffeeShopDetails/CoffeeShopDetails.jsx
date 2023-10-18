@@ -1,21 +1,19 @@
-//css
-import styles from './CoffeeShopDetails.module.css'
-
-//services
-import * as shopService from '../../services/shopService'
-
 //npm modules
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
+//services
+import * as shopService from '../../services/shopService'
 
 //components
 import NewReview from '../NewReview/NewReview'
 import Reviews from '../Reviews/Reviews'
 
+//css
+import styles from './CoffeeShopDetails.module.css'
 
-//import loading, new review, and reviews here 
+//import loading
 
 const CoffeeShopDetails = (props) => {
   const [coffeeShop, setCoffeeShop] = useState({})
@@ -40,32 +38,29 @@ const CoffeeShopDetails = (props) => {
 
   // if (!coffeeShop) return <Loading />
 
-//i changed coffeeshop id to shop id based on the asyn function in shopService!!!!!!!!
 
   return (
     <main className={styles.container}>
       <div className={styles['coffeeShop-details-container']}>
-        <h1>CoffeeShop Name Here</h1>
-        <h3>Name:{coffeeShop.name}</h3>
-        <h3>Ambience:{coffeeShop.coffeeShopAmbience}</h3>
-        <h3>CoffeShop Description: ...</h3>
-      </div>
+        <h1>{coffeeShop.name}</h1>
+        <h3>Street:{coffeeShop.street}</h3>
+        <h3>City:{coffeeShop.city}</h3>
+        <h3>State:{coffeeShop.state}</h3>
+        <h3>Zipcode:{coffeeShop.zipcode}</h3>
+      </div> 
       <div className={styles['show-all-clubs-container']}>
         <h3>All Clubs</h3>
         <ul>
           <li>clubname</li>
-          <li></li>
-          <li></li>
+          <li>clubname</li>
+          <li>clubname</li>
         </ul>
       </div>
       <div className={styles['coffee-edit-delete-button']}> 
-      <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} ><button> edit</button> </Link>
-      <button> delete</button> 
+      <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} ><button> Edit</button> </Link>
+      <button> Delete</button> 
       </div> 
-           {/* <button> edit</button> */}
-         {/* edit button will be changed to a link to be sent to the edit form for user to be able to edit their coffesshop^ */}
-      {/* <button> delete</button> */}
-      {/* delete button needs an onclick with a handleDeleteCoffeeShop function that will be held in app.jsx and will be deleted by using the coffeeshopId */}
+        
     <div className={styles['review-container']}>
       <h1>Leave a Review</h1>
       <NewReview handleAddReview={handleAddReview} />
