@@ -20,6 +20,8 @@ const EditCoffeeShop = (props) => {
     setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
   }
 
+  console.log('THIS IS COFFESHOP', coffeeShop)
+
   const handleSubmit = evt => {
     const adjustedFormData = {}
     adjustedFormData._id = state._id

@@ -1,19 +1,33 @@
+import { Link } from 'react-router-dom'
+//components
+import AddedBy from '../AddedBy/AddedBy'
+
+//css
 import styles from './ReviewCard.module.css'
 
-const ReviewCard = ({ review }) => {
+
+
+const ReviewCard = ({ review, shopId, user }) => {
   
 
   return (
-    // <div>
-    //   <h1> this is a review card</h1>
-    //   <AddedBy content={review} />
-    //   <h3>{review.text}</h3>
-    //   <h3>{review.price}</h3>
-    //   <h3>{review.rating}</h3>
-    //   <h3>{review.coffeeShopAmbience}</h3>
-    //   <h3>{review.wifi}</h3>
-    // </div>
-  
+    <div className={styles['for-review-container']}>
+      <AddedBy content={review} />
+      {review.addedBy._id === user.profile &&
+      <>
+      <Link to={`/shops/${shopId}/reviews/${review._id}`} state={review}>
+        EDIT
+      </Link>
+      <button onClick={()=> handleDeleteReview(shopId, review._id)}>DELETE</button>
+      </>
+    }
+      <h3>Text: {review.text}</h3>
+      <h3>Price of Coffee:{review.price}</h3>
+      <h3>Rating: {review.rating}</h3>
+      <h3>Ambience: {review.coffeeShopAmbience}</h3>
+      <h3>Wifi Strength: {review.wifi}</h3>
+
+    </div>
   )
 }
 

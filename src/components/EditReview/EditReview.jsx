@@ -1,36 +1,38 @@
-//npm imports
-import { useState } from 'react'
+import { useState } from "react";
+import { useLocation, useParams, useNavigate } from "react-router-dom";
 
 //css
-import styles from './NewReview.module.css'
+import styles from './EditReview.module.css'
 
-const NewReview = (props) => {
-  const [reviewFormData, setReviewFormData] = useState({
-    text: '',
-    price:'1',
-    rating:'1',
-    wifi:'1',
-    coffeeShopAmbience: 'Spacious'
-  })
+// services
+import * as shopService from '../../services/shopService'
 
-  const handleChange = (evt) => {
-    setReviewFormData({...reviewFormData, [evt.target.name]: evt.target.value})
+const EditReview = () => {
+  const navigate = useNavigate()
+  const { state } = useLocation()
+  const { shopId, reviewId } = useParams()
+  const  [reviewFormData, setReviewFormData] = useState(state)
+
+  const handleChange = ({ target }) => {
+    setReviewFormData({ ...reviewFormData, [target.name]: target.value})
   }
 
-  const handleSubmitReview = (evt) => {
-    const newForm = {}
-    newForm.text = reviewFormData.text
-    newForm.price = parseFloat(reviewFormData.price)
-    newForm.rating = parseFloat(reviewFormData.rating)
-    newForm.wifi = parseFloat(reviewFormData.wifi)
-    newForm.coffeeShopAmbience = reviewFormData.coffeeShopAmbience
+  const handleSubmitEdit = async (evt) => {
+
+    // const newForm = {}
+    // newForm.text = reviewFormData.text
+    // newForm.price = parseFloat(reviewFormData.price)
+    // newForm.rating = parseFloat(reviewFormData.rating)
+    // newForm.wifi = parseFloat(reviewFormData.wifi)
+    // newForm.coffeeShopAmbience = reviewFormData.coffeeShopAmbience
     evt.preventDefault()
-    props.handleAddReview(newForm)
-    setReviewFormData({})
+    await shopService.updateReview(shopId, reviewId, reviewFormData)
+    navigate(`/shops/${shopId}`)
   }
 
   return (
-    <form className={styles.container} onSubmit={handleSubmitReview}>
+    <form className={styles.container} onSubmit={handleSubmitEdit}>
+      <h1> EDIT REVIEW</h1>
       <div className={styles['review-container']}> 
         <div className={styles['space-between']}>
           <label htmlFor="text">Text:</label>
@@ -41,7 +43,7 @@ const NewReview = (props) => {
             value={reviewFormData.text || ''} 
             id='text'
             onChange={handleChange}
-            placeholder='Add Review'
+            placeholder='Edit Review'
             autoComplete='off'
           />
         </div>
@@ -79,23 +81,23 @@ const NewReview = (props) => {
           </select>
     </div>
     <div className={styles['space-between']}>
-      <label htmlFor='wifi'> Wifi Strength:</label>
-        <select name='wifi' value={reviewFormData.wifi || ''} id='wifi' onChange={handleChange}>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-        </select>
-    </div>  
-    <div className={styles['review-button']}>
-      <button type="submit">Add Review</button>
+        <label htmlFor='wifi'> Wifi Strength:</label>
+          <select name='wifi' value={reviewFormData.wifi || ''} id='wifi' onChange={handleChange}>
+            <option value='1'>1</option>
+            <option value='2'>2</option>
+            <option value='3'>3</option>
+            <option value='4'>4</option>
+            <option value='5'>5</option>
+          </select>
+      </div>  
+      <div className={styles['review-button']}>
+        <button type="submit">Edit Review</button>
+      </div>
     </div>
-  </div>
-</form>
-
+    </form>
   )
 }
 
+export default EditReview
 
-export default NewReview
+// Add updateReview and deleteReview functions in shopService and import edit review into app.jsx

@@ -19,6 +19,7 @@ import ClubDetails from './components/ClubDetails/ClubDetails'
 import CoffeeShopDetails from './components/CoffeeShopDetails/CoffeeShopDetails'
 import EditClub from './components/EditClub/EditClub'
 import EditCoffeeShop from './components/EditCoffeeShop/EditCoffeeShop'
+import EditReview from './components/EditReview/EditReview'
 
 // services
 import * as authService from './services/authService'
@@ -30,9 +31,12 @@ import './App.css'
 
 
 function App() {
-  const [user, setUser] = useState(authService.getUser())
   const [clubs, setClubs] = useState([])
+  const [user, setUser] = useState(authService.getUser())
   const [shops, setShops] = useState([])
+  const [clubSearchResults, setClubSearchResults] = useState([])
+  const [shopSearchResults, setShopSearchResults] = useState([])
+
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -60,12 +64,14 @@ function App() {
   const handleDeleteClub = async (clubId) => {
     const deletedClub = await clubService.deleteClub(clubId)
     setClubs(clubs.filter(club => club._id !== deletedClub._id))
+    setClubSearchResults(clubSearchResults.filter(club => club._id !== deletedClub._id))
     navigate('/clubs')
   }
 
   const handleDeleteShop = async (shopId) => {
     const deletedShop = await shopService.deleteShop(shopId)
     setShops(shops.filter(shop => shop._id !== deletedShop._id))
+    setShopSearchResults(shopSearchResults.filter(shop => shop._id !== deletedShop._id))
     navigate('/shops')
   }
 
@@ -81,21 +87,41 @@ function App() {
     navigate('/shops')
   }
 
+  const handleClubSearch = formData => {
+    const filteredClubResults = clubs.filter(club => (
+      club.name.toLowerCase().includes(formData.query.toLowerCase()) ||
+      club.category.toLowerCase().includes(formData.query.toLowerCase())
+    ))
+    setClubSearchResults(filteredClubResults)
+  }
+
+  const handleShopSearch = formData => {
+    const filteredShopResults = shops.filter(shop => (
+      shop.location.toLowerCase().includes(formData.query.toLowerCase()) || 
+      shop.name.toLowerCase().includes(formData.query.toLowerCase())
+    ))
+    setShopSearchResults(filteredShopResults)
+  }
+
   useEffect(() => {
     const fetchAllClubs = async () => {
       const data = await clubService.index()
       setClubs(data)
+      setClubSearchResults(data)
     }
     fetchAllClubs()
   }, [])
+  
 
   useEffect(() => {
     const fetchAllShops = async () => {
       const data = await shopService.index()
       setShops(data)
+      setShopSearchResults(data)
     }
     fetchAllShops()
-  }, [])
+  }, [])  
+  
 
   return (
     <main>
@@ -112,17 +138,33 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={ <AllClubs clubs={clubs} handleDeleteClub={handleDeleteClub} user={user}/>}
+          element={ <AllClubs 
+            clubs={clubs} 
+            handleDeleteClub={handleDeleteClub} 
+            user={user}
+            handleClubSearch={handleClubSearch}
+            clubSearchResults={clubSearchResults}
+          />}
         />
         <Route
           path="/shops"
-          element={ <AllCoffeeShops shops={shops} handleDeleteShop={handleDeleteShop} user={user}/> }
+          element={ 
+          <AllCoffeeShops 
+            shops={shops} 
+            handleDeleteShop={handleDeleteShop} 
+            user={user}
+            handleShopSearch={handleShopSearch}
+            shopSearchResults={shopSearchResults}
+          /> }
         />
         <Route
           path="/new"
           element={
             <ProtectedRoute user={user}>
-              <NewClub handleAddClub={handleAddClub} handleAddShop={handleAddShop}/>
+              <NewClub 
+                handleAddClub={handleAddClub} 
+                handleAddShop={handleAddShop}
+              />
             </ProtectedRoute>
           }
         />
@@ -165,6 +207,14 @@ function App() {
               <EditCoffeeShop handleUpdateCoffeeShop={handleUpdateCoffeeShop} />
             </ProtectedRoute>
           }
+        />
+        <Route 
+          path="/shops/:shopId/reviews/:reviewId" 
+          element={
+            <ProtectedRoute user={user}>
+              <EditReview />
+            </ProtectedRoute>
+        } 
         />
       </Routes>
     </main>

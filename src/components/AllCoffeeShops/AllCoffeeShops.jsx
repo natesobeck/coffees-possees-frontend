@@ -1,13 +1,24 @@
+
 // components
 import ShopCard from "../ShopCard/ShopCard"
+import ShopSearchForm from "../ShopSearchForm/ShopSearchForm"
 
 // css
 import styles from "./AllCoffeeShops.module.css"
 
-const AllCoffeeShops = ({ shops, handleDeleteShop, user }) => {
+const AllCoffeeShops = (props) => {
+
   return ( 
     <div className={styles["shops-container"]}>
-      {shops.map(shop => <ShopCard key={shop._id} shop={shop} handleDeleteShop={handleDeleteShop} user={user}/>)}
+      <ShopSearchForm 
+        handleShopSearch={props.handleShopSearch} 
+      />
+      {props.shopSearchResults.map(shop => <ShopCard 
+        key={shop._id} 
+        shop={shop} 
+        handleDeleteShop={props.handleDeleteShop} 
+        user={props.user}
+      />)}
     </div>
   )
 }
