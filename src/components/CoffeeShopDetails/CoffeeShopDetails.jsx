@@ -9,6 +9,7 @@ import * as shopService from '../../services/shopService'
 //components
 import NewReview from '../NewReview/NewReview'
 import Reviews from '../Reviews/Reviews'
+import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
 
 //css
 import styles from './CoffeeShopDetails.module.css'
@@ -43,10 +44,10 @@ const CoffeeShopDetails = (props) => {
     <main className={styles.container}>
       <div className={styles['coffeeShop-details-container']}>
         <h1>{coffeeShop.name}</h1>
-        <h3>Street:{coffeeShop.street}</h3>
-        <h3>City:{coffeeShop.city}</h3>
-        <h3>State:{coffeeShop.state}</h3>
-        <h3>Zipcode:{coffeeShop.zipcode}</h3>
+        <h3>Street:{coffeeShop.address.street}</h3>
+        <h3>City:{coffeeShop.address.city}</h3>
+        <h3>State:{coffeeShop.address.state}</h3>
+        <h3>ZipCode:{coffeeShop.address.zipCode}</h3>
       </div> 
       <div className={styles['show-all-clubs-container']}>
         <h3>All Clubs</h3>
