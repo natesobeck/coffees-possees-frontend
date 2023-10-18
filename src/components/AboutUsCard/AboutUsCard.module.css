@@ -30,8 +30,8 @@
   color: inherit;
   cursor: pointer;
   min-width: 20%;
-  height: 300px;
-  min-height: 300px;
+  height: 400px;
+  min-height: 400px;
   perspective: 1000px;
   margin: 1rem auto;
   position: relative;
@@ -66,6 +66,8 @@
   overflow: hidden;
 }
 
+
+
 .front:before {
   position: absolute;
   display: block;
@@ -96,6 +98,36 @@
 
 .back>div {
   margin: 10px;
+}
+
+.social {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social>img {
+  width: 30px;
+  opacity: 0.8;
+}
+
+.social>img:hover {
+  opacity: 1;
+  color: orange;
+  transform: translateY(-10px);
+  width: 40px;
+
+  .social {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+
+
+.desc {
+  text-align: justify;
 }
 
 .card:hover .back {
