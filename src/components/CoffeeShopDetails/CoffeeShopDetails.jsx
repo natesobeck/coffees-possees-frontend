@@ -59,7 +59,7 @@ const CoffeeShopDetails = (props) => {
         </ul>
       </div>
       <div className={styles['coffee-edit-delete-button']}> 
-      <Link state={coffeeShop} to={`/coffeeshops/${shopId}/editshop`} ><button> edit</button> </Link>
+      <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} ><button> edit</button> </Link>
       <button> delete</button> 
       </div> 
            {/* <button> edit</button> */}
