@@ -99,7 +99,7 @@ function App() {
 
   const handleShopSearch = formData => {
     const filteredShopResults = shops.filter(shop => (
-      shop.location.toLowerCase().includes(formData.query.toLowerCase()) || 
+      shop.location.toLowerCase().includes(formData.query.toLowerCase()) ||
       shop.name.toLowerCase().includes(formData.query.toLowerCase())
     ))
     setShopSearchResults(filteredShopResults)
@@ -113,7 +113,7 @@ function App() {
     }
     fetchAllClubs()
   }, [])
-  
+
 
   useEffect(() => {
     const fetchAllShops = async () => {
@@ -123,7 +123,7 @@ function App() {
     }
     fetchAllShops()
   }, [])
-  
+
 
   return (
     <main>
@@ -140,9 +140,9 @@ function App() {
         />
         <Route
           path="/clubs"
-          element={ <AllClubs 
-            clubs={clubs} 
-            handleDeleteClub={handleDeleteClub} 
+          element={<AllClubs
+            clubs={clubs}
+            handleDeleteClub={handleDeleteClub}
             user={user}
             handleClubSearch={handleClubSearch}
             clubSearchResults={clubSearchResults}
@@ -150,33 +150,34 @@ function App() {
         />
         <Route
           path="/shops"
-          element={ 
-          <AllCoffeeShops 
-            shops={shops} 
-            handleDeleteShop={handleDeleteShop} 
-            user={user}
-            handleShopSearch={handleShopSearch}
-            shopSearchResults={shopSearchResults}
-          /> }
+          element={
+            <AllCoffeeShops
+              shops={shops}
+              handleDeleteShop={handleDeleteShop}
+              user={user}
+              handleShopSearch={handleShopSearch}
+              shopSearchResults={shopSearchResults}
+            />}
         />
         <Route
           path="/new"
           element={
             <ProtectedRoute user={user}>
-              <NewClub 
-                handleAddClub={handleAddClub} 
+              <NewClub
+                handleAddClub={handleAddClub}
                 handleAddShop={handleAddShop}
+                shops={shops}
               />
             </ProtectedRoute>
           }
         />
         <Route
           path="/clubs/:clubId"
-          element={ <ClubDetails user={user}/> }
+          element={<ClubDetails user={user} />}
         />
         <Route
           path="/shops/:shopId"
-          element={ <CoffeeShopDetails user={user}/> }
+          element={<CoffeeShopDetails user={user} />}
         />
         <Route
           path="/auth/signup"
@@ -210,13 +211,13 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route 
-          path="/shops/:shopId/reviews/:reviewId" 
+        <Route
+          path="/shops/:shopId/reviews/:reviewId"
           element={
             <ProtectedRoute user={user}>
               <EditReview />
             </ProtectedRoute>
-        } 
+          }
         />
       </Routes>
     </main>

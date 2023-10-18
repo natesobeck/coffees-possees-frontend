@@ -1,5 +1,5 @@
 // npm modules
-import { useEffect, useState } from 'react'
+import {useState } from 'react'
 
 //components
 import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
@@ -17,16 +17,25 @@ const NewClub = (props) => {
     description: '',
   })
 
+  const [shopsByLocation, setShopsByLocation] = useState([])
+  const [selectedLocation, setSelectedLocation] = useState('')
+
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
+    const newLocation = clubFormData.location
+    setSelectedLocation(newLocation)
+    let data = props.shops.filter(shop => shop.location === selectedLocation)
+    setShopsByLocation(data)
   }
-
   const handleSubmit = evt => {
     displayShopSuggestions()
     evt.preventDefault()
     props.handleAddClub(clubFormData)
+    // const newLocation = clubFormData.location
+    // setSelectedLocation(newLocation)
+    // let data = props.shops.filter(shop => shop.location === selectedLocation)
+    // console.log(data)
   }
-
 
   // useEffect(() => {
   //   const createClub = document.getElementById('create-club').addEventListener("click", displayShopSuggestions)
@@ -45,7 +54,7 @@ const NewClub = (props) => {
       shopSuggestions.style.display = 'none'
     }
   }
-  
+
 
   return (
     <div className={styles['new-club-container']}>
@@ -86,9 +95,26 @@ const NewClub = (props) => {
       <div className={styles['shops-in-club']} id='shop-suggestions'>
         <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
         <div className={styles['shop-cards']}>
-          <div>Shop Card 1</div>
+          {/* <div>Shop Card 1</div>
           <div>Shop Card 2</div>
-          <div>Shop Card 3</div>
+          <div>Shop Card 3</div> */}
+
+          <div>
+            {shopsByLocation.length ?
+              <>
+                {shopsByLocation.map(shop => (
+                  <div key={shop._id}>
+                    <h1 style={{color: 'black'}}>
+                      {shop.name}
+                    </h1>
+                    <h3>{shop.location}</h3>
+                  </div>
+                ))}
+              </>
+              : <>
+                <h1>No coffeeShop near you</h1>
+              </>}
+          </div>
         </div>
         {/* <div className='time-slot'>
           <label>Pick a time:</label>
@@ -97,7 +123,7 @@ const NewClub = (props) => {
         </div> */}
       </div>
     </div>
-    
+
   )
 }
 
