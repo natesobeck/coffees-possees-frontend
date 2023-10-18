@@ -7,7 +7,7 @@ import styles from './ReviewCard.module.css'
 
 
 
-const ReviewCard = ({ review, shopId, user }) => {
+const ReviewCard = ({handleDeleteReview, review, shopId, user }) => {
   
 
   return (
