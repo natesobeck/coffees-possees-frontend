@@ -8,12 +8,21 @@ import styles from './EditCoffeeShop.module.css'
 
 const EditCoffeeShop = (props) => {
   const { state } = useLocation()
-  const [coffeeShop, setCoffeeShop] = useState(state)
+  const [coffeeShop, setCoffeeShop] = useState({
+    name: state.name,
+    street: state.address.street,
+    city: state.address.city,
+    state: state.address.state,
+    zipCode: state.address.zipCode
+  })
 
+  console.log("THIS IS STATE", state)
 
   const handleChange = evt => {
     setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
   }
+
+  console.log('THIS IS COFFESHOP', coffeeShop)
 
   const handleSubmit = evt => {
     const adjustedFormData = {}
