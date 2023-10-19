@@ -1,0 +1,65 @@
+#background-image {
+  position: absolute;
+  top: 0;
+  height: 150vh;
+  width: 100%;
+  background-image: url(/assets/coffeeOnGreen.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+#img-cover {
+  position: absolute;
+  top: 0;
+  height: 150vh;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: .5;
+}
+
+.edit-btn {
+  padding: 2px 5px;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  background-color: rgba(84, 186, 185, .8);
+  margin: 20px;
+  font-size: 1.1rem;
+}
+
+.edit-btn:hover {
+  color: rgba(84, 186, 185, .8);
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+
+.title {
+  color: #CEE6F3;
+  background-color: rgb(0, 0, 0, .6);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #CEE6F3;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-family: 'breve';
+  font-size: 3rem;
+}
+
+.form-container {
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(16px);
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
