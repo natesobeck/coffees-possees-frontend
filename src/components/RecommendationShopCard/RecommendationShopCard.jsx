@@ -1,7 +1,13 @@
 import styles from './RecommendationShopCard.module.css'
 import { Link } from 'react-router-dom';
+// import * as shopService from '../../services/shopService';
 
 const RecommendationShopCard = (props) => {
+
+  // const handleClubtoShop = async (shopId, clubId) => {
+  //   const fetchClubs = await shopService.addClubtoShop(shopId, clubId)
+  // }
+
   return ( 
     <div className={styles.card}>
       <div className={styles.front}>
