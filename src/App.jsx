@@ -37,7 +37,7 @@ function App() {
   const [shops, setShops] = useState([])
   const [clubSearchResults, setClubSearchResults] = useState([])
   const [shopSearchResults, setShopSearchResults] = useState([])
-
+  let clubId = ''
   const navigate = useNavigate()
 
   const handleLogout = () => {
@@ -54,6 +54,8 @@ function App() {
     const newClub = await clubService.create(clubFormData)
     setClubs([newClub, ...clubs])
     setClubSearchResults([newClub, ...clubSearchResults])
+    clubId = newClub._id
+    console.log(clubId)
     navigate('/new')
   }
 
@@ -168,6 +170,7 @@ function App() {
                 handleAddClub={handleAddClub}
                 handleAddShop={handleAddShop}
                 shops={shops}
+                clubId={clubId}
               />
             </ProtectedRoute>
           }
