@@ -12,7 +12,6 @@ const LandingRec = (props) => {
     setCurrIdx(0)
   } else if (currIdx < 0) setCurrIdx(props.someShops.length - 1)
 
-  console.log(currIdx)
   const handleClickNext = () => {
     setCurrIdx(currIdx + 1)
   }
