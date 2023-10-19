@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './NewCoffeeShop.module.css'
+import { useEffect } from 'react';
 
 const NewCoffeeShop = (props) => {
 
@@ -12,7 +13,8 @@ const NewCoffeeShop = (props) => {
     location: ''
   })
 
-  const handleChange = evt => {
+
+  const handleChange = (evt) => {
     setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
   }
 
@@ -29,17 +31,25 @@ const NewCoffeeShop = (props) => {
     evt.preventDefault()
     props.handleAddShop(adjustedFormData)
   }
-
-  // const handleChangeAddress = evt => {
-  //   setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
-  // }
-  // Build a new Object?
-  // Store the address
+  // const shopForm = document.getElementById('shopForm')
+  // console.log(shopForm)
+  function displayForm() {
+    useEffect(() => {
+      const shopForm = document.getElementById('shopForm')
+      shopForm.style.display = 'flex'
+      console.log(shopForm)
+    }, [])
+  }
+  displayForm()
 
   return ( 
-    <form className={styles["new-shop-form-container"]} onSubmit={handleSubmit}>
+    <form className={styles['new-shop-form-container']} onSubmit={handleSubmit} id="shopForm">
       {/* <h1>Add A Coffee Shop Here</h1> */}
-      <div className={styles["new-shop-image-holder"]}></div>
+      <div className={styles["new-shop-image-holder"]}>
+        <div className={styles.textOverImage}>
+          <h4>Add a Coffee Shop, enjoy a moment with the members of your club. </h4>
+        </div>
+      </div>
       <div className={styles["shop-form"]}>
         <div>
           <label htmlFor="shop-name">Name:</label>

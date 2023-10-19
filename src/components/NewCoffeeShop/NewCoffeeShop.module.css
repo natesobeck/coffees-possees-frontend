@@ -9,6 +9,8 @@
 
 
 .new-shop-image-holder {
+  display: flex;
+  justify-content: center;
   width: 50%;
   min-height: 95%;
   background-color: darkslategray;
@@ -22,7 +24,22 @@
   &:hover {
     transform: perspective(3000px) rotateY(5deg);
   }
+  background-image: url("../../../public/assets/drinking.png");
 }
+
+.new-shop-form-container .textOverImage {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  background-color: #481f01;
+  font-size: 20px;
+  height: 100px;
+  margin-top: 15px;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+}
+
 
 .shop-form {
   display: flex;

@@ -21,6 +21,8 @@ const NewClub = (props) => {
 
   const [shopsByLocation, setShopsByLocation] = useState([])
   const [selectedLocation, setSelectedLocation] = useState('')
+  const [isSuggestions, setIsSuggestions] = useState(false);
+  const shopId = 'shopForm'
 
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
@@ -33,28 +35,21 @@ const NewClub = (props) => {
     displayShopSuggestions()
     evt.preventDefault()
     props.handleAddClub(clubFormData)
-    // const newLocation = clubFormData.location
-    // setSelectedLocation(newLocation)
-    // let data = props.shops.filter(shop => shop.location === selectedLocation)
-    // console.log(data)
   }
 
-  // useEffect(() => {
-  //   const createClub = document.getElementById('create-club').addEventListener("click", displayShopSuggestions)
-  //   const shopSuggestions = document.getElementById('shop-suggestions')
-  //   const displayShopSuggestions = () => {
-  //     shopSuggestions
-  //   }
-  // })
-
   const displayShopSuggestions = () => {
-    console.log('click')
     const shopSuggestions = document.getElementById('shop-suggestions')
     if (shopSuggestions.style.display === 'none') {
       shopSuggestions.style.display = 'flex'
     } else {
       shopSuggestions.style.display = 'none'
     }
+  }
+
+  const displayShopForm = () => {
+    setIsSuggestions((isSuggestions) => !isSuggestions)
+    const shopForm = document.getElementById('shopForm')
+    shopForm.style.display = 'flex'
   }
 
 
@@ -68,7 +63,7 @@ const NewClub = (props) => {
             <p>What will yor club be called ?</p>
             <div className={styles['name']}>
               <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' required />
-              {/* <button>Search</button> */}
+              <textarea name="description" onChange={handleChange} placeholder='Description for your club'>{clubFormData.description}</textarea>
             </div>
           </div>
           <div className={styles['club-focus']}>
@@ -78,8 +73,8 @@ const NewClub = (props) => {
               <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' id='category' autoComplete='off' required />
             </div>
             <div className={styles['location-time']}>
+              <h2>Location - Time of Day</h2>
               <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' autoComplete='off' required />
-              <input name="description" type="text" value={clubFormData.description} onChange={handleChange} placeholder='Enter club description' autoComplete='off' required />
               <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay" placeholder='Choose time of day' required>
                 <option value="Morning">Morning</option>
                 <option value="AfterNoon">Afternoon</option>
@@ -92,9 +87,9 @@ const NewClub = (props) => {
           <button type='submit' id='create-club' onClick={displayShopSuggestions}>Create Club</button>
         </div>
       </form>
-      <NewCoffeeShop handleAddShop={props.handleAddShop} />
+      {isSuggestions && <NewCoffeeShop handleAddShop={props.handleAddShop} />}
       <div className={styles['shops-in-club']} id='shop-suggestions'>
-        <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
+        <p>Here are some coffee shops in your area! Select one to host your club in and let others join!</p>
         <div className={styles['shop-cards']}>
 
             {shopsByLocation.length ?
@@ -115,13 +110,11 @@ const NewClub = (props) => {
               : <>
                 <h1>No coffeeShop near you</h1>
               </>}
+
+              
           
         </div>
-        {/* <div className='time-slot'>
-          <label>Pick a time:</label>
-          <input type="time" placeholder="Pick a time slot" />
-          <button>Pick Time</button>
-        </div> */}
+        <p className={styles.showShopForm} onClick={displayShopForm}>Don't see what you're looking for? <br />Add a Shop!</p>
       </div>
     </div>
 
