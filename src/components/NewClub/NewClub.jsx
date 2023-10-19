@@ -3,6 +3,8 @@ import {useState } from 'react'
 
 //components
 import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
+import RecommendationShopCard from '../RecommendationShopCard/RecommendationShopCard'
+
 
 // css
 import styles from './NewClub.module.css'
@@ -49,7 +51,7 @@ const NewClub = (props) => {
     console.log('click')
     const shopSuggestions = document.getElementById('shop-suggestions')
     if (shopSuggestions.style.display === 'none') {
-      shopSuggestions.style.display = 'block'
+      shopSuggestions.style.display = 'flex'
     } else {
       shopSuggestions.style.display = 'none'
     }
@@ -65,7 +67,7 @@ const NewClub = (props) => {
             <h5>Start by giving your club a stunning name that will grab interest!</h5>
             <p>What will yor club be called ?</p>
             <div className={styles['name']}>
-              <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' />
+              <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' required />
               {/* <button>Search</button> */}
             </div>
           </div>
@@ -73,11 +75,11 @@ const NewClub = (props) => {
             <h6>Tell us a bit about your group... Provide to other members information about its focus, location and the like.</h6>
             <div className={styles['category-container']}>
               <label htmlFor="category">Category:</label>
-              <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' id='category' autoComplete='off' />
+              <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' id='category' autoComplete='off' required />
             </div>
             <div className={styles['location-time']}>
-              <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' autoComplete='off' />
-              <input name="description" type="text" value={clubFormData.description} onChange={handleChange} placeholder='Enter club description' autoComplete='off' />
+              <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' autoComplete='off' required />
+              <input name="description" type="text" value={clubFormData.description} onChange={handleChange} placeholder='Enter club description' autoComplete='off' required />
               <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay" placeholder='Choose time of day'>
                 {/* <option value="" selected disabled>Choose Time of Day</option> */}
                 <option value="Morning">Morning</option>
@@ -95,26 +97,26 @@ const NewClub = (props) => {
       <div className={styles['shops-in-club']} id='shop-suggestions'>
         <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
         <div className={styles['shop-cards']}>
-          {/* <div>Shop Card 1</div>
-          <div>Shop Card 2</div>
-          <div>Shop Card 3</div> */}
 
-          <div>
             {shopsByLocation.length ?
               <>
                 {shopsByLocation.map(shop => (
-                  <div key={shop._id}>
-                    <h1 style={{color: 'black'}}>
-                      {shop.name}
-                    </h1>
-                    <h3>{shop.location}</h3>
-                  </div>
+                  <RecommendationShopCard shop={shop} key={shop._id} />
+                  // <div key={shop._id} className={styles['suggestion']}>
+                  //   <p style={{color: 'black'}}>
+                  //     {shop.name}
+                  //   </p>
+                  //   <p>{shop.location}</p>
+                  //   <button>Add This Shop</button>
+                  //   <button>View Shop Details</button>
+                  // </div>
+                  
                 ))}
               </>
               : <>
                 <h1>No coffeeShop near you</h1>
               </>}
-          </div>
+          
         </div>
         {/* <div className='time-slot'>
           <label>Pick a time:</label>
