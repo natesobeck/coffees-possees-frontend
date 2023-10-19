@@ -53,8 +53,8 @@ function App() {
     const newClub = await clubService.create(clubFormData)
     setClubs([newClub, ...clubs])
     setClubSearchResults([newClub, ...clubSearchResults])
-    clubId = newClub._id
-    console.log(clubId)
+    // clubId = newClub._id
+    // console.log(clubId)
     navigate('/new')
   }
 
