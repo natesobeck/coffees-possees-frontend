@@ -28,7 +28,6 @@ import * as shopService from './services/shopService'
 
 // styles
 import './App.css'
-import AboutUs from './components/AboutUs/AboutUs'
 
 
 function App() {
