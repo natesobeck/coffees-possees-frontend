@@ -112,6 +112,21 @@ const deleteReview = async (shopId, reviewId) => {
   }
 }
 
+const addClubtoShop = async (shopId, clubId) => {
+  try {
+    const res = await fetch(`${BASE_URL}/${shopId}/${clubId}`, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${tokenService.getToken()}`,
+        'Content-Type': 'application/json'
+      },
+    })
+    return res.json()
+  } catch (error) {
+    console.log(error)
+  }
+}
+
 export {
   index,
   show,
@@ -120,5 +135,6 @@ export {
   deleteShop,
   createReview,
   updateReview,
-  deleteReview
+  deleteReview,
+  addClubtoShop
 }
