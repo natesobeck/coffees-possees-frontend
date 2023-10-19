@@ -16,15 +16,18 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: 'breve';
-  font-size: 30px;
+  font-family: M PLUS Rounded 1c;
+  /* font-family: 'breve'; */
+  font-size: 20px;
   font-weight: 400;
   /* border: 3px solid white;  */
 }
 
 .coffee-name {
-  font-family: 'breve';
-  font-size: 50px;
+
+  font-family: M PLUS Rounded 1c;
+  /* font-family: 'breve'; */
+  font-size: 30px;
   margin-left: auto;
   margin-right: auto;
   width: 3em; 
@@ -90,7 +93,7 @@ margin-left: auto;
   /* font-family: 'breve'; */
   margin-left: auto;
   margin-right: auto;
-  width: 3em; 
+  width: 8em; 
 /* margin-left: 45%; */
-/* padding: 20px; */
+ padding: 20px 16px; 
 }
