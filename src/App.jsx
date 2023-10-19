@@ -55,6 +55,7 @@ function App() {
     setClubs([newClub, ...clubs])
     setClubSearchResults([newClub, ...clubSearchResults])
     clubId = newClub._id
+    console.log(clubId)
     navigate('/new')
   }
 
