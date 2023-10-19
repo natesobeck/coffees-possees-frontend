@@ -117,7 +117,6 @@ const NewClub = (props) => {
         {/* </div> */}
       </div>
     </main>
-
   )
 }
 
