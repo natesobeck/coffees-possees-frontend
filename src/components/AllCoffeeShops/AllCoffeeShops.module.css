@@ -47,7 +47,16 @@
 }
 
 #shop-search-results {
-  border-radius: 10px;
   background-color: rgba(0, 0, 0, .2);
   backdrop-filter: blur(32px);
+}
+
+#shop-search-results:nth-child(n) {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+#shop-search-results:nth-last-child(n) {
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }

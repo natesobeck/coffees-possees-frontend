@@ -1,5 +1,6 @@
 main {
   width: 100vw;
+  font-size: 1rem;
 }
 
 input {
@@ -7,6 +8,8 @@ input {
   padding: 4px 8px;
   font-size: 16px;
   width: 300px;
+  border-radius: 5px;
+  border-style: none;
 }
 
 input[type="file"] {
@@ -17,6 +20,11 @@ input[type="file"] {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: rgba(0, 0, 0, .4);
+  backdrop-filter: blur(16px);
+  padding: 30px;
+  border-radius: 10px;
+  z-index: 2;
 }
 
 .message {
@@ -40,12 +48,62 @@ input[type="file"] {
   justify-content: end;
   align-items: center;
   margin-bottom: 8px;
+  font-weight: bold;
 }
 
 .button {
   margin-left: 16px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 2px 5px;
+  color: #603601;
+  background-color: #CEE6F3;
+  border: 2px solid #603601;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.button:hover {
+  cursor: pointer;
+  color: #CEE6F3;
+  background-color: #603601;
+  border: 2px solid #CEE6F3;
 }
 
 .form > label:last-of-type {
   margin-bottom: 16px;
+}
+
+h1 {
+  color: #CEE6F3;
+  background-color: rgb(0, 0, 0, .6);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #CEE6F3;
+  margin: 0 0 20px 0;
+  font-size: 3rem;
+  text-align: center;
+  font-family: 'breve';
+}
+
+#background-image {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/latteAndBeans.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+#img-cover {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: .3;
 }

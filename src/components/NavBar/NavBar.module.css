@@ -63,18 +63,12 @@ nav > ul {
 
 @media (min-width: 800px) {
   nav a {
-    font-size: 25px;
+    font-size: 24px;
   }
 }
 
 @media (min-width: 1000px) {
   nav a {
-    font-size: 30px;
-  }
-}
-
-@media (min-width: 1200px) {
-  nav a {
-    font-size: 35px;
+    font-size: 28px;
   }
 }

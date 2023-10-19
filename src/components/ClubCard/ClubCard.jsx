@@ -14,7 +14,13 @@ const ClubCard = ({ club, handleDeleteClub, user }) => {
       <div>{club.timeOfDay}</div>
       {user.profile === club.addedBy._id &&
         <div>
-          <button type='submit' onClick={() => handleDeleteClub(club._id)}>DELETE</button>
+          <button 
+            type='submit' 
+            onClick={() => handleDeleteClub(club._id)}
+            className={styles['delete-btn']}
+          >
+            DELETE
+          </button>
         </div>
       }
     </div>

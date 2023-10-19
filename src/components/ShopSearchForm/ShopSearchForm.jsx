@@ -30,6 +30,7 @@ const ShopSearchForm = (props) => {
           className={styles["city-input"]} 
           name="query"
           onChange={handleChange}
+          autoComplete='off'
         />
         <button>🔎</button>
       </form>
