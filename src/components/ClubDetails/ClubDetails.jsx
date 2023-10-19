@@ -37,12 +37,12 @@ useEffect(() => {
         <div className={styles['club-details-container']}>
           <h1>{club.name}</h1>
           <h3>Category: {club.category} </h3>
-          <h3>Club Description: {club.description}  </h3>
+          <h3>Description: {club.description}  </h3>
         </div>
         <div className={styles['show-previous-container']} >
           <h3> Previous Club Locations:</h3>
           <ul>
-            <h3>This club has not met at any shops yet!</h3>
+            <h4>This club has not met at any shops yet!</h4>
           </ul>
         </div>
         <div> 

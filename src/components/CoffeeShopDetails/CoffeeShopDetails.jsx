@@ -37,40 +37,44 @@ const CoffeeShopDetails = (props) => {
   }
 
   return (
-    <main className={styles.container}>
-        <h1 className={styles['coffee-name']}>{coffeeShop.name}</h1>
-      <div className={styles['coffeeshop-details-container']}>
-        {coffeeShop.address ?
-          <>
-          <h3 className={styles['address-style']}>Street: {coffeeShop.address.street}</h3>
-            <h3 className={styles['address-style']}>City: {coffeeShop.address.city}</h3>
-            <h3 className={styles['address-style']}>State: {coffeeShop.address.state}</h3>
-            <h3 className={styles['address-style']}>ZipCode: {coffeeShop.address.zipCode}</h3>
-          </>
-          : null
-        }
-      </div>
-      <div className={styles['show-all-clubs-container']}>
-        <h3>All Clubs</h3>
-        <ul>
-          <li>clubname</li>
-          <li>clubname</li>
-          <li>clubname</li>
-        </ul>
-      </div>
-      <div className={styles['coffee-edit-delete-button']}>
-        {/* {coffeeShop?.name && <AddedBy content={coffeeShop} />} */}
-        {coffeeShop?.name && coffeeShop.addedBy._id === props.user.profile && 
-        <>
-          <Link state={coffeeShop} to={`/shops/${shopId}/editshop`}><button> EDIT</button> </Link>
-          <button onClick={() => props.handleDeleteShop(shopId)}> DELETE</button>
-        </>
-        }
-      </div>
-      <div className={styles['review-container']}>
-        <h1>Leave a Review</h1>
-        <NewReview handleAddReview={handleAddReview} />
-        <Reviews reviews={coffeeShop.reviews} user={props.user} shopId={shopId} handleDeleteReview={handleDeleteReview} />
+    <main>
+      <div id={styles['background-image']}></div>
+      <div id={styles['img-cover']}></div>
+      <div className={styles.container}>
+        <div className={styles.subcontainer}>
+          <h1 className={styles['coffee-name']}>{coffeeShop.name}</h1>
+          <div className={styles['coffeeshop-details-container']}>
+            {coffeeShop.address ?
+              <div className={styles['address-container']}>
+                <div className={styles['address']}>{coffeeShop.address.street},</div>
+                <div className={styles['address']}>{coffeeShop.address.city},</div>
+                <div className={styles['address']}>{coffeeShop.address.state},</div>
+                <div className={styles['address']}>{coffeeShop.address.zipCode}</div>
+              </div>
+              : null
+            }
+          </div>
+          <div className={styles['show-all-clubs-container']}>
+            <h3>All Clubs</h3>
+            <h4>No clubs have met in {coffeeShop.name} yet!</h4>
+            <ul>
+            </ul>
+          </div>
+          <div className={styles['coffee-edit-delete-button']}>
+            {/* {coffeeShop?.name && <AddedBy content={coffeeShop} />} */}
+            {coffeeShop?.name && coffeeShop.addedBy._id === props.user.profile && 
+            <>
+              <Link state={coffeeShop} to={`/shops/${shopId}/editshop`}><button> EDIT</button> </Link>
+              <button onClick={() => props.handleDeleteShop(shopId)}> DELETE</button>
+            </>
+            }
+          </div>
+          <div className={styles['review-container']}>
+            <h3 className={styles['review-title']}>Leave a Review</h3>
+            <NewReview handleAddReview={handleAddReview} />
+            <Reviews reviews={coffeeShop.reviews} user={props.user} shopId={shopId} handleDeleteReview={handleDeleteReview} />
+          </div>
+        </div>
       </div>
     </main>
   )

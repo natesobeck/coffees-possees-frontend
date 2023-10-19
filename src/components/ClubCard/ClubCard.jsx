@@ -12,7 +12,7 @@ const ClubCard = ({ club, handleDeleteClub, user }) => {
       </Link>
       <div>{club.category}</div>
       <div>{club.timeOfDay}</div>
-      {user.profile === club.addedBy._id &&
+      {user?.profile === club.addedBy._id &&
         <div>
           <button 
             type='submit' 

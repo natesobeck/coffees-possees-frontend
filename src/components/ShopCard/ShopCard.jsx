@@ -11,7 +11,7 @@ const ShopCard = ({ shop, handleDeleteShop, user }) => {
         {shop.name}
       </Link>
       <div>{shop.location}, {shop.address.state}</div>
-      {user.profile === shop.addedBy._id &&
+      {user?.profile === shop.addedBy._id &&
       <div className={styles['btn-container']}>
         <button 
           type='submit' 

@@ -1,14 +1,21 @@
 .container {
+  margin-top: 120px;
+  padding: 30px;
+  width: 70vw;
+  max-width: 1400px;
+  text-align: center;
+  z-index: 2;
+  background-color: rgb(245, 245, 245, .3);
+  border-radius: 20px;
+  backdrop-filter: blur(24px);
+}
+
+.subcontainer {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  border: 3px solid white;
-  height: 900%; 
-  width:900px; 
-  padding: 30px;
-  margin-top: 100px;
-  width: 85vw;
-  max-width: 1400px;
-
+  align-items: center;
+  border-radius: 10px;
 }
 
 .coffeeshop-details-container {
@@ -16,84 +23,91 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: M PLUS Rounded 1c;
-  /* font-family: 'breve'; */
   font-size: 20px;
-  font-weight: 400;
-  /* border: 3px solid white;  */
 }
 
 .coffee-name {
-
-  font-family: M PLUS Rounded 1c;
-  /* font-family: 'breve'; */
-  font-size: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 3em; 
-  font-weight: 900;
-}
-
-
-/* .address-stye {
-padding: 70px;
-} */
-/* .coffee-name {
   font-family: 'breve';
-  font-size: 50px;
-  font-weight: 400;
-  /* font-weight: bolder; */
-  /* margin-left: auto;
-  margin-right: auto;
-  width: 3em;
-} */ 
-
-
-/* .address-styleone {
-flex-direction: row;
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(18px);
+  border-radius: 50%;
+  width: 25%;
+  border-bottom: 2px solid #CEE6F3;
+  color: #CEE6F3;
 }
-
-.address-styletwo {
-margin-left: auto;
-} */
-
-/* .address-style {
-  font-family: 'breve';
-  font-size: 35px;
-  font-weight: 400;
-  margin-left: 45%; */
-  /* margin-left: auto;
-  margin-right: auto;
-  /* width: 3em;  */
-
-/* } */
-
-
-/* .coffeeshop-details-container {
-  margin-left: 60px
-  border: 3px solid white; 
-
-
-} */
-
 
 .show-all-clubs-container {
-  /* position: relative; top: 175px; */
-  border: 3px solid white;
-  padding: 50px;
-  /* align-items: center; */
-  height: 30%;
-
+  padding: 15px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(18px);
 }
 
 .coffee-edit-delete-button {
   display: flex;
   flex-direction: row;
   border: none;
-  /* font-family: 'breve'; */
   margin-left: auto;
   margin-right: auto;
   width: 8em; 
-/* margin-left: 45%; */
- padding: 20px 16px; 
+  padding: 20px 16px; 
+}
+
+.address-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(18px);
+  color: #CEE6F3;
+  font-size: 1rem;
+}
+
+.coffee-name {
+  font-size: 3rem;
+}
+
+#background-image {
+  position: absolute;
+  top: 0;
+  height: 200vh;
+  width: 100%;
+  background-image: url(/assets/coffeeOnWhite.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+#img-cover {
+  position: absolute;
+  top: 0;
+  height: 200vh;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: .3;
+}
+
+.review-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-title {
+  font-family: 'breve';
+  font-size: 2rem;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(18px);
+  border-radius: 50%;
+  width: 25%;
+  border-bottom: 2px solid #CEE6F3;
+  color: #CEE6F3;
+  margin-top: 0px;
 }

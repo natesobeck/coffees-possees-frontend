@@ -11,22 +11,23 @@ const ReviewCard = ({handleDeleteReview, review, shopId, user }) => {
   
 
   return (
-    <div className={styles['for-review-container']}>
+    <div className={styles['review-container']}>
       <AddedBy content={review} />
+      <div className={styles['review-text']}>{review.text}</div>
+      <div className={styles['dropdown-container']}>
+        <div>⭐️ {review.rating}</div>
+        <div>💰 {review.price}</div>
+        <div>☕️ {review.coffeeShopAmbience}</div>
+        <div>🛜 {review.wifi}</div>
+      </div>
       {review.addedBy._id === user.profile &&
-      <>
-      <Link to={`/shops/${shopId}/reviews/${review._id}`} state={review}>
-        <button>EDIT</button>
-      </Link>
-      <button onClick={()=> handleDeleteReview(shopId, review._id)}>DELETE</button>
-      </>
-    }
-      <h3>Text: {review.text}</h3>
-      <h3>Price of Coffee:{review.price}</h3>
-      <h3>Rating: {review.rating}</h3>
-      <h3>Ambience: {review.coffeeShopAmbience}</h3>
-      <h3>Wifi Strength: {review.wifi}</h3>
-
+      <div className={styles['btn-container']}>
+        <Link to={`/shops/${shopId}/reviews/${review._id}`} state={review} className={styles['edit-btn']}>
+          EDIT
+        </Link>
+        <button onClick={()=> handleDeleteReview(shopId, review._id)} className={styles['delete-btn']}>DELETE</button>
+      </div>
+      }
     </div>
   )
 }

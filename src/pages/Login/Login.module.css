@@ -74,7 +74,7 @@ input[type="file"] {
   margin-bottom: 16px;
 }
 
-h1 {
+.title {
   color: #CEE6F3;
   background-color: rgb(0, 0, 0, .6);
   padding: 5px 10px;
