@@ -95,7 +95,7 @@
 
 
 .slogan {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   color: #CEE6F3;
   background-color: black;
   padding: 5px 10px;
@@ -120,13 +120,13 @@
   border-radius: 10px;
   border: 2px solid #CEE6F3;
   color: #CEE6F3;
-  font-size: 6rem;
+  font-size: 5rem;
   margin-bottom: 5%;
 }
 
 #about-background {
   background-image: url(/assets/coffeeBeans.jpg);
-  height: 110vh;
+  height: 120vh;
   width: 100%;
   background-size: cover;
   background-position: center;
@@ -135,7 +135,7 @@
 }
 
 #img-cover3 {
-  height: 110vh;
+  height: 120vh;
   width: 100%;
   position: absolute;
   z-index: 1;
@@ -146,19 +146,19 @@
 
 @media (max-width: 1200px){
   #title-container {
-    font-size: 5rem;
+    font-size: 4rem;
   }
   .slogan {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 800px) {
   #title-container {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
   .slogan {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
 }
 

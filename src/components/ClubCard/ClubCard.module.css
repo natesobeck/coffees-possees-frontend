@@ -27,3 +27,18 @@
   text-underline-offset: 8px;
   text-decoration-thickness: 2px;
 }
+
+.delete-btn {
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  background-color: rgba(161, 51, 51, .8);
+}
+
+.delete-btn:hover {
+  color: rgba(161, 51, 51, .8);
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}

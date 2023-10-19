@@ -1,36 +1,113 @@
+.main {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 70px;
+}
+
 .container {
   display: flex;
   flex-direction: column;
-  border: 3px solid white;
-  height: 650px;
-  width:950px;
+  height: 70vh;
+  width: 70vw;
   padding: 30px;
   margin-top: 60px;
-
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  background-color: rgb(245, 245, 245, .3);
+  border-radius: 10px;
 }
 
-
 .club-details-container {
-  /* position: absolute; top: 150px; */
-  /* display: flex; */
-  /* flex-direction: column; */
-  width: 700px; 
-  border: 3px solid white;
-  /* align-items: center; */
-  padding:20px; 
+  width: 80%; 
+  padding: 20px; 
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.club-details-container h1 {
+  font-family: 'breve';
+  font-size: 3rem;
+  background-color: rgba(0, 0, 0, .3);
+  border-radius: 50%;
+  width: 25%;
+  border-bottom: 2px solid #CEE6F3;
+  color: #CEE6F3;
 }
 
 .show-previous-container {
-  /* position: relative; top: 175px; */
-  border: 3px solid white;
   padding: 50px;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(16px);
+}
 
+#background-image {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url(/assets/coffeeOnWood.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+#img-cover {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: .5;
+}
+
+.delete-btn {
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  background-color: rgba(161, 51, 51, .8);
+  margin: 0px 5px;
+  width: 90%;
+}
+
+.delete-btn:hover {
+  color: rgba(161, 51, 51, .8);
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+
+.edit-btn {
+  padding: 5px;
+  border-radius: 5px;
+  border-style: none;
+  color: white;
+  background-color: rgba(84, 186, 185, .8);
+  margin: 0px 5px;
+  width: 90%;
+}
+
+.edit-btn:hover {
+  color: rgba(84, 186, 185, .8);
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
 }
 
 .edit-delete-button {
-margin-left: 50%;
-
+  display: flex;
 }
-

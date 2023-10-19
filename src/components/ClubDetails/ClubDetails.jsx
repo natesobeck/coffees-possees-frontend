@@ -30,29 +30,29 @@ useEffect(() => {
 
 
   return (
-    <main className={styles.container}>
-      <div className={styles['club-details-container']}>
-        <h1>Club Name Here</h1>
-        <h3>Name:{club.name} </h3>
-        <h3>Category:{club.category} </h3>
-        <h3>Club Description: ....  </h3>
-      </div>
-      <div className={styles['show-previous-container']} >
-        <h3> Previous Club Locations:</h3>
-        {/* <ul className={styles['coffeeshop-list']}> */}
-        <ul>
-          <li>CoffeeShop Name</li>
-          <li>CoffeeShop Name</li>
-          <li>CoffeeShop Name</li>
-        </ul>
- {/* for the list of the coffeshop names once this is done they will be written in a component tags above */}
-      </div>
-      <div className=''> 
-      <div className={styles['edit-delete-button']}> 
-      {/* <button> edit</button>  */}
-      <NavLink state={club} to={`/clubs/${clubId}/editclub`}><button>edit</button></NavLink>
-      <button> delete</button> 
-      </div> 
+    <main className={styles['main']}>
+      <div id={styles['background-image']}></div>
+      <div id={styles['img-cover']}></div>
+      <div className={styles.container}>
+        <div className={styles['club-details-container']}>
+          <h1>{club.name}</h1>
+          <h3>Category: {club.category} </h3>
+          <h3>Club Description: {club.description}  </h3>
+        </div>
+        <div className={styles['show-previous-container']} >
+          <h3> Previous Club Locations:</h3>
+          <ul>
+            <h3>This club has not met at any shops yet!</h3>
+          </ul>
+        </div>
+        <div> 
+          <div className={styles['edit-delete-button']}> 
+            <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
+              <button className={styles['edit-btn']}>Edit</button>
+            </NavLink>
+            <button className={styles['delete-btn']}>Delete</button> 
+          </div> 
+        </div>
       </div>
     </main>
   )

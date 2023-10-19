@@ -1,8 +1,8 @@
 import styles from './AboutUsCard.module.css'
 
-import github from '../../assets/Icon/github.svg'
-import linkedIn from '../../assets/Icon/linkedIn.svg'
-import mail from '../../assets/Icon/mail.svg'
+import github from '/assets/Icon/github.svg'
+import linkedIn from '/assets/Icon/linkedIn.svg'
+import mail from '/assets/Icon/mail.svg'
 
 const AboutUsCard = ({ about }) => {
   return (
