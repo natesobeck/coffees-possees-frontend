@@ -6,7 +6,7 @@
   padding: 15px;
   width: 80vw;
   max-width: 1180px;
-  margin: 100px 0 30px 0;
+  margin: 120px 0 30px 0;
   z-index: 2;
   background-color: rgb(245, 245, 245, .3);
   border-radius: 20px;
@@ -54,6 +54,7 @@
 .location-info>.name>input:focus {
   border: 4px solid #0492c2;
 }
+
 .location-info>.name > textarea {
   height: 100px;
   font-size: 18px;
@@ -97,7 +98,7 @@
 }
 
 .category-container>input {
-  width: 170px;
+  width: 150px;
   height: 40px;
   text-align: center;
   border: none;
@@ -147,15 +148,6 @@
   margin-left: 15px;
 }
 
-.create-club-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 25px 0 25px 0;
-  background-color: rgba(255, 255, 255, );
-}
-
 #create-club {
   background-color: rgba(75, 101, 135, .7);
   color: white;
@@ -178,14 +170,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: #d0d0d0;
-  color: black;
-  border-top: 3px solid black;
+  background-color: rgb(0, 0, 0, .3);
   width: 100%;
-  color: #606060;
   gap: 40px;
   padding: 20px;
   display: none;
+  border-top: 2px solid rgba(0, 0, 0, .3);
 }
 
 .shops-in-club>p {
@@ -266,7 +256,6 @@
   padding: 0.5em 1em;
   border-radius: 100px;
   background: linear-gradient(145deg, #1487ca, #093396);
-
   border: none;
   position: relative;
   transform-style: preserve-3d;
@@ -279,15 +268,17 @@
 }
 
 .shops-in-club .showShopForm {
-  text-decoration: underline;
-  color: #0492c2;
+  background-color: rgba(0, 0, 0, .2);
+  padding: 10px;
+  border-radius: 10px;
+  color: lightblue;
   text-align: center;
   font-size: 18px;
   font-weight: bold;
 } 
 .shops-in-club .showShopForm:hover {
   cursor: pointer;
-  color: #4b9cd3;
+  color: #CC9544;
 }
 
 #background-image {

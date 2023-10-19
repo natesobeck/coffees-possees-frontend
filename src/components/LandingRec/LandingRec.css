@@ -2,8 +2,9 @@
   margin: 0;
   position: relative;
   width: 100%;
-  height: 80%;
-  /* background: url(https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&q=80&w=2071&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+  height: 100%;
+  margin-bottom: 20vh;
+  border-radius: 20px;
 }
 
 .content::before {
@@ -17,14 +18,8 @@
   background: linear-gradient(145deg, #0a0428, #0f214c, #0a0428);
   opacity: 0.25;
   z-index: -1;
+  border-radius: 20px;
 }
-
-/* .slide img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-} */
 
 .slide.active .bg-img {
   opacity: 0.2;
@@ -41,14 +36,11 @@
   color: white;
   background: 0 0 0 rga(255, 255, 255, 0.8);
   backdrop-filter: blur(15px);
-  /* -webkit-mask: linear-gradient(#000 0 0), linear-gradient(#000 0 0);
-  mask: linear-gradient(#c1baba 0 0), linear-gradient(#cec9c9 0 0);
-  mask-clip: text, padding-box;
-  -webkit-mask-clip: text, padding-box;
-  -webkit-mask-composite: xor;
-  mask-composite: xor; */
-  /* transform: translateX(-100%); */
-  /* transition: 0.5s; */
+}
+
+.left_slide {
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
 }
 
 .slide.active .left_slide {
@@ -61,15 +53,8 @@
   font-size: 8rem;
   margin-right: 1rem;
   text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  margin-bottom: 30px;
 }
-
-.slide .left_slide .info {
-  /* padding: 50px 20px 10px; */
-  padding: 4rem;
-  position: absolute;
-  bottom: 4rem;
-}
-
 
 .slide .left_slide .info p {
   line-height: 1.5;
@@ -112,6 +97,8 @@
   color: white;
   transform: translateX(100%);
   transition: 0.5s;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .right_slide {
@@ -119,12 +106,19 @@
 }
 
 .right_slide .info {
-  position: absolute;
-  left: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.right_slide .info h1 {
-  font-size: 8rem;
+.at {
+  font-size: 3rem;
+  margin-right: 20px;
+  margin-bottom: 60px;
+}
+
+.right_slide .info .rec-location {
+  font-size: 3.5rem;
   padding-bottom: 3rem;
   text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #ddd, 0 4px 0 #b9b9b9,
     0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0px 5px rgba(0, 0, 0, 0.1),
@@ -133,17 +127,12 @@
     0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
-.right_slide .info h2 {
-  position: absolute;
-  font-size: 2rem;
-  transform: translate(50px, -60px);
-}
-
 .slide .right_slide .next_prev {
   position: absolute;
   bottom: 5rem;
   right: 5rem;
 }
+
 .slide .right_slide .next_prev #next,
 .slide .right_slide .next_prev #prev {
   padding: 14px 18px;
@@ -162,7 +151,6 @@
 .slide .right_slide .next_prev #prev:hover {
   transform: scale(1.1);
 }
-
 
 .slide .right_slide .next_prev #next:focus,
 .slide .right_slide .next_prev #prev:focus {

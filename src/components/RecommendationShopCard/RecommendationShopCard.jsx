@@ -16,7 +16,7 @@ const RecommendationShopCard = (props) => {
         <Link to={`/shops/${props.shop._id}`} className={styles.detailsButton}>Details</Link>
         </div>
         <div>
-        <a href="#" className={styles.button}>Add this Shop</a>
+        <a href="#" className={styles.button}>Add Shop</a>
         </div>
       </div>
     </div>

@@ -19,6 +19,11 @@ html {
   justify-content: center;
 }
 
+main {
+  display: flex;
+  justify-content: center;
+}
+
 body {
   box-sizing: border-box;
 
@@ -39,6 +44,7 @@ body {
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+  max-width: 1400px;
 }
 
 a,
@@ -47,13 +53,3 @@ a:visited {
   text-decoration: none;
 }
 
-@media (min-width: 1200px) {
-  main {
-    display: flex;
-    justify-content: center;
-  }
-
-  body {
-    max-width: 1200px;
-  }
-}
