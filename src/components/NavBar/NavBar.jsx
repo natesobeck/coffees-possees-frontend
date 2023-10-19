@@ -12,7 +12,7 @@ const NavBar = ({ user, handleLogout }) => {
       <nav className={styles.nav}>
         {user ?
           <ul>
-            <li><HashLink smooth to="#">HOME</HashLink></li>
+            <li><HashLink smooth to="/#">HOME</HashLink></li>
             <li><HashLink smooth to='/#aboutUs'>ABOUT US</HashLink></li>
             <li><NavLink to="/new">NEW CLUB</NavLink></li>
             <li><NavLink to="/clubs">ALL CLUBS</NavLink></li>
