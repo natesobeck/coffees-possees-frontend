@@ -12,10 +12,69 @@
 }
 
 .coffeeshop-details-container {
-  border: 3px solid white;
-
-
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-family: M PLUS Rounded 1c;
+  /* font-family: 'breve'; */
+  font-size: 20px;
+  font-weight: 400;
+  /* border: 3px solid white;  */
 }
+
+.coffee-name {
+
+  font-family: M PLUS Rounded 1c;
+  /* font-family: 'breve'; */
+  font-size: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 3em; 
+  font-weight: 900;
+}
+
+
+/* .address-stye {
+padding: 70px;
+} */
+/* .coffee-name {
+  font-family: 'breve';
+  font-size: 50px;
+  font-weight: 400;
+  /* font-weight: bolder; */
+  /* margin-left: auto;
+  margin-right: auto;
+  width: 3em;
+} */ 
+
+
+/* .address-styleone {
+flex-direction: row;
+}
+
+.address-styletwo {
+margin-left: auto;
+} */
+
+/* .address-style {
+  font-family: 'breve';
+  font-size: 35px;
+  font-weight: 400;
+  margin-left: 45%; */
+  /* margin-left: auto;
+  margin-right: auto;
+  /* width: 3em;  */
+
+/* } */
+
+
+/* .coffeeshop-details-container {
+  margin-left: 60px
+  border: 3px solid white; 
+
+
+} */
 
 
 .show-all-clubs-container {
@@ -28,6 +87,13 @@
 }
 
 .coffee-edit-delete-button {
-margin-left: 45%;
-/* padding: 20px; */
+  display: flex;
+  flex-direction: row;
+  border: none;
+  /* font-family: 'breve'; */
+  margin-left: auto;
+  margin-right: auto;
+  width: 8em; 
+/* margin-left: 45%; */
+ padding: 20px 16px; 
 }
