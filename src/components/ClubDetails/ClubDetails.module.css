@@ -24,7 +24,7 @@
   width: 80%; 
   padding: 20px; 
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, .4);
   backdrop-filter: blur(16px);
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 .club-details-container h1 {
   font-family: 'breve';
   font-size: 3rem;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .2);
   border-radius: 50%;
   width: 25%;
   border-bottom: 2px solid #CEE6F3;
@@ -48,7 +48,7 @@
   margin-top: 30px;
   margin-bottom: 20px;
   border-radius: 10px;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, .4);
   backdrop-filter: blur(16px);
 }
 
@@ -71,7 +71,7 @@
   width: 100%;
   z-index: 1;
   background-color: black;
-  opacity: .5;
+  opacity: .3;
 }
 
 .delete-btn {
@@ -82,6 +82,7 @@
   background-color: rgba(161, 51, 51, .8);
   margin: 0px 5px;
   width: 90%;
+  font-size: 1.3rem;
 }
 
 .delete-btn:hover {
@@ -99,6 +100,7 @@
   background-color: rgba(84, 186, 185, .8);
   margin: 0px 5px;
   width: 90%;
+  font-size: 1.3rem;
 }
 
 .edit-btn:hover {
