@@ -76,5 +76,5 @@ const NewCoffeeShop = (props) => {
     </form>
   )
 }
- 
+
 export default NewCoffeeShop;
