@@ -14,21 +14,15 @@
   font-family: 'breve';
 }
 
-.form-container h1, .form-container p {
+.form-container h1{
   color: #CEE6F3;
   background-color: rgb(0, 0, 0, .6);
   padding: 5px 10px;
   border-radius: 10px;
   border: 2px solid #CEE6F3;
   margin: 0 0 20px 0;
-}
-.form-container h1 {
   font-size: 3rem;
-}
-
-.form-container p {
-  font-size: 2rem;
-  padding: 5px;
+  text-align: center;
 }
 
 .search-clubs {
@@ -37,7 +31,7 @@
   justify-content: space-evenly;
   align-items: center;
   border-radius: 7px;
-  width: 500px;
+  width: 40%;
   height: 90px;
   margin-top: 20px;
   background-color: rgb(0, 0, 0, .6);

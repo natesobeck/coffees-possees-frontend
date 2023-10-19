@@ -15,7 +15,9 @@ const ClubSearchResults = (props) => {
         <div>Club Name:</div>
         <div>Category:</div>
         <div>Time of Day:</div>
+        <div></div>
       </div>
+      <div id={styles['all-clubs']}>
       {props.clubSearchResults.map(club => (
         <ClubCard 
           key={club._id} 
@@ -24,6 +26,7 @@ const ClubSearchResults = (props) => {
           user={props.user} 
         />
       ))}
+      </div>
     </div>
   )
 }

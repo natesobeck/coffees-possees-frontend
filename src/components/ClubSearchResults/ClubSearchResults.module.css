@@ -5,14 +5,32 @@
   padding: 25px;
   width: 70%;
   margin-bottom: 30px;
+  background-color: rgb(245, 245, 245, .3);
+  border-radius: 10px;
 }
 
 .headers {
   display: flex;
+  background-color: rgba(0, 0, 0, .5);
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 
 .headers div {
   width: 25%;
-  font-weight: bold;
+  font-size: 1.3rem;
   text-align: center;
+  color: lightblue;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 5px;
+  text-decoration-color: rgb(204, 149, 68, .8);
+}
+
+#all-clubs {
+  background-color: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(32px);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
