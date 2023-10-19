@@ -28,14 +28,11 @@ const NewCoffeeShop = (props) => {
       street: coffeeShop.street,
       city: coffeeShop.city,
       state: coffeeShop.state,
-      zipCode: coffeeShop.zipCode
+      zipCode: coffeeShop.zipCode  
     }
+    navigate('/clubs')
     evt.preventDefault()
     props.handleAddShop(adjustedFormData)
-  }
-  
-  const goToClubs = () => {
-    navigate('/clubs')
   }
 
   return ( 
