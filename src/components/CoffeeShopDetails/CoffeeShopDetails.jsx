@@ -66,7 +66,7 @@ const CoffeeShopDetails = (props) => {
         </ul>
       </div>
       <div className={styles['coffee-edit-delete-button']}>
-        {coffeeShop?.name && <AddedBy content={coffeeShop} />}
+        {/* {coffeeShop?.name && <AddedBy content={coffeeShop} />} */}
         {coffeeShop?.name && coffeeShop.addedBy._id === props.user.profile && 
         <>
           <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} ><button> Edit</button> </Link>
