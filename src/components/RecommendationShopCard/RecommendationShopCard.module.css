@@ -1,0 +1,196 @@
+/* body {
+  background: linear-gradient(45deg, #c43b1122, #c10c513b, #0860802e, #0e55445f);
+  background-size: 500% 500%;
+  animation: bgGradient 8s ease infinite;
+}
+
+@keyframes bgGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 25% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  75% {
+    background-position: 25% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
+h3{
+  color: white;
+}
+
+.card {
+  color: inherit;
+  cursor: pointer;
+  min-width: 25%;
+  height: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 1rem auto;
+  position: relative;
+  margin: 1rem 1rem;
+}
+
+.front,
+.back {
+  display: flex;
+  border-radius: 12px;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: ease-in-out 600ms;
+  border: 3px solid #CEE6F3;
+}
+
+.front {
+  /* background: url(https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjdnZjUxN3JtNGQ4NHoxMzhrMTh5bHhhNGozZHVoZWxkbndlcHloMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/dB1HgMmZIYRuE/giphy.gif); */
+  background: url(https://media4.giphy.com/media/l41lRi0VWdnH90yJy/giphy.gif?cid=ecf05e470wj1ci0xekaojip8jpe5jyf6z991tfgsq01g2ywu&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+  /* background: url(https://media0.giphy.com/media/3jVT4U5bilspG/giphy.gif?cid=ecf05e47o7bzd8h9b7cscaei7nuh8434jmuv592xjsbc8z17&ep=v1_gifs_search&rid=giphy.gif&ct=g); */
+  /* background: url(https://images.unsplash.com/photo-1545418314-7ce0b9b53901?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGNvZmZlZSUyMHNob3B8ZW58MHx8MHx8fDA%3D&w=1000&q=80); */
+  background-size: cover;
+  padding: 2rem;
+  font-size: 1.618rem;
+  font-weight: 600;
+  /* color: #fff; */
+  overflow: hidden;
+}
+
+
+
+.front:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(145deg, #0a0428, #94a7d3, #0a0428);
+  /* opacity: 0.4; */
+  opacity: 0.25;
+  z-index: -1;
+}
+
+.card:hover .front {
+  transform: rotateY(180deg);
+}
+
+.back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(145deg, #5e6168, #abd0d0, #5e6168);
+  transform: rotateY(-180deg);
+  padding: 0 2em;
+}
+
+.back>div {
+  margin: 10px;
+}
+
+.social {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.social>img {
+  width: 30px;
+  opacity: 0.8;
+}
+
+.social>img:hover {
+  opacity: 1;
+  color: orange;
+  transform: translateY(-10px);
+  width: 40px;
+
+  .social {
+    margin: 0;
+    padding: 0;
+  }
+
+}
+
+
+
+.desc {
+  text-align: justify;
+}
+
+.card:hover .back {
+  transform: rotateY(0deg);
+}
+
+.button {
+  text-decoration: none;
+  opacity: 0.6;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  background: linear-gradient(145deg, #1a9be6, #1a57e6);
+
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+}
+
+.detailsButton {
+  background: linear-gradient(145deg, #68d082, #037020);
+  text-decoration: none;
+  opacity: 0.6;
+  cursor: pointer;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  font-weight: bold;
+  color: #fff;
+  padding: 0.5em 1em;
+  border-radius: 100px;
+  border: none;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: 300ms ease;
+
+}
+
+.button.deleteButton {
+  /* background-color: rgba(230, 87, 230, 0.25); */
+  background: linear-gradient(145deg, #c57a8a, #e61a1a);
+}
+
+.button:hover, .detailsButton:hover {
+  opacity: 1;
+}
+
+.name {
+  background-color: rgba(0, 0, 0, .5);
+  border: 2px solid #CEE6F3;
+  padding: 5px;
+  border-radius: 10px;
+  font-weight: bold;
+}
