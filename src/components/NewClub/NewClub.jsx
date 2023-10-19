@@ -21,13 +21,13 @@ const NewClub = (props) => {
 
   const [shopsByLocation, setShopsByLocation] = useState([])
   const [selectedLocation, setSelectedLocation] = useState('')
-  const [isSuggestions, setIsSuggestions] = useState(false);
 
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
     const newLocation = clubFormData.location
     setSelectedLocation(newLocation)
-    let data = props.shops.filter(shop => shop.location === selectedLocation)
+    // let data = props.shops.filter(shop => shop.location === selectedLocation)
+    let data = props.shops.filter(shop => shop.location.includes(selectedLocation))
     setShopsByLocation(data)
   }
   const handleSubmit = evt => {
@@ -45,12 +45,12 @@ const NewClub = (props) => {
     }
   }
 
-  const displayShopForm = () => {
-    setIsSuggestions((isSuggestions) => !isSuggestions)
-    const shopForm = document.getElementById('shopForm')
-    shopForm.style.display = 'flex'
+  const handleShowNewShop = () => {
+    const newShop = document.getElementById('newShop')
+    if (newShop.style.display === 'none') {
+      newShop.style.display = 'flex'
+    } else newShop.style.display = 'none'
   }
-
 
   return (
     <div className={styles['new-club-container']}>
@@ -62,7 +62,7 @@ const NewClub = (props) => {
             <p>What will yor club be called ?</p>
             <div className={styles['name']}>
               <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' required />
-              <textarea name="description" onChange={handleChange} placeholder='Description for your club'>{clubFormData.description}</textarea>
+              <textarea name="description" onChange={handleChange} placeholder='Description for your club' value={clubFormData.description}>{clubFormData.description}</textarea>
             </div>
           </div>
           <div className={styles['club-focus']}>
@@ -86,7 +86,7 @@ const NewClub = (props) => {
           <button type='submit' id='create-club' onClick={displayShopSuggestions}>Create Club</button>
         </div>
       </form>
-      {isSuggestions && <NewCoffeeShop handleAddShop={props.handleAddShop} />}
+
       <div className={styles['shops-in-club']} id='shop-suggestions'>
         <p>Here are some coffee shops in your area! Select one to host your club in and let others join!</p>
         <div className={styles['shop-cards']}>
@@ -95,14 +95,20 @@ const NewClub = (props) => {
             <>
               {shopsByLocation.map(shop => (
                 <RecommendationShopCard shop={shop} key={shop._id} />
+
               ))}
             </>
             : <>
               <h1>No coffeeShop near you</h1>
             </>}
-
         </div>
-        <p className={styles.showShopForm} onClick={displayShopForm}>Don't see what you're looking for? <br />Add a Shop!</p>
+        <p className={styles.showShopForm} onClick={handleShowNewShop} >Don't see what you're looking for? <br /><span><button className={styles.button}>Add a Shop!</button></span></p>
+      </div>
+
+      <div id='newShop' className={styles.showNewShop}>
+
+        {<NewCoffeeShop handleAddShop={props.handleAddShop} />}
+
       </div>
     </div>
 

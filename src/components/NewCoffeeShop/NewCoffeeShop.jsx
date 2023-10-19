@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './NewCoffeeShop.module.css'
-import { useEffect } from 'react';
+
 
 const NewCoffeeShop = (props) => {
 
@@ -31,19 +31,9 @@ const NewCoffeeShop = (props) => {
     evt.preventDefault()
     props.handleAddShop(adjustedFormData)
   }
-  // const shopForm = document.getElementById('shopForm')
-  // console.log(shopForm)
-  function displayForm() {
-    useEffect(() => {
-      const shopForm = document.getElementById('shopForm')
-      shopForm.style.display = 'flex'
-      console.log(shopForm)
-    }, [])
-  }
-  displayForm()
 
   return ( 
-    <form className={styles['new-shop-form-container']} onSubmit={handleSubmit} id="shopForm">
+    <form className={styles['new-shop-form-container']} onSubmit={handleSubmit}>
       {/* <h1>Add A Coffee Shop Here</h1> */}
       <div className={styles["new-shop-image-holder"]}>
         <div className={styles.textOverImage}>
