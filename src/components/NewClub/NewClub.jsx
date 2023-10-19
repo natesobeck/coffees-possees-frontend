@@ -1,5 +1,6 @@
 // npm modules
 import { useState } from 'react'
+import { HashLink } from 'react-router-hash-link'
 
 //components
 import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
@@ -21,6 +22,7 @@ const NewClub = (props) => {
 
   const [shopsByLocation, setShopsByLocation] = useState([])
   const [selectedLocation, setSelectedLocation] = useState('')
+  // let shopId = 'shopForm'
 
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
@@ -46,7 +48,7 @@ const NewClub = (props) => {
   }
 
   const handleShowNewShop = () => {
-    const newShop = document.getElementById('newShop')
+    const newShop = document.getElementById('shopForm')
     if (newShop.style.display === 'none') {
       newShop.style.display = 'flex'
     } else newShop.style.display = 'none'
@@ -83,10 +85,10 @@ const NewClub = (props) => {
           </div>
         </div>
         <div className={styles['create-club-button']}>
-          <button type='submit' id='create-club' onClick={displayShopSuggestions}>Create Club</button>
+          <button type='submit' id="createClub" onClick={displayShopSuggestions}>Create Club</button>
         </div>
       </form>
-
+      {<NewCoffeeShop handleAddShop={props.handleAddShop} />}
       <div className={styles['shops-in-club']} id='shop-suggestions'>
         <p>Here are some coffee shops in your area! Select one to host your club in and let others join!</p>
         <div className={styles['shop-cards']}>
@@ -102,14 +104,16 @@ const NewClub = (props) => {
               <h1>No coffeeShop near you</h1>
             </>}
         </div>
-        <p className={styles.showShopForm} onClick={handleShowNewShop} >Don't see what you're looking for? <br /><span><button className={styles.button}>Add a Shop!</button></span></p>
+        <HashLink smooth to="/new#createClub" onClick={handleShowNewShop}> 
+          <p className={styles.showShopForm} onClick={handleShowNewShop}>Don't see what you're looking for? <br />Add a Shop!</p>
+        </HashLink>
       </div>
 
-      <div id='newShop' className={styles.showNewShop}>
+      {/* <div id='newShop' className={styles.showNewShop}> */}
 
-        {<NewCoffeeShop handleAddShop={props.handleAddShop} />}
+        {/* {<NewCoffeeShop handleAddShop={props.handleAddShop} />} */}
 
-      </div>
+      {/* </div> */}
     </div>
 
   )
