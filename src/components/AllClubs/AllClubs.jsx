@@ -1,4 +1,3 @@
-
 // components
 import ClubSearchForm from '../ClubSearchForm/ClubSearchForm'
 import ClubSearchResults from '../ClubSearchResults/ClubSearchResults'

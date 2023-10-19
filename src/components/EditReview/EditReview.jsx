@@ -32,18 +32,18 @@ const EditReview = () => {
           <h1 className={styles['title']}> EDIT REVIEW</h1>
           <div className={styles['review-container']}> 
             <div className={styles['space-between']}>
-            <input
-              required
-              name='text'
-              type='text'
-              value={reviewFormData.text} 
-              id='text'
-              onChange={handleChange}
-              placeholder='Edit Review'
-              autoComplete='off'
-            />
-          </div>
-          <div className={styles['space-between']}>
+              <input
+                required
+                name='text'
+                type='text'
+                value={reviewFormData.text} 
+                id='text'
+                onChange={handleChange}
+                placeholder='Edit Review'
+                autoComplete='off'
+              />
+            </div>
+            <div className={styles['space-between']}>
               <label htmlFor='price'>Price  💰 </label>
               <select name='price' value={reviewFormData.price} id='price' onChange={handleChange}>
                 <option value='1'>1</option>

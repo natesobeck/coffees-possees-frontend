@@ -5,11 +5,6 @@ import { useParams, NavLink, useLocation } from 'react-router-dom'
 //css
 import styles from './ClubDetails.module.css'
 
-
-//components
-// import loading
-
-
 //services
 import * as clubService from '../../services/clubService'
 
@@ -25,9 +20,6 @@ useEffect(() => {
   }
   fetchClub()
 },[clubId])
-
-// useEffect is the function that makes the api call
-
 
   return (
     <main className={styles['main']}>
@@ -59,7 +51,3 @@ useEffect(() => {
 }
 
 export default ClubDetails
-
-
-
-{/* <h1 className={styles['title-club-details']}>Club Name Here</h1> */}

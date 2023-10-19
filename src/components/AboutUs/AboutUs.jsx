@@ -2,8 +2,6 @@ import style from './AboutUs.module.css'
 import { data } from '../../data/aboutUs'
 import AboutUsCard from '../AboutUsCard/AboutUsCard'
 
-
-
 const AboutUs = () => {
 
   let aboutUsList = data.sort(() => 0.5 - Math.random())

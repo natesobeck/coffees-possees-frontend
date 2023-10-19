@@ -1,7 +1,5 @@
 import { useState } from 'react';
 import styles from './NewCoffeeShop.module.css'
-import { useNavigate } from 'react-router-dom';
-
 
 const NewCoffeeShop = (props) => {
 
@@ -18,7 +16,6 @@ const NewCoffeeShop = (props) => {
   const handleChange = (evt) => {
     setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
   }
-  const navigate = useNavigate()
 
   const handleSubmit = evt => {
     const adjustedFormData = {}
@@ -30,17 +27,15 @@ const NewCoffeeShop = (props) => {
       state: coffeeShop.state,
       zipCode: coffeeShop.zipCode  
     }
-    navigate('/clubs')
     evt.preventDefault()
     props.handleAddShop(adjustedFormData)
   }
 
   return ( 
     <form className={styles['new-shop-form-container']} onSubmit={handleSubmit} id="shopForm">
-      {/* <h1>Add A Coffee Shop Here</h1> */}
       <div className={styles["new-shop-image-holder"]}>
         <div className={styles.textOverImage}>
-          <h4>Add a Coffee Shop, enjoy a moment with the members of your club. </h4>
+          <h4>Add a Coffee Shop, enjoy a moment with the members of your club.</h4>
         </div>
       </div>
       <div className={styles["shop-form"]}>

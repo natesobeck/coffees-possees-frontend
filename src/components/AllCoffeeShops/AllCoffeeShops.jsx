@@ -1,4 +1,3 @@
-
 // components
 import ShopCard from "../ShopCard/ShopCard"
 import ShopSearchForm from "../ShopSearchForm/ShopSearchForm"
