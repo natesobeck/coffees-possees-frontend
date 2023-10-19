@@ -15,7 +15,6 @@
   list-style-type: none;
   height: 70px;
   align-items: center;
-  margin-right: 2rem;
 }
 
 .nav ul li a {
@@ -24,7 +23,7 @@
 
 nav a {
   font-family: 'breve';
-  font-size: 3.5vw;
+  font-size: 2rem;
   background-color: rgba(0, 0, 0, .2);
   padding: 10px;
   border-radius: 50%;
@@ -48,6 +47,30 @@ nav > ul {
   width: 100vw;
   height: 90px;
   z-index: 2;
+}
+
+@media (min-width: 375px) {
+  nav a {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 600px) {
+  nav a {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 800px) {
+  nav a {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 1000px) {
+  nav a {
+    font-size: 30px;
+  }
 }
 
 @media (min-width: 1200px) {

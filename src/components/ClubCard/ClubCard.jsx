@@ -17,7 +17,7 @@ const ClubCard = ({ club, handleDeleteClub, user }) => {
           <button type='submit' onClick={() => handleDeleteClub(club._id)}>DELETE</button>
         </div>
       }
-      </div>
+    </div>
   )
 }
 

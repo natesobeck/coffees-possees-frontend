@@ -1,13 +1,13 @@
 .shops-container {
+  position: absolute;
+  top: 140px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
-  align-items: center;
+  align-items:center;
   gap: 20px;
-  width: 100vw;
+  width: 100%;
   max-width: 1400px;
-  margin-bottom: 30px;
-  margin-top: 70px;
+  z-index: 2;
 }
 
 .label {
@@ -15,4 +15,39 @@
   grid-template-columns: 50% 25%;
   width: 100%;
   text-align: center;
+}
+
+#background-image {
+  position: absolute;
+  top: 0;
+  height: 150vh;
+  width: 100%;
+  background-image: url(/assets/coldBrew.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+#img-cover {
+  position: absolute;
+  top: 0;
+  height: 150vh;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: .4;
+}
+
+#shop-search-results-container {
+  background-color: rgb(245, 245, 245, .3);
+  width: 70%;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+#shop-search-results {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .2);
+  backdrop-filter: blur(32px);
 }
