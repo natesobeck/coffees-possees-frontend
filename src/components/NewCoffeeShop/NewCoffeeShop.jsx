@@ -39,7 +39,11 @@ const NewCoffeeShop = (props) => {
   return ( 
     <form className={styles["new-shop-form-container"]} onSubmit={handleSubmit}>
       {/* <h1>Add A Coffee Shop Here</h1> */}
-      <div className={styles["new-shop-image-holder"]}></div>
+      <div className={styles["new-shop-image-holder"]}>
+        <div className={styles.textOverImage}>
+          <h4>Add a Coffee Shop, enjoy a moment with the members of your club. </h4>
+        </div>
+      </div>
       <div className={styles["shop-form"]}>
         <div>
           <label htmlFor="shop-name">Name:</label>
