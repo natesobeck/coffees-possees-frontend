@@ -64,8 +64,8 @@ const CoffeeShopDetails = (props) => {
             {/* {coffeeShop?.name && <AddedBy content={coffeeShop} />} */}
             {coffeeShop?.name && coffeeShop.addedBy._id === props.user.profile && 
             <>
-              <Link state={coffeeShop} to={`/shops/${shopId}/editshop`}><button> EDIT</button> </Link>
-              <button onClick={() => props.handleDeleteShop(shopId)}> DELETE</button>
+              <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} className={styles['edit-btn']}>EDIT</Link>
+              <button onClick={() => props.handleDeleteShop(shopId)} className={styles['delete-btn']}> DELETE</button>
             </>
             }
           </div>
