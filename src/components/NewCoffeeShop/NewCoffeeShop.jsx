@@ -47,30 +47,31 @@ const NewCoffeeShop = (props) => {
         </div>
       </div>
       <div className={styles["shop-form"]}>
-        <div>
-          <label htmlFor="shop-name">Name:</label>
-          <input type="text" name="name" id="shop-name" value={coffeeShop.name} onChange={handleChange} autoComplete='off' placeholder='e.g: Panther Coffee' required />
-        </div>
         <div className={styles["shop-address"]}>
-          <h4>Address</h4>
+          <div className={styles['address-title']}>Name of Shop</div>
           <div>
-            <label htmlFor="shop-street">Street:</label>
-            <input type="text" name="street" id="shop-street" value={coffeeShop.street} onChange={handleChange} autoComplete='off' placeholder='e.g: Saint St' required />
+            <input type="text" name="name" id="shop-name" value={coffeeShop.name} onChange={handleChange} autoComplete='off' placeholder='Shop name e.g: Panther Coffee' required />
+          </div>
+          <div className={styles['address-title']}>Address</div>
+          <div>
+            <input type="text" name="street" id="shop-street" value={coffeeShop.street} onChange={handleChange} autoComplete='off' placeholder='Street Address e.g: Saint St' required />
           </div>
           <div>
-            <label htmlFor="shop-city">City:</label>
-            <input type="text" name="city" id="shop-city" value={coffeeShop.city} onChange={handleChange} autoComplete='off' placeholder='e.g: Paris' required />
+            <input type="text" name="city" id="shop-city" value={coffeeShop.city} onChange={handleChange} autoComplete='off' placeholder='City e.g: Paris' required />
           </div>
           <div>
-            <label htmlFor="shop-state">State:</label>
-            <input type="text" name="state" id="shop-state" value={coffeeShop.state} onChange={handleChange} autoComplete='off' placeholder='e.g: Texas' required />
+            <input type="text" name="state" id="shop-state" value={coffeeShop.state} onChange={handleChange} autoComplete='off' placeholder='State e.g: Texas' required />
           </div>
           <div>
-            <label htmlFor="shop-zipCode">Zip-code:</label>
-            <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode} onChange={handleChange} autoComplete='off' placeholder='e.g: 40202' required />
+            <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode} onChange={handleChange} autoComplete='off' placeholder='Zip Code e.g: 40202' required />
           </div>
+          <button 
+            type='submit'
+            id={styles['create-shop']}
+          >
+            Add Coffee Shop
+          </button>
         </div>
-        <button type='submit'>Add Coffee Shop</button>
       </div>
     </form>
   )
