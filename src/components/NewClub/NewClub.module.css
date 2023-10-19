@@ -4,16 +4,17 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px;
-  border: 3px solid white;
-  width: 100vw;
-  max-width: 1400px;
+  width: 80vw;
+  max-width: 1180px;
   margin: 100px 0 30px 0;
+  z-index: 2;
+  background-color: rgb(245, 245, 245, .3);
+  border-radius: 20px;
+  backdrop-filter: blur(18px);
 }
 
 .club-info {
-  border: 2px solid white;
   display: flex;
-  flex-direction: row;
 }
 
 .location-info {
@@ -23,11 +24,9 @@
   align-items: center;
   padding: 20px;
   width: 50%;
-  background-color: #481f01;
-}
-
-.location-info>h3 {
-  font-size: 30px;
+  background-color: rgba(0, 0, 0, .3);
+  border-top-left-radius: 20px;
+  border-right: 2px solid rgba(0, 0, 0, .3);
 }
 
 .location-info>h5 {
@@ -39,15 +38,13 @@
 .location-info>.name {
   display: flex;
   flex-direction: column;
-  border: 3px solid white;
   padding: 20px;
   gap: 15px;
-  background-color: darkslategray;
+  background-color: rgba(47, 79, 79, .5);
   border-radius: 7px;
 }
 
 .location-info>.name>input {
-  border: 3px solid #b0b0b0;
   border-radius: 5px;
   color: #505050;
   outline: none;
@@ -74,8 +71,9 @@
   justify-content: space-evenly;
   align-items: center;
   width: 50%;
-  background-color: white;
-  color: #606060;
+  background-color: rgb(0, 0, 0, .3);
+  color: white;
+  border-top-right-radius: 20px;
 }
 
 .club-focus>h6 {
@@ -91,16 +89,11 @@
   align-items: center;
   gap: 20px;
   width: 50%;
-  margin-top: 30px;
 }
 
-/* .category-container {
-
-} */
 .category-container>label {
   font-size: 20px;
   font-weight: bold;
-  color: black;
 }
 
 .category-container>input {
@@ -108,7 +101,7 @@
   height: 40px;
   text-align: center;
   border: none;
-  border: 2px solid #0492c2;
+  border: 1px solid #0492c2;
   border-radius: 5px;
   font-size: 20px;
   background-color: white;
@@ -122,12 +115,12 @@
   gap: 20px;
   padding: 20px;
   padding-right: 30px;
-  background-color: darkslategray;
+  background-color: rgba(120, 29, 66, .5);
   border-radius: 7px;
-  margin-top: 80px;
+  margin-top: 30px;
   margin-bottom: 20px;
-  /* margin: 0 auto; */
 }
+
 .club-focus > .location-time > h2 {
   color: white;
   margin-top: 5px;
@@ -136,7 +129,6 @@
 
 .club-focus>.location-time>input {
   height: 40px;
-  border: 3px solid #b0b0b0;
   border-radius: 5px;
   color: #505050;
   outline: none;
@@ -149,7 +141,6 @@
 .club-focus>.location-time>select {
   width: 95%;
   height: 40px;
-  border: 3px solid #b0b0b0;
   border-radius: 5px;
   color: #505050;
   outline: none;
@@ -160,22 +151,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* border: 3px solid white; */
   width: 100%;
   padding: 25px 0 25px 0;
-  /* height: 70px; */
-  background-color: white;
+  background-color: rgba(255, 255, 255, );
 }
 
-.create-club-button>button {
-  width: 200px;
-  height: 45px;
-  background-color: #b90e0a;
+#create-club {
+  background-color: rgba(75, 101, 135, .7);
   color: white;
   border-radius: 5px;
   font-size: 18px;
   font-weight: bold;
   border: none;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, .8);
+}
+
+#create-club:hover {
+  color: rgba(75, 101, 135, .7);
+  background-color: white;
+  cursor: pointer;
 }
 
 .shops-in-club {
@@ -191,7 +186,6 @@
   gap: 40px;
   padding: 20px;
   display: none;
-  /* display: flex; */
 }
 
 .shops-in-club>p {
@@ -294,4 +288,38 @@
 .shops-in-club .showShopForm:hover {
   cursor: pointer;
   color: #4b9cd3;
+}
+
+#background-image {
+  position: absolute;
+  top: 0;
+  height: 200vh;
+  width: 100%;
+  background-image: url(/assets/coffeeSteam.jpg);
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+#img-cover {
+  position: absolute;
+  top: 0;
+  height: 200vh;
+  width: 100%;
+  z-index: 1;
+  background-color: black;
+  opacity: .3;
+}
+
+.title {
+  color: #CEE6F3;
+  background-color: rgb(0, 0, 0, .6);
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid #CEE6F3;
+  margin: 0 0 20px 0;
+  text-align: center;
+  font-family: 'breve';
+  font-size: 3rem;
 }
