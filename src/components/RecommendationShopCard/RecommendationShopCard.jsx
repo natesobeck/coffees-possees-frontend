@@ -4,10 +4,6 @@ import { Link } from 'react-router-dom';
 
 const RecommendationShopCard = (props) => {
 
-  // const handleClubtoShop = async (shopId, clubId) => {
-  //   const fetchClubs = await shopService.addClubtoShop(shopId, clubId)
-  // }
-
   return ( 
     <div className={styles.card}>
       <div className={styles.front}>
@@ -29,18 +25,3 @@ const RecommendationShopCard = (props) => {
 }
  
 export default RecommendationShopCard;
-
-
-
-
-
-
-{/* <div className={styles['suggestion']}>
-      
-      <p style={{color: 'black'}}>
-        {shop.name}
-      </p>
-      <p>{shop.location}</p>
-      <button>Add This Shop</button>
-      <button>View Shop Details</button>
-    </div> */}
