@@ -5,7 +5,7 @@ import styles from './Landing.module.css'
 // components
 import AboutUs from '../../components/AboutUs/AboutUs'
 
-const Landing = ({ user }) => {
+const Landing = () => {
   return (
     <main className={styles.container}>
       <div id={styles['home-background']}></div>

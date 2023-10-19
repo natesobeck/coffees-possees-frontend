@@ -1,5 +1,5 @@
 // npm modules
-import {useState } from 'react'
+import { useState } from 'react'
 
 //components
 import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
@@ -22,7 +22,7 @@ const NewClub = (props) => {
   const [shopsByLocation, setShopsByLocation] = useState([])
   const [selectedLocation, setSelectedLocation] = useState('')
   const [isSuggestions, setIsSuggestions] = useState(false);
-  
+
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
     const newLocation = clubFormData.location
@@ -91,27 +91,16 @@ const NewClub = (props) => {
         <p>Here are some coffee shops in your area! Select one to host your club in and let others join!</p>
         <div className={styles['shop-cards']}>
 
-            {shopsByLocation.length ?
-              <>
-                {shopsByLocation.map(shop => (
-                  <RecommendationShopCard shop={shop} key={shop._id} />
-                  // <div key={shop._id} className={styles['suggestion']}>
-                  //   <p style={{color: 'black'}}>
-                  //     {shop.name}
-                  //   </p>
-                  //   <p>{shop.location}</p>
-                  //   <button>Add This Shop</button>
-                  //   <button>View Shop Details</button>
-                  // </div>
-                  
-                ))}
-              </>
-              : <>
-                <h1>No coffeeShop near you</h1>
-              </>}
+          {shopsByLocation.length ?
+            <>
+              {shopsByLocation.map(shop => (
+                <RecommendationShopCard shop={shop} key={shop._id} />
+              ))}
+            </>
+            : <>
+              <h1>No coffeeShop near you</h1>
+            </>}
 
-              
-          
         </div>
         <p className={styles.showShopForm} onClick={displayShopForm}>Don't see what you're looking for? <br />Add a Shop!</p>
       </div>
