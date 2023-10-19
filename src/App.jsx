@@ -180,7 +180,7 @@ function App() {
         />
         <Route
           path="/shops/:shopId"
-          element={<CoffeeShopDetails user={user} />}
+          element={<CoffeeShopDetails user={user} handleDeleteShop={handleDeleteShop} />}
         />
         <Route
           path="/auth/signup"

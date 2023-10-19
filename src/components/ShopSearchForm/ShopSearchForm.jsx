@@ -22,17 +22,16 @@ const ShopSearchForm = (props) => {
 
   return ( 
     <div className={styles["form-container"]}>
-      <h1>Search For A Shop</h1>
-      <p className={styles['p-tag']}>Enter the name of a coffee shop or a location.</p>
+      <h1>Find a CoffeeShop Here</h1>
       <form onSubmit={handleSubmit} className={styles['search']}>
         <input 
           type="text" 
-          placeholder="Enter your city..." 
+          placeholder="Enter your city or shop name..." 
           className={styles["city-input"]} 
           name="query"
           onChange={handleChange}
         />
-        <button>Search</button>
+        <button>🔎</button>
       </form>
     </div>
   )
