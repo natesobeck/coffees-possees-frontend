@@ -32,8 +32,7 @@ const NewReview = (props) => {
   return (
     <form className={styles.container} onSubmit={handleSubmitReview}>
       <div className={styles['review-container']}> 
-        <div className={styles['space-between']}>
-          <label htmlFor="text">Text:</label>
+        <div>
           <input
             required
             name='text'
@@ -43,57 +42,54 @@ const NewReview = (props) => {
             onChange={handleChange}
             placeholder='Add Review'
             autoComplete='off'
+            className={styles['review-text-input']}
           />
         </div>
-
-    {/* <h1>Leave a Review</h1> */}
-    <div className={styles['space-between']}>
-      <label htmlFor='price'>Price of Coffees:</label>
-      <select name='price' value={reviewFormData.price || ''} id='price' onChange={handleChange}>
-        <option value='1'>1</option>
-        <option value='2'>2</option>
-        <option value='3'>3</option>
-        <option value='4'>4</option>
-        <option value='5'>5</option>
-      </select>
-    </div>
-        
-    <div className={styles['space-between']}>
-      <label htmlFor='rating'> Rating:</label>
-        <select name='rating' value={reviewFormData.rating || ''} id='rating' onChange={handleChange}>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-        </select>
-    </div>
-    <div className={styles['space-between']}>
-      <label htmlFor='coffeeShopAmbience'>Ambience:</label>
-          <select name='coffeeShopAmbience' value={reviewFormData.coffeeShopAmbience || ''} id='coffeeShopAmbience' onChange={handleChange}>
-            <option value='Spacious'>Spacious</option>
-            <option value='Cozy'>Cozy</option>
-            <option value='Loud'>Loud</option>
-            <option value='Relaxing'>Relaxing</option>
-            <option value='Quiet'>Quiet</option>
-          </select>
-    </div>
-    <div className={styles['space-between']}>
-      <label htmlFor='wifi'> Wifi Strength:</label>
-        <select name='wifi' value={reviewFormData.wifi || ''} id='wifi' onChange={handleChange}>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-        </select>
-    </div>  
-    <div className={styles['review-button']}>
-      <button type="submit">Add Review</button>
-    </div>
-  </div>
-</form>
-
+        <div className={styles['review-dropdowns']}>
+        <div className={styles['space-between']}>
+            <label htmlFor='rating'>Rating ⭐️ </label>
+            <select name='rating' value={reviewFormData.rating || ''} id='rating' onChange={handleChange}>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+            </select>
+          </div>
+          <div className={styles['space-between']}>
+            <label htmlFor='price'>Price 💰 </label>
+            <select name='price' value={reviewFormData.price || ''} id='price' onChange={handleChange}>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
+              <option value='4'>4</option>
+              <option value='5'>5</option>
+            </select>
+          </div>       
+          <div className={styles['space-between']}>
+          <label htmlFor='coffeeShopAmbience'>Ambience ☕️ </label>
+            <select name='coffeeShopAmbience' value={reviewFormData.coffeeShopAmbience || ''} id='coffeeShopAmbience' onChange={handleChange}>
+              <option value='Spacious'>Spacious</option>
+              <option value='Cozy'>Cozy</option>
+              <option value='Loud'>Loud</option>
+              <option value='Relaxing'>Relaxing</option>
+              <option value='Quiet'>Quiet</option>
+            </select>
+          </div>
+          <div className={styles['space-between']}>
+            <label htmlFor='wifi'> Wifi 🛜 </label>
+              <select name='wifi' value={reviewFormData.wifi || ''} id='wifi' onChange={handleChange}>
+                <option value='1'>1</option>
+                <option value='2'>2</option>
+                <option value='3'>3</option>
+                <option value='4'>4</option>
+                <option value='5'>5</option>
+              </select>
+          </div>  
+          <button type="submit" className={styles['submit-review-btn']}>Add Review</button>
+        </div>
+      </div>
+    </form>
   )
 }
 

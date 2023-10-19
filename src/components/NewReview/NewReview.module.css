@@ -1,23 +1,51 @@
 .container {
-  /* display: flex; */
-  /* flex-direction: row; */
-  border: 3px solid white;
-  height: 100%;
-  /* width: 150%; */
-  padding: 10px
-
-}
-
-.review-container {
-  display: flex;
-  flex-direction: row;
-  /* padding: 40px; */
+  padding: 25px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, .5);
+  backdrop-filter: blur(18px);
+  color: #CEE6F3;
 }
 
 .space-between {
   padding: 10px;
 }
 
-/* .review-button {
-  
-} */
+.review-dropdowns {
+  display: flex;
+}
+
+.review-text-input {
+  width: 80%;
+}
+
+.container label {
+  background-color: rgba(0, 0, 0, .5);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 0 2px 2px 2px;
+  margin-top: 2px;
+}
+
+.container select {
+  border-style: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 4px 2px 3px 2px;
+  background-color: rgba(211, 211, 211, .8);
+}
+
+.submit-review-btn {
+  height: 25px;
+  border-radius: 5px;
+  border-style: none;
+  margin-top: 12px;
+  border: 1px solid lightgray;
+}
+
+.submit-review-btn:hover {
+  border: 1px solid rgba(0, 0, 0, .5);
+  color: white;
+  background-color: gray;
+  cursor: pointer;
+}
