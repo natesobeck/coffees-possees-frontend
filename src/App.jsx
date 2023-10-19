@@ -36,8 +36,10 @@ function App() {
   const [shops, setShops] = useState([])
   const [clubSearchResults, setClubSearchResults] = useState([])
   const [shopSearchResults, setShopSearchResults] = useState([])
+  const [someShops, setSomeShops] = useState([])
   let clubId = ''
   const navigate = useNavigate()
+
 
   const handleLogout = () => {
     authService.logout()
@@ -122,6 +124,9 @@ function App() {
       const data = await shopService.index()
       setShops(data)
       setShopSearchResults(data)
+
+      let dataShuffle = data.sort(() => 0.5 - Math.random())
+      setSomeShops(dataShuffle.slice(0, 5))
     }
     fetchAllShops()
   }, [])
@@ -131,7 +136,7 @@ function App() {
     <main>
       <NavBar user={user} handleLogout={handleLogout} />
       <Routes>
-        <Route path="/" element={<Landing user={user} />} />
+        <Route path="/" element={<Landing someShops={someShops} user={user} />} />
         <Route
           path="/profiles"
           element={
@@ -198,7 +203,7 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
+
         <Route
           path="/clubs/:clubId/editclub"
           element={

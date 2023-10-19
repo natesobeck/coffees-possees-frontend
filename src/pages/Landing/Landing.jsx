@@ -4,8 +4,10 @@ import styles from './Landing.module.css'
 
 // components
 import AboutUs from '../../components/AboutUs/AboutUs'
+import LandingRec from '../../components/LandingRec/LandingRec'
 
-const Landing = () => {
+const Landing = (props) => {
+
   return (
     <main className={styles.container}>
       <div id={styles['home-background']}></div>
@@ -21,9 +23,10 @@ const Landing = () => {
         </div>
       </section>
       <div id={styles['reccomendation-background']}></div>
-      <div id={styles['img-cover2']}></div>
+      <div id={styles['img-cover2']}>
+      </div>
       <section className={styles['section-container']} id={styles['reccomendations']}>
-        <h1>This is where the club reccomendations go.</h1>
+        <LandingRec someShops={props.someShops}/>
       </section>
       <div id={styles['about-background']}></div>
       <div id={styles['img-cover3']}></div>

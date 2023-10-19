@@ -94,7 +94,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(145deg, #5e6168, #abd0d0, #5e6168);
+  background: linear-gradient(145deg, #5e6168, rgba(171,208,208,.5), #5e6168);
   transform: rotateY(-180deg);
   padding: 0 2em;
 }
