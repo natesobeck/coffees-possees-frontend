@@ -22,8 +22,7 @@ const NewClub = (props) => {
   const [shopsByLocation, setShopsByLocation] = useState([])
   const [selectedLocation, setSelectedLocation] = useState('')
   const [isSuggestions, setIsSuggestions] = useState(false);
-  const shopId = 'shopForm'
-
+  
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
     const newLocation = clubFormData.location
