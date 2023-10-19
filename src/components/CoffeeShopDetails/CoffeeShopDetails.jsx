@@ -13,6 +13,7 @@ import Reviews from '../Reviews/Reviews'
 
 //css
 import styles from './CoffeeShopDetails.module.css'
+import AddedBy from '../AddedBy/AddedBy'
 
 //import loading
 
@@ -64,8 +65,13 @@ const CoffeeShopDetails = (props) => {
         </ul>
       </div>
       <div className={styles['coffee-edit-delete-button']}>
-        <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} ><button> Edit</button> </Link>
-        <button> Delete</button>
+        {/* <AddedBy content={coffeeShop} />
+        {coffeeShop.addedBy._id === props.user.profile && 
+        <> */}
+          <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} ><button> Edit</button> </Link>
+          <button onClick={() => props.handleDeleteShop(shopId)}> Delete</button>
+        {/* </>
+        } */}
       </div>
 
       <div className={styles['review-container']}>
