@@ -64,7 +64,7 @@ const NewClub = (props) => {
             <div className={styles['location-info']}>
               <h3 className={styles['title']}>Create a Club</h3>
               <h5>Start by giving your club a stunning name that will grab interest!</h5>
-              <p>What will yor club be called ?</p>
+              <p>What will your club be called ?</p>
               <div className={styles['name']}>
                 <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' required />
                 <textarea name="description" onChange={handleChange} placeholder='Description for your club' value={clubFormData.description}>{clubFormData.description}</textarea>
@@ -102,7 +102,7 @@ const NewClub = (props) => {
                 ))}
               </>
               : <>
-                <h1>No coffeeShop near you</h1>
+                <h2>No coffee shop near your location</h2>
               </>}
           </div>
           <HashLink smooth to="/new#createClub" onClick={handleShowNewShop}> 
