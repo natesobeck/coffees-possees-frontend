@@ -8,6 +8,7 @@
 }
 
 .section-container {
+  position: relative;
   height: 100vh;
   width: 100%;
   text-align: center;
@@ -93,6 +94,10 @@
   font-family: 'breve';
 }
 
+#reccomendations {
+  padding: 0;
+  margin: 0;
+}
 
 .slogan {
   font-size: 2.5rem;
