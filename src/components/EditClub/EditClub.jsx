@@ -25,11 +25,8 @@ const EditClub = (props) => {
       <div className={styles['club-info']}>
         <div className={styles['location-info']}>
           <h3>Let's Edit Your Club!</h3>
-          {/* <h5>Start by giving your club a stunning name that will grab interest!</h5>
-          <p>What will yor club be called ?</p> */}
           <div className={styles['name']}>
             <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' />
-            {/* <button>Search</button> */}
           </div>
         </div>
         <div className={styles['club-focus']}>

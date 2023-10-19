@@ -1,6 +1,5 @@
 import styles from './RecommendationShopCard.module.css'
 import { Link } from 'react-router-dom';
-// import * as shopService from '../../services/shopService';
 
 const RecommendationShopCard = (props) => {
 

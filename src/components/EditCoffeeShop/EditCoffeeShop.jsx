@@ -20,8 +20,6 @@ const EditCoffeeShop = (props) => {
     setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
   }
 
-  console.log('THIS IS COFFESHOP', coffeeShop)
-
   const handleSubmit = evt => {
     const adjustedFormData = {}
     adjustedFormData._id = state._id
@@ -62,7 +60,7 @@ const EditCoffeeShop = (props) => {
             </div>
             <div>
               <label htmlFor="shop-zipCode">Zip-code</label>
-              <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode || ''} onChange={handleChange} />
+              <input type="text" name="zipCode" id="shop-zipCode" value={coffeeShop.zipCode} onChange={handleChange} />
             </div>
           </div>
           <button className={styles['edit-btn']} type='submit'>Save Shop</button>

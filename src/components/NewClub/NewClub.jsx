@@ -22,13 +22,11 @@ const NewClub = (props) => {
 
   const [shopsByLocation, setShopsByLocation] = useState([])
   const [selectedLocation, setSelectedLocation] = useState('')
-  // let shopId = 'shopForm'
 
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
     const newLocation = clubFormData.location
     setSelectedLocation(newLocation)
-    // let data = props.shops.filter(shop => shop.location === selectedLocation)
     let data = props.shops.filter(shop => shop.location.includes(selectedLocation))
     setShopsByLocation(data)
   }
@@ -98,10 +96,10 @@ const NewClub = (props) => {
               <>
                 {shopsByLocation.map(shop => (
                   <RecommendationShopCard shop={shop} key={shop._id} />
-
                 ))}
               </>
-              : <>
+              : 
+              <>
                 <h2>No coffee shop near your location</h2>
               </>}
           </div>
@@ -109,12 +107,6 @@ const NewClub = (props) => {
             <p className={styles.showShopForm} onClick={handleShowNewShop}>Don't see what you're looking for? <br />Add a Shop!</p>
           </HashLink>
         </div>
-
-        {/* <div id='newShop' className={styles.showNewShop}> */}
-
-        {/* {<NewCoffeeShop handleAddShop={props.handleAddShop} />} */}
-
-        {/* </div> */}
       </div>
     </main>
   )

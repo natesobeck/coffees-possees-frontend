@@ -1,4 +1,3 @@
-
 // components
 import ClubCard from '../ClubCard/ClubCard'
 
@@ -18,14 +17,14 @@ const ClubSearchResults = (props) => {
         <div></div>
       </div>
       <div id={styles['all-clubs']}>
-      {props.clubSearchResults.map(club => (
-        <ClubCard 
-          key={club._id} 
-          club={club} 
-          handleDeleteClub={props.handleDeleteClub} 
-          user={props.user} 
-        />
-      ))}
+        {props.clubSearchResults.map(club => (
+          <ClubCard 
+            key={club._id} 
+            club={club} 
+            handleDeleteClub={props.handleDeleteClub} 
+            user={props.user} 
+          />
+        ))}
       </div>
     </div>
   )
