@@ -6,7 +6,6 @@ import { HashLink } from 'react-router-hash-link'
 import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
 import RecommendationShopCard from '../RecommendationShopCard/RecommendationShopCard'
 
-
 // css
 import styles from './NewClub.module.css'
 
@@ -30,10 +29,10 @@ const NewClub = (props) => {
     let data = props.shops.filter(shop => shop.location.includes(selectedLocation))
     setShopsByLocation(data)
   }
-  const handleSubmit = evt => {
+  const handleSubmit = async (evt) => {
     displayShopSuggestions()
     evt.preventDefault()
-    props.handleAddClub(clubFormData)
+    await props.handleAddClub(clubFormData)
   }
 
   const displayShopSuggestions = () => {
