@@ -59,7 +59,7 @@ const CoffeeShopDetails = (props) => {
             <h4>No clubs have met in {coffeeShop.name} yet!</h4>
           </div>
           <div className={styles['coffee-edit-delete-button']}>
-            {coffeeShop?.name && coffeeShop.addedBy._id === props.user.profile &&
+            {coffeeShop?.name && coffeeShop.addedBy._id === props.user?.profile &&
               <>
                 <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} className={styles['edit-btn']}>EDIT</Link>
                 <button onClick={() => props.handleDeleteShop(shopId)} className={styles['delete-btn']}> DELETE</button>

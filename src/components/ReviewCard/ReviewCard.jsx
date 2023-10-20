@@ -20,7 +20,7 @@ const ReviewCard = ({handleDeleteReview, review, shopId, user }) => {
         <div>☕️ {review.coffeeShopAmbience}</div>
         <div>🛜 {review.wifi}</div>
       </div>
-      {review.addedBy._id === user.profile &&
+      {review.addedBy._id === user?.profile &&
       <div className={styles['btn-container']}>
         <Link to={`/shops/${shopId}/reviews/${review._id}`} state={review} className={styles['edit-btn']}>
           EDIT
