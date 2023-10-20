@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import styles from './NewCoffeeShop.module.css'
 
+import { useNavigate } from 'react-router-dom';
+
 const NewCoffeeShop = (props) => {
 
   const [coffeeShop, setCoffeeShop] = useState({
@@ -17,7 +19,9 @@ const NewCoffeeShop = (props) => {
     setCoffeeShop({ ...coffeeShop, [evt.target.name]: evt.target.value })
   }
 
-  const handleSubmit = evt => {
+  const navigate = useNavigate()
+
+  const handleSubmit = async (evt) => {
     const adjustedFormData = {}
     adjustedFormData.name = coffeeShop.name
     adjustedFormData.location = coffeeShop.location
@@ -28,7 +32,8 @@ const NewCoffeeShop = (props) => {
       zipCode: coffeeShop.zipCode  
     }
     evt.preventDefault()
-    props.handleAddShop(adjustedFormData)
+    await props.handleAddShop(adjustedFormData)
+    navigate('/clubs')
   }
 
   return ( 
