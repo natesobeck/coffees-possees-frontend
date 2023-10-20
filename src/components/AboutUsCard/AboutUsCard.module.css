@@ -95,7 +95,9 @@
 
 }
 
-
+.blurb {
+  font-family: 'M PLUS Rounded 1c', sans-serif, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
 
 .desc {
   text-align: justify;
