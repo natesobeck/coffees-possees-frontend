@@ -46,10 +46,14 @@ const CoffeeShopDetails = (props) => {
           <div className={styles['coffeeshop-details-container']}>
             {coffeeShop.address ?
               <div className={styles['address-container']}>
-                <div className={styles['address']}>{coffeeShop.address.street},</div>
-                <div className={styles['address']}>{coffeeShop.address.city},</div>
-                <div className={styles['address']}>{coffeeShop.address.state},</div>
-                <div className={styles['address']}>{coffeeShop.address.zipCode}</div>
+                <div className={styles['address-pair']}>
+                  <div className={styles['address']}>{coffeeShop.address.street},</div>
+                  <div className={styles['address']}>{coffeeShop.address.city}</div>
+                </div>
+                <div className={styles['address-pair']}>
+                  <div className={styles['address']}>{coffeeShop.address.state},</div>
+                  <div className={styles['address']}>{coffeeShop.address.zipCode}</div>
+                </div>
               </div>
               : null
             }

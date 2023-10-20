@@ -90,6 +90,10 @@
   cursor: pointer;
 }
 
+.address-pair {
+  display: flex;
+}
+
 .address-container {
   display: flex;
   flex-direction: column;
