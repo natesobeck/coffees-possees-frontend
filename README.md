@@ -1,15 +1,18 @@
-# Coffees & Posses:"Bringing Like Minded People Together"
+# Coffees & Posses:"Bringing Like-Minded People Together" ☕️
 
-Do you like coffee? Of course you do... but who do you take your coffee with? We hope not alone! [Coffees & Posses](https://coffees-and-posses.netlify.app/) is here to help bring like minded people together with the easy use of a full stack application that allows you to create clubs for people to join in coffeeshops in your area.
+![coffees-and-posses-homepage](/public/assets/coffeeone.png)
+![coffees-and-posses-clubpage](/public/assets/coffeetwo.png)
+![coffees-and-posses-loginpage](/public/assets/coffeethree.png)
+
+Do you like coffee? Of course you do... but who do you take your coffee with? We hope not alone! [Coffees & Posses](https://coffees-and-posses.netlify.app/) is here to help bring like-minded people together with the easy use of a full stack application that allows you to create clubs within your local coffeeshops.
 
 ### [Meet Jolyne...](https://docs.google.com/presentation/d/1DQm0XDNEbN_ibKMw87wEhzTzs_LkZHxNUtE6tktCEoM/edit#slide=id.g24dca8be8d5_0_110)
-After reading about Jolyne's experience I'm sure you are wondering how you can get the same joy that she has and my friend you are in the right place. By clicking the link provided below you can be just like Jolyne.
+After reading about Jolyne's experience I'm sure you are wondering how you can get the same joy that she has and my friend you are in the right place. By clicking the link provided below you can join a club or create your own in just a few minutes.
 
+## [CLICK](https://coffees-and-posses.netlify.app/) to Sign Up w/ Coffees & Posses! ☕️
+Join Us: https://coffees-and-posses.netlify.app/
 
-## [CLICK](https://coffees-and-posses.netlify.app/) to Sign Up w/ Coffees & Posses!
-
-
-## Our Team Members:
+## Meet the Team Behind Coffees & Posses:
 - Nate:
 - Tuan:
 - Jonathan: https://github.com/Johny270
@@ -36,7 +39,7 @@ Tabitha Turner](https://unsplash.com/photos/F0Wd4djYvSA)
 - MongoDB
 - Mongoose
 - JavaScript
-- Node
+- Node.js
 - Express.js
 - HTML
 - CSS
@@ -45,7 +48,7 @@ Tabitha Turner](https://unsplash.com/photos/F0Wd4djYvSA)
 - Git
 - Github
 
-### Future Plans for Coffees & Posses
+### Future Plans for Coffees & Posses ☕️
 - Implement google maps api so that users will be able to search up the exact location of the coffeeshop where the club meeting will be held.
 - Add a calendar within the application for users to be able to select a date and time for the club.
 - Track how many users are in a club.
