@@ -1,6 +1,6 @@
-//npm modeules
+//npm module
 import { useState, useEffect } from 'react'
-import { useParams, NavLink, useLocation } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 
 //css
 import styles from './ClubDetails.module.css'
@@ -41,7 +41,7 @@ const ClubDetails = ({ user }) => {
         </div>
         <div> 
           <div className={styles['edit-delete-button']}> 
-            {user?.profile === club.addedBy._id &&
+            {user?.profile === club.addedBy?._id &&
             <div>
               <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
               <button className={styles['edit-btn']}>Edit</button>
