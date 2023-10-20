@@ -21,8 +21,12 @@ const EditClub = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='edit-club-container'>
-      <div className={styles['club-info']}>
+    <main>
+      <div id={styles['background-image']}></div>
+      <div id={styles['img-cover']}></div>
+      <div className={styles['container']}>
+        <form onSubmit={handleSubmit} className='edit-club-container'>
+          <div className={styles['club-info']}>
             <div className={styles['location-info']}>
               <h3 className={styles['title']}>Create a Club</h3>
               <h5>Start by giving your club a stunning name that will grab interest!</h5>
@@ -46,11 +50,13 @@ const EditClub = (props) => {
                   <option value="AfterNoon">Afternoon</option>
                   <option value="Evening">Evening</option>
                 </select>
-                <button type='submit' id={styles['create-club']} onClick={displayShopSuggestions}>Save Club</button>
+                <button type='submit' id={styles['create-club']} onClick={props.displayShopSuggestions} className={styles['button']}>Save Club</button>
               </div>
             </div>
           </div>
-    </form>
+        </form>
+      </div>
+    </main>
   )
 }
 
