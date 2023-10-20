@@ -9,7 +9,7 @@ import styles from './ClubDetails.module.css'
 import * as clubService from '../../services/clubService'
 
 
-const ClubDetails = () => {
+const ClubDetails = ({ user }) => {
   const [club, setClub] = useState({})
   const { clubId } = useParams()
 
@@ -39,10 +39,17 @@ useEffect(() => {
         </div>
         <div> 
           <div className={styles['edit-delete-button']}> 
-            <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
+            {user ?
+            <>
+              <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
               <button className={styles['edit-btn']}>Edit</button>
-            </NavLink>
-            <button className={styles['delete-btn']}>Delete</button> 
+              </NavLink>
+              <button className={styles['delete-btn']}>Delete</button> 
+            </>
+            :
+              <></>
+            }
+            
           </div> 
         </div>
       </div>
