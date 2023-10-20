@@ -41,7 +41,7 @@ const ClubDetails = ({ user }) => {
         </div>
         <div> 
           <div className={styles['edit-delete-button']}> 
-            {user?.profile === club.addedBy._id &&
+            {user?.profile === club.addedBy?._id &&
             <div>
               <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
               <button className={styles['edit-btn']}>Edit</button>
