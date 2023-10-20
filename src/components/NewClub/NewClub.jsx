@@ -26,7 +26,7 @@ const NewClub = (props) => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
     const newLocation = clubFormData.location
     setSelectedLocation(newLocation)
-    let data = props.shops.filter(shop => shop.location.includes(selectedLocation))
+    let data = props.shops.filter(shop => shop.location.toLowerCase().includes(selectedLocation.toLowerCase()))
     setShopsByLocation(data)
   }
   const handleSubmit = async (evt) => {
@@ -97,12 +97,12 @@ const NewClub = (props) => {
                   <RecommendationShopCard shop={shop} key={shop._id} />
                 ))}
               </>
-              : 
+              :
               <>
                 <h2>No coffee shop near your location</h2>
               </>}
           </div>
-          <HashLink smooth to="/new#createClub" onClick={handleShowNewShop}> 
+          <HashLink smooth to="/new#createClub" onClick={handleShowNewShop}>
             <p className={styles.showShopForm} onClick={handleShowNewShop}>Don't see what you're looking for? <br />Add a Shop!</p>
           </HashLink>
         </div>

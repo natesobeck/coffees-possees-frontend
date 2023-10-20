@@ -21,11 +21,7 @@
   border-radius: 20px;
 }
 
-.slide.active .bg-img {
-  opacity: 0.2;
-}
-
-.slide .left_slide {
+.left_slide {
   position: absolute;
   width: 50%;
   height: 100%;
@@ -36,32 +32,29 @@
   color: white;
   background: 0 0 0 rga(255, 255, 255, 0.8);
   backdrop-filter: blur(15px);
-}
-
-.left_slide {
   border-bottom-left-radius: 20px;
   border-top-left-radius: 20px;
 }
 
-.slide.active .left_slide {
-  transform: translateX(0);
-}
-
-.slide .left_slide h1 {
+.left_slide h1 {
   width: 100%;
   text-align: end;
   font-size: 8rem;
   margin-right: 1rem;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  /* Tuan change color and text-shadow */
+  color: #cd6013;
+  text-shadow: 0 5px 12px rgba(255, 255, 255, .8);
+  /* Old version */
+  /* text-shadow: 0 0 10px rgba(255, 255, 255, 1); */
   margin-bottom: 30px;
 }
 
-.slide .left_slide .info p {
+.left_slide .info p {
   line-height: 1.5;
   font-size: 1rem;
 }
 
-.slide .left_slide .info .btn {
+.left_slide .info .btn {
   outline: none;
   border: 2px solid white;
   padding: 15px 25px;
@@ -74,12 +67,12 @@
   cursor: pointer;
 }
 
-.slide .left_slide .info .btn:hover {
+.left_slide .info .btn:hover {
   background-color: transparent;
   color: white;
 }
 
-.slide .left_slide .info .btn:focus {
+.left_slide .info .btn:focus {
   background-color: transparent;
   color: white;
 }
@@ -127,14 +120,15 @@
     0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
-.slide .right_slide .next_prev {
+.right_slide .next_prev {
   position: absolute;
   bottom: 5rem;
   right: 5rem;
 }
 
-.slide .right_slide .next_prev #next,
-.slide .right_slide .next_prev #prev {
+.right_slide .next_prev #next,
+.right_slide .next_prev #prev {
+  border: 2px solid white;
   padding: 14px 18px;
   background-color: white;
   color: #777;
@@ -146,13 +140,16 @@
   margin-right: 5px;
   position: relative;
 }
-
-.slide .right_slide .next_prev #next:hover,
-.slide .right_slide .next_prev #prev:hover {
+.right_slide .next_prev #next:hover,
+.right_slide .next_prev #prev:hover {
+  background-color: transparent;
+  color: white;
   transform: scale(1.1);
 }
 
-.slide .right_slide .next_prev #next:focus,
-.slide .right_slide .next_prev #prev:focus {
+.right_slide .next_prev #next:focus,
+.right_slide .next_prev #prev:focus {
+  background-color: transparent;
+  color: white;
   transform: scale(1.1);
 }

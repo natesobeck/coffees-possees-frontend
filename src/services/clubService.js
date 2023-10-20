@@ -13,6 +13,7 @@ async function index() {
 
 async function create(clubFormData) {
   try {
+    clubFormData.location = clubFormData.location.charAt(0).toUpperCase() + clubFormData.location.toLowerCase().slice(1)
     const res = await fetch(BASE_URL, {
       method: 'POST',
       headers: {
