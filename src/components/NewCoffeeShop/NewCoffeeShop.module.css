@@ -8,6 +8,9 @@
   display: none;
 }
 
+input {
+  outline: none;
+}
 
 .new-shop-image-holder {
   display: flex;
@@ -79,7 +82,7 @@
   width: 70%;
   padding: 15px;
   color: white;
-  background-color: rgba(47, 79, 79, .5);
+  background-color: rgba(47, 79, 79, .8);
 }
 
 .shop-address > h4 {

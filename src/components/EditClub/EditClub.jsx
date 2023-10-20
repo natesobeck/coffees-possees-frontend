@@ -21,51 +21,42 @@ const EditClub = (props) => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className='edit-club-container'>
-      <div className={styles['club-info']}>
-        <div className={styles['location-info']}>
-          <h3>Let's Edit Your Club!</h3>
-          {/* <h5>Start by giving your club a stunning name that will grab interest!</h5>
-          <p>What will yor club be called ?</p> */}
-          <div className={styles['name']}>
-            <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' />
-            {/* <button>Search</button> */}
+    <main>
+      <div id={styles['background-image']}></div>
+      <div id={styles['img-cover']}></div>
+      <div className={styles['container']}>
+        <form onSubmit={handleSubmit} className='edit-club-container'>
+          <div className={styles['club-info']}>
+            <div className={styles['location-info']}>
+              <h3 className={styles['title']}>Create a Club</h3>
+              <h5>Start by giving your club a stunning name that will grab interest!</h5>
+              <p>What will your club be called ?</p>
+              <div className={styles['name']}>
+                <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' required />
+                <textarea name="description" onChange={handleChange} placeholder='Description for your club' value={clubFormData.description}>{clubFormData.description}</textarea>
+              </div>
+            </div>
+            <div className={styles['club-focus']}>
+              <h6>Tell us a bit about your group... Provide to other members information about its focus, location and the like.</h6>
+              <div className={styles['category-container']}>
+                <label htmlFor="category">Category:</label>
+                <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' id='category' autoComplete='off' required />
+              </div>
+              <div className={styles['location-time']}>
+                <h2>Location & Time of Day</h2>
+                <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' autoComplete='off' required />
+                <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay" placeholder='Choose time of day' required>
+                  <option value="Morning">Morning</option>
+                  <option value="AfterNoon">Afternoon</option>
+                  <option value="Evening">Evening</option>
+                </select>
+                <button type='submit' id={styles['create-club']} onClick={props.displayShopSuggestions} className={styles['button']}>Save Club</button>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className={styles['club-focus']}>
-          <h6>Tell us a bit about your group... Provide to other members information about its focus, location and the like.</h6>
-          <div className={styles['category-container']}>
-            <label htmlFor="category">Category:</label>
-            <input name="category" type="text" value={clubFormData.category} onChange={handleChange} placeholder='e.g: soccer' />
-          </div>
-          <div className={styles['location-time']}>
-            <input name="location" type="text" value={clubFormData.location} onChange={handleChange} placeholder='Enter your city here' />
-            <select name="timeOfDay" value={clubFormData.timeOfDay} onChange={handleChange} id="timeOfDay">
-              <option value="morning">Morning</option>
-              <option value="afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
-            </select>
-          </div>
-        </div>
+        </form>
       </div>
-      <div className={styles['create-club-button']}>
-        <button type='submit'>Edit Club</button>
-      </div>
-      
-      <div className={styles['shops-in-club']}>
-        <p>Here's the coffee shops in you area! Select a shop to host your club in and let others join!</p>
-        <div className={styles['shop-cards']}>
-          <div>Shop Card 1</div>
-          <div>Shop Card 2</div>
-          <div>Shop Card 3</div>
-        </div>
-        <div className={styles['time-slot']}>
-          <label>Pick a time:</label>
-          <input type="time" placeholder="Pick a time slot" />
-          <button>Pick Time</button>
-        </div>
-      </div>
-    </form>
+    </main>
   )
 }
 

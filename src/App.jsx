@@ -20,6 +20,7 @@ import CoffeeShopDetails from './components/CoffeeShopDetails/CoffeeShopDetails'
 import EditClub from './components/EditClub/EditClub'
 import EditCoffeeShop from './components/EditCoffeeShop/EditCoffeeShop'
 import EditReview from './components/EditReview/EditReview'
+import NoRoutes from './components/NoRoutes/NoRoutes'
 
 // services
 import * as authService from './services/authService'
@@ -55,8 +56,6 @@ function App() {
     const newClub = await clubService.create(clubFormData)
     setClubs([newClub, ...clubs])
     setClubSearchResults([newClub, ...clubSearchResults])
-    // clubId = newClub._id
-    // console.log(clubId)
     navigate('/new')
   }
 
@@ -228,6 +227,7 @@ function App() {
             </ProtectedRoute>
           }
         />
+        <Route path='*' element={<NoRoutes />} />
       </Routes>
     </main>
   )

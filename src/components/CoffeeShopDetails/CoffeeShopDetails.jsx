@@ -9,10 +9,10 @@ import * as shopService from '../../services/shopService'
 //components
 import NewReview from '../NewReview/NewReview'
 import Reviews from '../Reviews/Reviews'
+import RatingShop from '../RatingShop/RatingShop'
 
 //css
 import styles from './CoffeeShopDetails.module.css'
-// import AddedBy from '../AddedBy/AddedBy'
 
 const CoffeeShopDetails = (props) => {
   const [coffeeShop, setCoffeeShop] = useState({})
@@ -57,17 +57,17 @@ const CoffeeShopDetails = (props) => {
           <div className={styles['show-all-clubs-container']}>
             <h3>All Clubs</h3>
             <h4>No clubs have met in {coffeeShop.name} yet!</h4>
-            <ul>
-            </ul>
           </div>
           <div className={styles['coffee-edit-delete-button']}>
-            {/* {coffeeShop?.name && <AddedBy content={coffeeShop} />} */}
-            {coffeeShop?.name && coffeeShop.addedBy._id === props.user.profile && 
-            <>
-              <Link state={coffeeShop} to={`/shops/${shopId}/editshop`}><button> EDIT</button> </Link>
-              <button onClick={() => props.handleDeleteShop(shopId)}> DELETE</button>
-            </>
+            {coffeeShop?.name && coffeeShop.addedBy._id === props.user?.profile &&
+              <>
+                <Link state={coffeeShop} to={`/shops/${shopId}/editshop`} className={styles['edit-btn']}>EDIT</Link>
+                <button onClick={() => props.handleDeleteShop(shopId)} className={styles['delete-btn']}> DELETE</button>
+              </>
             }
+          </div>
+          <div className={styles['rating-shop']} style={{ marginBottom: '20px' }}>
+            <RatingShop shopId={shopId} coffeeShop={coffeeShop}/>
           </div>
           <div className={styles['review-container']}>
             <h3 className={styles['review-title']}>Leave a Review</h3>

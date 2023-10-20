@@ -1,0 +1,35 @@
+.reviewBoard {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.reviewBoard>div {
+  margin: 0 10px;
+}
+
+.rating {
+  text-align: left;
+}
+
+.field {
+  font-weight: 800;
+}
+
+.overall {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overall>h1 {
+  font-size: 4rem;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.overall>p {
+  padding: 0;
+  margin: 5px 0 0 0;
+}

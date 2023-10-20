@@ -1,32 +1,26 @@
-//npm modeules
+//npm module
 import { useState, useEffect } from 'react'
-import { useParams, NavLink, useLocation } from 'react-router-dom'
+import { useParams, NavLink } from 'react-router-dom'
 
 //css
 import styles from './ClubDetails.module.css'
-
-
-//components
-// import loading
-
 
 //services
 import * as clubService from '../../services/clubService'
 
 
-const ClubDetails = () => {
+const ClubDetails = ({ user }) => {
   const [club, setClub] = useState({})
   const { clubId } = useParams()
 
-useEffect(() => {
-  const fetchClub = async () => {
-    const data = await clubService.show(clubId)
-    setClub(data)
-  }
-  fetchClub()
-},[clubId])
+  useEffect(() => {
+    const fetchClub = async () => {
+      const data = await clubService.show(clubId)
+      setClub(data)
+    }
+    fetchClub()
+  },[clubId])
 
-// useEffect is the function that makes the api call
 
 
   return (
@@ -47,10 +41,14 @@ useEffect(() => {
         </div>
         <div> 
           <div className={styles['edit-delete-button']}> 
-            <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
+            {user?.profile === club?.addedBy?._id &&
+            <>
+              <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
               <button className={styles['edit-btn']}>Edit</button>
-            </NavLink>
-            <button className={styles['delete-btn']}>Delete</button> 
+              </NavLink>
+              <button className={styles['delete-btn']}>Delete</button>
+            </>
+            }
           </div> 
         </div>
       </div>
@@ -59,7 +57,3 @@ useEffect(() => {
 }
 
 export default ClubDetails
-
-
-
-{/* <h1 className={styles['title-club-details']}>Club Name Here</h1> */}

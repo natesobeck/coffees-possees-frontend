@@ -6,7 +6,6 @@ import { HashLink } from 'react-router-hash-link'
 import NewCoffeeShop from '../NewCoffeeShop/NewCoffeeShop'
 import RecommendationShopCard from '../RecommendationShopCard/RecommendationShopCard'
 
-
 // css
 import styles from './NewClub.module.css'
 
@@ -22,20 +21,18 @@ const NewClub = (props) => {
 
   const [shopsByLocation, setShopsByLocation] = useState([])
   const [selectedLocation, setSelectedLocation] = useState('')
-  // let shopId = 'shopForm'
 
   const handleChange = evt => {
     setClubFormData({ ...clubFormData, [evt.target.name]: evt.target.value })
     const newLocation = clubFormData.location
     setSelectedLocation(newLocation)
-    // let data = props.shops.filter(shop => shop.location === selectedLocation)
-    let data = props.shops.filter(shop => shop.location.includes(selectedLocation))
+    let data = props.shops.filter(shop => shop.location.toLowerCase().includes(selectedLocation.toLowerCase()))
     setShopsByLocation(data)
   }
-  const handleSubmit = evt => {
+  const handleSubmit = async (evt) => {
     displayShopSuggestions()
     evt.preventDefault()
-    props.handleAddClub(clubFormData)
+    await props.handleAddClub(clubFormData)
   }
 
   const displayShopSuggestions = () => {
@@ -64,7 +61,7 @@ const NewClub = (props) => {
             <div className={styles['location-info']}>
               <h3 className={styles['title']}>Create a Club</h3>
               <h5>Start by giving your club a stunning name that will grab interest!</h5>
-              <p>What will yor club be called ?</p>
+              <p>What will your club be called ?</p>
               <div className={styles['name']}>
                 <input name="name" type="text" value={clubFormData.name} onChange={handleChange} placeholder='E.g: Bookers - A true love for books  ' autoComplete='off' required />
                 <textarea name="description" onChange={handleChange} placeholder='Description for your club' value={clubFormData.description}>{clubFormData.description}</textarea>
@@ -98,23 +95,17 @@ const NewClub = (props) => {
               <>
                 {shopsByLocation.map(shop => (
                   <RecommendationShopCard shop={shop} key={shop._id} />
-
                 ))}
               </>
-              : <>
-                <h1>No coffeeShop near you</h1>
+              :
+              <>
+                <h2>No coffee shop near your location</h2>
               </>}
           </div>
-          <HashLink smooth to="/new#createClub" onClick={handleShowNewShop}> 
+          <HashLink smooth to="/new#createClub" onClick={handleShowNewShop}>
             <p className={styles.showShopForm} onClick={handleShowNewShop}>Don't see what you're looking for? <br />Add a Shop!</p>
           </HashLink>
         </div>
-
-        {/* <div id='newShop' className={styles.showNewShop}> */}
-
-        {/* {<NewCoffeeShop handleAddShop={props.handleAddShop} />} */}
-
-        {/* </div> */}
       </div>
     </main>
   )
