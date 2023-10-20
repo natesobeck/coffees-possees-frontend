@@ -1,27 +1,19 @@
 # Coffees & Posses:"Bringing Like Minded People Together"
 
+Do you like coffee? Of course you do... but who do you take your coffee with? We hope not alone! [Coffees & Posses](https://coffees-and-posses.netlify.app/) is here to help bring like minded people together with the easy use of a full stack application that allows you to create clubs for people to join in coffeeshops in your area.
+
+### [Meet Jolyne...](https://docs.google.com/presentation/d/1DQm0XDNEbN_ibKMw87wEhzTzs_LkZHxNUtE6tktCEoM/edit#slide=id.g24dca8be8d5_0_110)
+After reading about Jolyne's experience I'm sure you are wondering how you can get the same joy that she has and my friend you are in the right place. By clicking the link provided below you can be just like Jolyne.
 
 
-
-
-
-
+## [CLICK](https://coffees-and-posses.netlify.app/) to Sign Up w/ Coffees & Posses!
 
 
 ## Our Team Members:
-- 
-- 
-- 
+- Nate:
+- Tuan:
+- Jonathan: https://github.com/Johny270
 - Ellie: https://github.com/Ellieellie12
-
-
-
-
-
-
-
-
-
 
 ### ATTRIBUTIONS:
 - Image by:[Nathan Dumlao](https://unsplash.com/photos/6VhPY27jdps)
@@ -38,8 +30,6 @@ Tabitha Turner](https://unsplash.com/photos/F0Wd4djYvSA)
 - Image by: [Nick Morrison](https://unsplash.com/photos/macbook-pro-near-white-open-book-FHnnjk1Yj7Y)
 - Coffee with Sugar font from [Misti's fonts](https://www.1001fonts.com/users/MistiFonts/)
 - Wood texture from [Transparent Textures](https://www.transparenttextures.com/wood-pattern.html)
-
-
 
 ### Technologies Used:
 - React
