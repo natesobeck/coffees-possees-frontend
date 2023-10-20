@@ -1,4 +1,5 @@
-# Coffees & Posses:"Bringing Like-Minded People Together" ☕️
+# Coffees & Posses
+## Bringing Like-Minded People Together ☕️
 
 ![coffees-and-posses-homepage](/public/assets/coffeeone.png)
 ![coffees-and-posses-clubpage](/public/assets/coffeetwo.png)
@@ -13,8 +14,8 @@ After reading about Jolyne's experience I'm sure you are wondering how you can g
 Join Us: https://coffees-and-posses.netlify.app/
 
 ## Meet the Team Behind Coffees & Posses:
-- Nate:
-- Tuan:
+- Nate:https://github.com/natesobeck
+- Tuan:https://github.com/TuanNguyen0915
 - Jonathan: https://github.com/Johny270
 - Ellie: https://github.com/Ellieellie12
 
@@ -33,9 +34,11 @@ Tabitha Turner](https://unsplash.com/photos/F0Wd4djYvSA)
 - Image by: [Nick Morrison](https://unsplash.com/photos/macbook-pro-near-white-open-book-FHnnjk1Yj7Y)
 - Coffee with Sugar font from [Misti's fonts](https://www.1001fonts.com/users/MistiFonts/)
 - Wood texture from [Transparent Textures](https://www.transparenttextures.com/wood-pattern.html)
+- Image by:[Jongsun Lee](https://unsplash.com/photos/moon-eclipse-F-pSZO_jeE8 )
+- Thank you [google fonts](https://fonts.google.com/) for M PLUS Rounded 1c
 
 ### Technologies Used:
-- React
+- React.js
 - MongoDB
 - Mongoose
 - JavaScript
@@ -49,7 +52,7 @@ Tabitha Turner](https://unsplash.com/photos/F0Wd4djYvSA)
 - Github
 
 ### Future Plans for Coffees & Posses ☕️
-- Implement google maps api so that users will be able to search up the exact location of the coffeeshop where the club meeting will be held.
+- Implement google maps api for users to be able to search up the exact location of the coffeeshop where the club meeting will be held.
 - Add a calendar within the application for users to be able to select a date and time for the club.
 - Track how many users are in a club.
 - Add club categories for the user to select.
