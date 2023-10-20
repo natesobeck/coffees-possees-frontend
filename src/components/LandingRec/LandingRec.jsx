@@ -24,7 +24,7 @@ const LandingRec = (props) => {
 
   return (
     <div className="content">
-      <div className={`slide active`}>
+      <div className={`slide`}>
         <div className="left_slide">
           <h1 style={{ border: 'none', background: 'none' }}>{shop ? shop.name : props.someShops[1]?.name}</h1>
           <div className="info">
