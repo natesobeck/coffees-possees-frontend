@@ -13,13 +13,15 @@ const ClubDetails = ({ user }) => {
   const [club, setClub] = useState({})
   const { clubId } = useParams()
 
-useEffect(() => {
-  const fetchClub = async () => {
-    const data = await clubService.show(clubId)
-    setClub(data)
-  }
-  fetchClub()
-},[clubId])
+  useEffect(() => {
+    const fetchClub = async () => {
+      const data = await clubService.show(clubId)
+      setClub(data)
+    }
+    fetchClub()
+  },[clubId])
+
+
 
   return (
     <main className={styles['main']}>
@@ -39,17 +41,15 @@ useEffect(() => {
         </div>
         <div> 
           <div className={styles['edit-delete-button']}> 
-            {user ?
-            <>
+            {user?.profile === club.addedBy._id &&
+            <div>
               <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
               <button className={styles['edit-btn']}>Edit</button>
               </NavLink>
-              <button className={styles['delete-btn']}>Delete</button> 
-            </>
-            :
-              <></>
+              <button className={styles['delete-btn']}>Delete</button>
+            </div>
             }
-            
+            {/* user?.profile === shop.addedBy._id */}
           </div> 
         </div>
       </div>
@@ -57,4 +57,9 @@ useEffect(() => {
   )
 }
 
+
+{/* <NavLink state={club} to={`/clubs/${clubId}/editclub`}>
+              <button className={styles['edit-btn']}>Edit</button>
+              </NavLink>
+              <button className={styles['delete-btn']}>Delete</button>  */}
 export default ClubDetails
